@@ -77,7 +77,7 @@ string& napraw_ogonki(string& napis) {
 }
 
 int main(int argc, char* argv[]) {
-	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
+	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSI\n";
 	cout << "Tester ver 1.1" << endl;
 	cout << "Lemm @ 2012 in association with DS @ 2022" << endl;
 	vector<CPytanie> pytania;
