@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include <string>
@@ -76,8 +76,15 @@ string& napraw_ogonki(string& napis) {
 	return napis;
 }
 
+void debug(vector<CPytanie> pytania) {
+	for (int i = 0; i < pytania.size(); i++) {
+		cout << pytania[i].pytanie << "\n";
+		for (int j = 0; j < pytania[i].odpowiedzi.size(); j++) cout << (char)(j + 'a') << ". " << pytania[i].odpowiedzi[j].desc << "   |   " << pytania[i].odpowiedzi[j].isGood << "\n\n";
+	}
+}
+
 int main(int argc, char* argv[]) {
-	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSI\n";
+	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
 	cout << "Tester ver 1.1" << endl;
 	cout << "Lemm @ 2012 in association with DS @ 2022" << endl;
 	vector<CPytanie> pytania;
@@ -114,6 +121,8 @@ int main(int argc, char* argv[]) {
 			}
 		}
 	}
+
+	//debug(pytania);
 
 	cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
 	string ans;
