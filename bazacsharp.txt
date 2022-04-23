@@ -1,0 +1,325 @@
+Œrodowisko wykonawcze .NET:
+4
+jest dostêpne jako zestaw bibliotek w systemie Windows i w systemie Linux
+jest maszyn¹ wirtualn¹ dzia³aj¹c¹ zarówno w systemie Windows, jak i Linux
+jest osadzone w systemie Windows, a w systemie Linux jest maszyn¹ wirtualn¹
+jest zintegrowane z systemem Windows, a w systemie Linux tworzy osobne j¹dro systemu operacyjnego
+a
+
+Typem referencyjnym w C# jest:
+4
+`DateTime`
+`struct`
+`enum`
+`String`
+d
+
+Czym w C# ró¿ni siê u¿ycie modyfikatorów `ref` oraz `out` dla parametrów?
+4
+Parametr „ref” jest przekazywany przez referencjê, a „out” przez wartoœæ
+Parametr „ref” mo¿e byæ u¿yty tylko do typów wartoœciowych, a „out” tylko do typów referencyjnych
+Parametr „out” musi mieæ przypisan¹ wartoœæ przed wyjœciem z funkcji
+Parametr „ref” mo¿e posiadaæ wartoœæ przed wywo³aniem, a parametr „out” nie mo¿e
+c
+
+W³aœciwoœci (properties) ró¿ni¹ siê od pól (fields) klas tym, ¿e:
+4
+mo¿na je serializowaæ i deserializowaæ, a pola nie
+nie mo¿na ich inicjowaæ w miejscu deklaracji, a pola mo¿na
+s¹ dziedziczone, a pola nie
+maj¹ metody dostêpu, a pola nie
+d
+
+Który z wymienionych typów w C# nie jest zgodny z CLS?
+4
+`enum`
+`event`
+`Int64`
+`UInt32`
+d
+
+Implementacja zagadnieñ przecinaj¹cych (crosscutting concerns) w obiektowych jêzykach programowania prowadzi do (2 odpowiedzi poprawne):
+4
+code scattering
+code tangling
+code obliviousness
+code quantification
+ab
+
+Rodzaje advice dostêpne w AspectJ to (2 odpowiedzi poprawne):
+5
+pointcut advice
+join-point advice
+introduction advice
+before advice
+around advice
+de
+
+Które klasy dostarczaj¹ metodê do zmiany bie¿¹cej pozycji w strumieniu (2 odpowiedzi poprawne):
+5
+`FileStream`
+`MemoryStream`
+`StreamReader`
+`StringReader`
+`StreamWriter`
+ab
+
+Kolekcje oferuj¹ce z³o¿onoœæ gorsz¹ ni¿ *O(log n)* dla wyszukiwania po kluczu to (2 odpowiedzi poprawne):
+5
+List
+LinkedList
+SortedList
+SortedSet
+SortedDictionary
+ab
+
+Aby obiekty klasy `TKey` mog³y pos³u¿yæ jako klucze w kolekcji `SortedDictionary<TKey, TValue>` utworzonej konstruktorem bezparametrowym:
+4
+`Tkey` musi implementowaæ `IEquatable<TKey>`
+`Tkey` musi implementowaæ `IEqualityComparer<TKey>`
+`Tkey` musi implementowaæ `IComparable<TKey>` lub `IComparable`
+`Tkey` musi implementowaæ `IComparer<TKey>`
+c
+
+Zazwyczaj, gdy czêsto musimy dodawaæ i usuwaæ elementy w³aœciwsza bêdzie kolekcja (2 odpowiedzi poprawne):
+4
+`ObservableCollection<T>` ni¿ `BlockingCollection<T>`
+`LinkedList<T>` ni¿ `List<T>`
+`ConcurrentDictionary<TKey, TValue>` ni¿ `Dictionary<TKey, TValue>`
+`Dictionary<TKey, TValue>` ni¿ `SortedList<TKey, TValue>`
+bd
+
+W przypadku implementacji w³asnej kolekcji mo¿liwoœæ iteracji po jej elementach instrukcj¹ foreach zapewnia (3 odpowiedzi poprawne):
+5
+implementacja interfejsu `ICollection<T>`
+implementacja interfejsu `IEnumerable`
+implementacja interfejsu `IEnumerable<T>`
+implementacja interfejsu `IEnumerator<T>`
+implementacja interfejsu `IEnumerator`
+abc
+
+Jeœli instrukcja Task result = await myMethod(); jest poprawna to typem zwracanym przez `myMethod()` jest:
+5
+`void`
+`Task<void>`
+`Task<Task>`
+`Task<object>`
+`Task`
+c
+
+Zwykle .NET Assembly (3 odpowiedzi poprawne):
+5
+zawiera *assembly manifest*
+zawiera *type metadata*
+zawiera *Common Language Specification (CLS)*
+mo¿e byæ wykonana przez CLR
+mo¿e byæ wykonana przez JVM
+abd
+
+RoutedEvent mo¿e przyj¹æ nastêpuj¹ce strategie poruszania siê po drzewie elementów (3 odpowiedzi poprawne):
+5
+Bubbling
+Cascading
+Tunneling
+Leveling
+Direct
+ace
+
+Entity Framework wspiera nastêpuj¹ce podejœcia do tworzenia baz danych (3 odpowiedzi poprawne):
+5
+code first
+model first
+database first
+connection first
+generic database
+abc
+
+Wska¿ ró¿nice pomiêdzy `Task.Run` a `Task.Factory.StartNew` (2 odpowiedzi poprawne):
+4
+w przypadku `Task.Run` nie ma mo¿liwoœci przekazania “object state”, który bêdzie u¿ywany jako parametr delegatu
+`Task.Factory.StartNew` umo¿liwia zdefiniowanie dodatkowych parametrów zapewniaj¹cych wiêksz¹ kontrolê nad wykonywanym Task’iem
+`Task.Factory.StartNew` ma status obsolete/deprecated
+`Task.Run` ma status oboslete/deprecated
+ab
+
+W przypadku funkcji haszuj¹cej powoduj¹cej liczne kolizje, która kolekcja zapewni najlepsze osi¹gi przy du¿ej liczbie elementów?
+5
+SortedList
+LinkedList
+HashList
+SortedSet
+HashSet
+d
+
+Kod napisany w C# po skompilowaniu mo¿na uruchomiæ na (2 odpowiedzi poprawne):
+5
+CLS
+CoreCLS
+CLR
+CoreCLR
+.NET SDK
+cd
+
+Instancje typu prostego `int` (2 odpowiedzi poprawne):
+5
+tworzone s¹ tylko na stosie
+tworzone s¹ tylko na stercie
+mog¹ byæ automatycznie skonwertowane na `long`
+mog¹ byæ automatycznie skonwertowane na `object`
+mo¿na do nich przypisaæ pseudo-wartoœæ `null`
+cd
+
+Kolekcja SortedDictionary (2 odpowiedzi poprawne):
+5
+utrzymuje porz¹dek wed³ug kluczy, a jeœli 2 elementy maj¹ taki sam klucz to wed³ug wartoœci
+utrzymuje porz¹dek wed³ug wartoœci, a jeœli 2 elementy maj¹ tak¹ sam¹ wartoœæ to wed³ug kluczy
+w ogólnym przypadku zapewnia szybsze wstawianie du¿ej liczby elementów ni¿ SortedList
+w ogólnym przypadku zapewnia szybsze usuwanie elementów ni¿ SortedList
+zapewnia dostêp poprzez indeks
+cd
+
+Jeœli typem zwracanym przez `myMethod()` jest `Task<string>` to wyra¿enie `await myMethod()` bêdzie typu:
+5
+`string`
+`Task<string>`
+`Task<Task<string>>`
+`Task<object>`
+`Task`
+a
+
+Które klasy dostarczaj¹ metodê do zmiany bie¿¹cej pozycji w strumieniu (2 odpowiedzi poprawne):
+4
+`FileStream`
+`MemoryStream`
+`StreamReader`
+`StringReader`
+ab
+
+Aby obiekty pewnej klasy mog³y byæ serializowane przeez `XmlSerializer`, klasa ta musi (2 odpowiedzi poprawne):
+4
+byæ oznaczona atrybutem `Serializable`
+posiadaæ bezparametrowy konstruktor
+byæ publiczna
+implementowaæ interfejs `Serializable`
+bc
+
+Jeœli instrukcja `string str = await myObject.myMethod();` jest poprawna, to typem zwracanym przez `myMethod()` jest:
+5
+`string`
+`Task<void>`
+`Task<string>`
+`Task<object>`
+`Task`
+c
+
+Pola klas bez podanego modyfikatora dostêpu s¹:
+4
+`Protected`
+`Public`
+`Private`
+`Internal`
+c
+
+Które stwierdzenie dotycz¹ce zmiennej typu `var` jest niepoprawne?
+4
+mo¿e pos³u¿yæ do przypisania wyniku zapytania LINQ
+mo¿e byæ wykorzystana jako parametr metody (np. `void metoda(var zmienna)`)
+docelowy typ zmiennej jest okreœlany przez kompilator
+nie mo¿e byæ zdefiniowana jako pole klasy
+b
+
+Jakie elementy jêzyka mo¿e zostaæ zadeklarowany jako elementy typu `partial` (2 odpowiedzi poprawne)?
+4
+delegat
+property
+klasa
+metoda
+cd
+
+Który atrybut pozwala na ominiêcie publicznego pola klasy podczas serializacji do XML?
+4
+`XmlType`
+`XmlIgnore`
+`XmlAttribute`
+`XmlOmmit`
+b
+
+Czym jest CIL (MSIL)?
+4
+debugger programów dla platformy .NET
+maszyna wirtualna odpowiedzialna za uruchamianie programów
+jêzyk poœredni, do którego kompilowany jest kod
+zestaw klas bazowych dostêpnych dla ca³ej platformy .NET
+c
+
+Które zapytanie LINQ pozwala na wybranie wszystkich elementów z kolekcji obiektów klasy i których pola maj¹ wartoœci wiek > 20 i wzrost < 180?
+4
+`IEnumerable<A> wynik = from x in lista where x.Wiek > 20 && x.Wzrost < 180 select x;`
+`string wynik = from x in lista where x.Wiek > 20 && x.Wzrost < 180 select x;`
+`IEnumerable wynik = for x in lista where x.Wiek > 20 and x.Wzrost < 180 select x;`
+`A wynik = from x in lista where x.wiek > 20 && x.Wzrost < 180 select x;`
+a
+
+Która deklaracja definiuje klasê `MyClass` jako klasê implementuj¹ca interfejs `IInterface`?
+4
+`public class MyClass overrides IInterface`
+`public class MyClass : IInterface`
+`public class MyClass implements IInterface`
+`public class MyClass extends IInterface`
+b
+
+Operator `==` pozwala na:
+4
+porównywanie wartoœci kolekcji
+porównywanie referencji obiektów
+porównywanie wartoœci obiektów
+porównywanie referencji typów prostych
+bc
+
+Któr¹ instrukcjê mo¿emy wykorzystaæ zamiast bloku `finally` do zamkniêcia po³¹czenia z baz¹ danych dziêki automatycznemu wykonaniu metody `Dispose` na obiekcie po³¹czenia?
+4
+`using`
+`yield`
+`as`
+`volatile`
+a
+
+Jaki rodzaj serializacji nie jest standardowo dostêpny na platformie .NET?
+4
+Serializacja binarna
+Serializacja protoko³u SOAP
+Serializacja do formatu XML
+Serializacja do formatu UML
+d
+
+Który z poziomów uprawnieñ nie istnieje w Code Access Security?
+4
+User
+Enterprise
+Machine
+Application
+d
+
+Jakie jest rozwiniêcie skrótu CLR?
+4
+Common Launch Repeater
+Common Language Runtime
+Class Loading Runtime
+Callback Loop Resolver
+b
+
+Jaki interfejs musi implementowaæ kolekcja, by mo¿na by³o iterowaæ po jej elementach za pomoc¹ pêtli `foreach`?
+4
+`IListable`
+`IEnumerable`
+`ILoop`
+`ICountable`
+b
+
+Który z elementów zosta³ wprowadzony w .NET 2.0?
+4
+Windows Workflow Foundation
+Wsparcie dla generycznoœci
+Task Parallel Library
+LINQ
+b
