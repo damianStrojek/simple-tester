@@ -12,6 +12,7 @@ The questions look like this:
 <answer nr 3>
 <answer nr 4>
 <proper answer>
+<enter>
 ```
 For example:
 ```
@@ -22,4 +23,13 @@ Nie istnieje możliwość dziedziczenia po wielu klasach bazowych
 Wszystkie metody klasy bazowej muszą być nadpisane w klasie potomnej
 Żadne z powyższych
 b
+
+2. W przypadku kolekcji TreeSet (1 poprawna):
+4
+Wyszukiwanie elementów cechuje się złożonością liniową O(n)
+Wyszukiwanie elementów cechuje się złożonością logarytmiczną O(log n)
+Wyszukiwanie elementów odbywa się w czasie stałym O(1)
+Dane mają postać par (klucz -> wartość)
+b
+
 ```
