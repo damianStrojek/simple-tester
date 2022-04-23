@@ -2,7 +2,7 @@
 Simple tester made from the source code of @Lemm. 
 
 # Database
-In order for it to work you need to provide a "baza.txt" ANSII encoded file. 
+In order for it to work you need to provide a "baza.txt" ANSI encoded file. 
 The questions look like this:
 ```c#
 <number of question>.<question>
