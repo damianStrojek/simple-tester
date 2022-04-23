@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 	cout << "Tester ver 1.1" << endl;
 	cout << "Lemm @ 2012 in association with DS @ 2022" << endl;
 	vector<CPytanie> pytania;
-	ifstream plik("bazajava.txt", ifstream::in);
+	ifstream plik("baza.txt", ifstream::in);
 	string temp, odp, ver;
 	int lodpowiedzi;
 
