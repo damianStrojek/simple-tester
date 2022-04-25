@@ -86,10 +86,10 @@ void debug(vector<CPytanie> pytania) {
 int main(int argc, char* argv[]) {
 	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
 	cout << "Tester ver 1.1" << endl;
-	cout << "Lemm @ 2012 in association with DS @ 2022" << endl;
+	cout << "Lemm @ 2012 in association with DS @ 2022 AND PG @ 2022" << endl;
 	vector<CPytanie> pytania;
 	ifstream plik("baza.txt", ifstream::in);
-	string temp, odp, ver;
+	string temp, odp, ver, temp2,finaltemp;
 	int lodpowiedzi;
 
 	if (!plik.good()) return bye(1);
@@ -97,11 +97,17 @@ int main(int argc, char* argv[]) {
 		getline(plik, temp);
 		if (!temp.empty()) {
 			// Stworzenie nowego pytania o danej tresci
-			CPytanie nowe(napraw_ogonki(temp));
-			plik >> lodpowiedzi;
+			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
+			
+			while (!((int)temp[0]>48 && (int)temp[0]<57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
+				getline(plik, temp);
+				if(!((int)temp[0] > 48 && (int)temp[0] < 57)) finaltemp += '\n'+temp; // dodanie nowej linii do pytania
+				
+			}
 
+			CPytanie nowe(napraw_ogonki(finaltemp));
+			lodpowiedzi = temp[0] - '0';
 			// wyciecie entera
-			getline(plik, temp);
 			int i = 0;
 			// Dodawanie nowych odpowiedzi
 			for (i = 0; i < lodpowiedzi && plik.good(); i++) {
@@ -112,8 +118,8 @@ int main(int argc, char* argv[]) {
 				// wziecie calej odpowiedzi
 				getline(plik, temp);
 				for (int i = 0; i < temp.size(); i++) {
-					if (temp[i] > 96 && temp[i] < 105){
-						int index = (int) temp[i] - 97;
+					if (temp[i] > 96 && temp[i] < 105) {
+						int index = (int)temp[i] - 97;
 						nowe.odpowiedzi[index].isGood = true;
 					}
 				}
@@ -130,6 +136,7 @@ int main(int argc, char* argv[]) {
 	int nrpyt = 0, poprawne = 0, indeks = 0;
 	srand(time(NULL));
 	auto rng = std::default_random_engine{};
+	int los = 0;
 	while (true) {
 		cout << "\nTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
 		//niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
@@ -153,7 +160,7 @@ int main(int argc, char* argv[]) {
 
 		bool check = false;
 		for (int i = 0; i < ans.size(); i++) {
-			if(ans[i] > 96 && ans[i] < 105){
+			if (ans[i] > 96 && ans[i] < 105) {
 				int index = (int)ans[i] - 97;
 				if (pytania[los].odpowiedzi[index].isGood) {
 					sum--;
@@ -180,12 +187,13 @@ int main(int argc, char* argv[]) {
 			}
 			check = true;
 		}
-		else if(!check) {
+		else if (!check) {
 			cout << "Brawo! To byla poprawna odpowiedz.\n";
 			poprawne++;
 		}
 
 		pytania[los].Wyswietlono();
+		//los++;
 		nrpyt++;
 	}
 	bye(0);
