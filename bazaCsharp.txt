@@ -32,6 +32,7 @@ d
 
 Wskaż poprawne zapytanie LINQ (2 odpowiedzi poprawne):
 List<string> names = new List<string>() { "Monika", "Karol", "Ewa" };
+4
 var results = from n in names where n[n.length-1] == 'a' select n;
 var results = select n from names n where n[n.length-1] == 'a'
 var results = names.Where(n[n.length-1] == 'a').Select(n);
