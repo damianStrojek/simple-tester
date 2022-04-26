@@ -56,10 +56,10 @@ d
 
 Czym w C# różni się użycie modyfikatorów `ref` oraz `out` dla parametrów?
 4
-Parametr „ref” jest przekazywany przez referencję, a „out” przez wartość
-Parametr „ref” może być użyty tylko do typów wartościowych, a „out” tylko do typów referencyjnych
-Parametr „out” musi mieć przypisaną wartość przed wyjściem z funkcji
-Parametr „ref” może posiadać wartość przed wywołaniem, a parametr „out” nie może
+Parametr 'ref' jest przekazywany przez referencję, a 'out' przez wartość
+Parametr 'ref' może być użyty tylko do typów wartościowych, a 'out' tylko do typów referencyjnych
+Parametr 'out' musi mieć przypisaną wartość przed wyjściem z funkcji
+Parametr 'ref' może posiadać wartość przed wywołaniem, a parametr 'out' nie może
 c
 
 Właściwości (properties) różnią się od pól (fields) klas tym, że:
