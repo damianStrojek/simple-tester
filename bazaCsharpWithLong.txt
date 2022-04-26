@@ -23,19 +23,19 @@ Console.Write(name + " ");
 }
 }
 5
-a. Monika
-b. Monika Ewa
-c. Monika Karol Ewa
-d. Monika Ewa Magda
-e. Monika Karol Ewa Magda
+Monika
+Monika Ewa
+Monika Karol Ewa
+Monika Ewa Magda
+Monika Karol Ewa Magda
 d
 
 Wskaż poprawne zapytanie LINQ (2 odpowiedzi poprawne):
 List<string> names = new List<string>() { "Monika", "Karol", "Ewa" };
-a. var results = from n in names where n[n.length-1] == 'a' select n;
-b. var results = select n from names n where n[n.length-1] == 'a'
-c. var results = names.Where(n[n.length-1] == 'a').Select(n);
-d. var results = names.Where(n => n[n.length-1] == 'a').Select(n => n);
+var results = from n in names where n[n.length-1] == 'a' select n;
+var results = select n from names n where n[n.length-1] == 'a'
+var results = names.Where(n[n.length-1] == 'a').Select(n);
+var results = names.Where(n => n[n.length-1] == 'a').Select(n => n);
 ad
 
 Środowisko wykonawcze .NET:
@@ -145,11 +145,11 @@ private static Boolean isNull(Object obj){
 return false;
 }
 5
-a. if(obj = null) return true;
-b. if(obj as null) return true;
-c. if(obj == null) return true;
-d. if(obj is null) return true;
-e. if(obj) return true;
+if(obj = null) return true;
+if(obj as null) return true;
+if(obj == null) return true;
+if(obj is null) return true;
+if(obj) return true;
 c
 
 Stworzenie instancji klasy C spowoduje wyświetlenie na konsoli:
@@ -163,10 +163,10 @@ class C : B {
 public C() : base() { Console.Write(„C”); }
 }
 4
-a. A B C
-b. C B A
-c. B C
-d. A C
+A B C
+C B A
+B C
+A C
 a
 
 Zwykle .NET Assembly (3 odpowiedzi poprawne):
@@ -202,21 +202,21 @@ myDelegate = (x) => 2 * x;
 myDelegate += (y) => y * y;
 int result = myDelegate(3);
 4
-a. obie funkcje anonimowe zostaną wykonane asynchronicznie
-b. obie funkcje anonimowe zostaną wykonane synchronicznie, najpierw ta z argumentem x potem ta z argumentem y
-c. obie funkcje anonimowe zostaną wykonane synchronicznie przy czym kolejność wykonania nie jest gwarantowana
-d. wykonana zostanie tylko funkcja anonimowa z argumentem y
+obie funkcje anonimowe zostaną wykonane asynchronicznie
+obie funkcje anonimowe zostaną wykonane synchronicznie, najpierw ta z argumentem x potem ta z argumentem y
+obie funkcje anonimowe zostaną wykonane synchronicznie przy czym kolejność wykonania nie jest gwarantowana
+wykonana zostanie tylko funkcja anonimowa z argumentem y
 b
 
 Jeśli poniższa instrukcja jest poprawna to typem zwracanym przez myMethod()
 jest:
 Task result = await myMethod();
 5
-a. void
-b. Task<void>
-c. Task<Task>
-d. Task<object>
-e. Task
+void
+Task<void>
+Task<Task>
+Task<object>
+Task
 c
 
 Próba kompilacji i wykonania poniższego kodu spowoduje:
@@ -226,10 +226,10 @@ IList myList = myArray;
 myList.Add(2);
 Console.WriteLine(myArray[1]);
 4
-a. kod nie skompiluje się
-b. kod skompiluje się, ale w trakcie wykonania zostanie rzucony wyjątek
-c. kod wykona się i na konsoli zostanie wypisana wartość 2
-d. kod wykona się i na konsoli zostanie wypisana wartość 0
+kod nie skompiluje się
+kod skompiluje się, ale w trakcie wykonania zostanie rzucony wyjątek
+kod wykona się i na konsoli zostanie wypisana wartość 2
+kod wykona się i na konsoli zostanie wypisana wartość 0
 b
 
 Wskaż różnice pomiędzy `Task.Run` a `Task.Factory.StartNew` (2 odpowiedzi poprawne):
@@ -248,11 +248,11 @@ firstLetter = 'M';
 names.Add("Marta");
 foreach (string s in results) Console.Write(s + " ");
 5
-a. Karol
-b. Monika
-c. Monika Marta
-d. kod nie skompiluje się
-e. nic nie zostanie wyświetlone
+Karol 
+Monika
+Monika Marta
+kod nie skompiluje się
+nic nie zostanie wyświetlone
 a
 
 Wskaż poprawną deklarację zmiennej cout dla poniższego kodu:
@@ -260,11 +260,11 @@ List<string> names = new List<string>() { "Monika", "Karol", "Ewa" };
 cout = name => Console.WriteLine(name.Length);
 names.FindAll(s => (s[s.leLength-1] == 'a')).ForEach(cout);
 5
-a. Func<string, void> cout;
-b. Func<string, int> cout;
-c. Predicate<string> cout;
-d. Predicate<int> cout;
-e. Action<string> cout;
+Func<string, void> cout;
+Func<string, int> cout;
+Predicate<string> cout;
+Predicate<int> cout;
+Action<string> cout;
 e
 
 Który kod wstawiony w miejsce komentarza nie spowoduje błędów kompilacji dla
@@ -280,10 +280,10 @@ static void Main(string[] args) {
 }
 }
 4
-a. Func<int, int, int> op = new BinaryOp(Add);
-b. Func<int, int, int> op = delegate (int x, int y) { return x + y; };
-c. BinaryOp op = (x, y) => x + y;
-d. BinaryOp op = new Func<int, int, int>(Add);
+Func<int, int, int> op = new BinaryOp(Add);
+Func<int, int, int> op = delegate (int x, int y) { return x + y; };
+BinaryOp op = (x, y) => x + y;
+BinaryOp op = new Func<int, int, int>(Add);
 bc
 
 Wykonanie poniższego kodu spowoduje wyświetlenie na konsoli:
