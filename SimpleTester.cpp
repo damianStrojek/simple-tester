@@ -99,13 +99,10 @@ int main(int argc, char* argv[]) {
 			// Stworzenie nowego pytania o danej tresci
 			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
 			getline(plik, temp);
-			while (!((int)temp[0]>48 && (int)temp[0]<57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
-				if (!((int)temp[0] > 48 && (int)temp[0] < 57)) finaltemp += '\n' + temp; // dodanie nowej linii do pytania
+			while (!((int) temp[0] > 48 && (int) temp[0] < 57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
+				if (!((int) temp[0] > 48 && (int) temp[0] < 57)) finaltemp += '\n' + temp; // dodanie nowej linii do pytania
 				getline(plik, temp);
-				
-				
 			}
-
 			CPytanie nowe(napraw_ogonki(finaltemp));
 			lodpowiedzi = temp[0] - '0';
 			// wyciecie entera
@@ -130,7 +127,6 @@ int main(int argc, char* argv[]) {
 	}
 
 	//debug(pytania);
-
 	cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
 	string ans;
 	getline(cin, ans);
