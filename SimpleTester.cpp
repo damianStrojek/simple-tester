@@ -89,7 +89,7 @@ int main(int argc, char* argv[]) {
 	cout << "Lemm @ 2012 in association with DS @ 2022 AND PG @ 2022" << endl;
 	vector<CPytanie> pytania;
 	ifstream plik("baza.txt", ifstream::in);
-	string temp, odp, ver, temp2,finaltemp;
+	string temp, odp, ver, temp2, finaltemp;
 	int lodpowiedzi;
 
 	if (!plik.good()) return bye(1);
@@ -99,8 +99,8 @@ int main(int argc, char* argv[]) {
 			// Stworzenie nowego pytania o danej tresci
 			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
 			getline(plik, temp);
-			while (!((int) temp[0] > 48 && (int) temp[0] < 57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
-				if (!((int) temp[0] > 48 && (int) temp[0] < 57)) finaltemp += '\n' + temp; // dodanie nowej linii do pytania
+			while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
+				if (!((int)temp[0] > 48 && (int)temp[0] < 57)) finaltemp += '\n' + temp; // dodanie nowej linii do pytania
 				getline(plik, temp);
 			}
 			CPytanie nowe(napraw_ogonki(finaltemp));
@@ -151,9 +151,8 @@ int main(int argc, char* argv[]) {
 		getline(cin, ans);
 
 		int sum = 0;
-		for (int i = 0; i < pytania[los].odpowiedzi.size(); i++) {
+		for (int i = 0; i < pytania[los].odpowiedzi.size(); i++)
 			if (pytania[los].odpowiedzi[i].isGood) sum++;
-		}
 
 		bool check = false;
 		for (int i = 0; i < ans.size(); i++) {
@@ -164,11 +163,10 @@ int main(int argc, char* argv[]) {
 					continue;
 				}
 				else {
-					cout << "To niestety zla odpowiedz. Poprawne to: \n";
-					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++) {
+					cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
 						if (pytania[los].odpowiedzi[j].isGood)
-							cout << "      " << pytania[los].odpowiedzi[j].desc << "\n";
-					}
+							cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
 					check = true;
 					break;
 				}
@@ -176,16 +174,14 @@ int main(int argc, char* argv[]) {
 		}
 
 		if (sum > 0 && !check) {
-			cout << "To niestety zla odpowiedz. Poprawne to: \n";
-			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++) {
-				if (pytania[los].odpowiedzi[j].isGood) {
-					cout << "      " << pytania[los].odpowiedzi[j].desc << "\n";
-				}
-			}
+			cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
+				if (pytania[los].odpowiedzi[j].isGood)
+					cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
 			check = true;
 		}
 		else if (!check) {
-			cout << "Brawo! To byla poprawna odpowiedz.\n";
+			cout << "      Brawo! To byla poprawna odpowiedz.\n";
 			poprawne++;
 		}
 
