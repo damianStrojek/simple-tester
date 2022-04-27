@@ -155,13 +155,13 @@ c
 
 Stworzenie instancji klasy C spowoduje wyświetlenie na konsoli:
 class A {
-public A() { Console.Write(„A”); }
+public A() { Console.Write('A'); }
 }
 class B : A {
-public B() { Console.Write(„B”); }
+public B() { Console.Write('B'); }
 }
 class C : B {
-public C() : base() { Console.Write(„C”); }
+public C() : base() { Console.Write('C'); }
 }
 4
 A B C
@@ -235,10 +235,10 @@ b
 
 Wskaż różnice pomiędzy `Task.Run` a `Task.Factory.StartNew` (2 odpowiedzi poprawne):
 4
-w przypadku `Task.Run` nie ma możliwości przekazania “object state”, który będzie używany jako parametr delegatu
-`Task.Factory.StartNew` umożliwia zdefiniowanie dodatkowych parametrów zapewniających większą kontrolę nad wykonywanym Task’iem
+w przypadku `Task.Run` nie ma możliwości przekazania 'object state', który będzie używany jako parametr delegatu
+`Task.Factory.StartNew` umożliwia zdefiniowanie dodatkowych parametrów zapewniających większą kontrolę nad wykonywanym Task'iem
 `Task.Factory.StartNew` ma status obsolete/deprecated
-`Task.Run` ma status oboslete/deprecated
+`Task.Run` ma status obsolete/deprecated
 ab
 
 Wykonanie poniższego kodu spowoduje wyświetlenie na konsoli:
