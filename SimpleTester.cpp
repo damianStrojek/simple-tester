@@ -90,7 +90,7 @@ int main(int argc, char* argv[]) {
 	vector<CPytanie> pytania;
 	ifstream plik("baza.txt", ifstream::in);
 	string temp, odp, ver, temp2, finaltemp;
-	int lodpowiedzi;
+	int lodpowiedzi, lpytan = 0;
 
 	if (!plik.good()) return bye(1);
 	while (plik.good()) {
@@ -122,11 +122,13 @@ int main(int argc, char* argv[]) {
 					}
 				}
 				pytania.push_back(nowe);
+				lpytan++;
 			}
 		}
 	}
 
 	//debug(pytania);
+	cout << "Ilosc zaladowanych pytan: " << lpytan << "\n";
 	cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
 	string ans;
 	getline(cin, ans);
@@ -136,9 +138,11 @@ int main(int argc, char* argv[]) {
 	int los = 0;
 	while (true) {
 		cout << "\nTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
-		//niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
-
-		sort(pytania.begin(), pytania.end(), pyt_sort);
+		
+		// Niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
+		// Jeżeli doszło do sytuacji "przemielenia" wszystkich pytań to randomizujemy całą bazę żeby nie bylo powtorek przez chwile
+		if (nrpyt % lpytan == 0) std::shuffle(std::begin(pytania), std::end(pytania), rng);
+		else sort(pytania.begin(), pytania.end(), pyt_sort);
 		int los = rand() % (pytania.size()) / 4;
 
 		cout << pytania[los].pytanie << "\n";
@@ -186,7 +190,6 @@ int main(int argc, char* argv[]) {
 		}
 
 		pytania[los].Wyswietlono();
-		//los++;
 		nrpyt++;
 	}
 	bye(0);
