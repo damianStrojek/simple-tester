@@ -209,8 +209,7 @@ obie funkcje anonimowe zostaną wykonane synchronicznie przy czym kolejność wy
 wykonana zostanie tylko funkcja anonimowa z argumentem y
 b
 
-Jeśli poniższa instrukcja jest poprawna to typem zwracanym przez myMethod()
-jest:
+Jeśli poniższa instrukcja jest poprawna to typem zwracanym przez myMethod() jest:
 Task result = await myMethod();
 5
 void
