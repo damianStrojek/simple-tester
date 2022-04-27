@@ -268,9 +268,7 @@ Predicate<int> cout;
 Action<string> cout;
 e
 
-Który kod wstawiony w miejsce komentarza nie spowoduje błędów kompilacji dla
-poniższego
-programu:
+Który kod wstawiony w miejsce komentarza nie spowoduje błędów kompilacji dla poniższego programu:
 public delegate int BinaryOp(int x, int y);
 class Program {
 public static int Add(int x, int y) {
