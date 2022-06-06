@@ -258,3 +258,19 @@ Wszystkie procesy działają zgodnie ze specyfikacjami
 Przeprowadzono (formalny) dowód poprawności (dla wszystkich scenariuszy)
 e
 
+Semafor binarny:
+5
+Nie można go podnosić, gdy jest podniesiony
+Operacje podnoszenia i opuszczania są dla niego atomowe
+Nie pamięta ilości operacji podnoszenia
+Przyjmuje wartości dodatnie oraz zero gdy jest opuszczony
+Nie można go wykorzystywać do kontroli dostępu wyjścia do sekcji krytycznej
+bc
+
+Problemy: czytelników - pisarzy oraz producentów - konsumentów:
+4
+Są tym samym problemem, różnica jest jedynie w nazwie
+Mogą być zrealizowane poprawnie przy pomocy semaforów lub monitorów
+Nie mogą być zrealizowane poprawnie w środowisku LINDU
+Problemy te nie dotyczą zagadnień związanych z omawianą tematyką
+b
