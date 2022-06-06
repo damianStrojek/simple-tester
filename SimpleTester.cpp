@@ -95,8 +95,8 @@ int main(int argc, char* argv[]) {
 	if (!plik.good()) return bye(1);
 	while (plik.good()) {
 		getline(plik, temp);
-		// Do sprawdzenia czy dziala ten #
-		if (!temp.empty() || temp[0] != '#') {
+		
+		if (!temp.empty()) {
 			// Stworzenie nowego pytania o danej tresci
 			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
 			getline(plik, temp);
