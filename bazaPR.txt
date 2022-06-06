@@ -1,3 +1,4 @@
+# Pytania niesprawdzone z simple testera na dysku
 Lokalny brak żywotności: 
 4
 Ma miejsce, gdy kilka procesów wchodzi jednocześnie do sekcji krytycznej 
@@ -17,7 +18,7 @@ d
 Globalny brak żywotności: 
 4
 Powoduje całkowite zatrzymanie całości (lub części) aplikacji 
-występuje wtedy gdy 2 lub więcej procesów wejdzie do sekcji krytycznej jednocześnie 
+Występuje wtedy gdy 2 lub więcej procesów wejdzie do sekcji krytycznej jednocześnie 
 Polega na głodzeniu części procesów 
 Jest mniej groźny w skutkach niz. lokalny brak żywotności 
 a
@@ -230,3 +231,32 @@ Może wywoływać wszystkie procedury dostępne w programie
 Ma dostęp do wartości dostępnych zmiennych w programie 
 Żadna z odpowiedzi nie jest poprawna 
 e
+
+# Pytania niesprawdzone z 3.pdf z dysku
+Globalny brak żywotności:
+5
+Powoduje całkowite zatrzymanie całości (lub części) aplikacji
+Jest łatwy do zaobserwowania, gdy zaistnieje
+Występuje wtedy gdy 2 lub więcej procesów wejdzie do sekcji krytycznej jednocześnie
+Polega na głodzeniu części procesów
+Jest mniej groźny w skutkach niż lokalny brak żywotności
+ab
+
+Instrukcje atomowe w przetwarzaniu współbieżnym:
+5
+Nie istnieją na żadnym poziomie abstrakcji
+Polegają na współbieżnej realizacji wykonania procedur krytycznych
+Zakłada się ich atomowość na poziomie abstrakcji programowania
+Są realizowane na pewnym poziomie abstrakcji programowania
+Ich implementacja na poziomie systemowym (niższym) jest niepodzielna
+cd
+
+Program współbieżny jest poprawny:
+5
+Gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy
+Posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej
+Wszystkie procesy działają zgodnie ze specyfikacjami
+Żadna z odpowiedzi nie jest poprawna
+Przeprowadzono (formalny) dowód poprawności (dla wszystkich scenariuszy)
+e
+
