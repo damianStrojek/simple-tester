@@ -7,22 +7,21 @@
 #include <ctime>
 #include <algorithm>
 #include <random>
-using namespace std;
 
 struct odpowiedz {
-	string desc;
+	std::string desc;
 	bool isGood;
 };
 
 class CPytanie {
 public:
-	string poprawna;
-	string pytanie;
-	vector<odpowiedz> odpowiedzi;
+	std::string poprawna;
+	std::string pytanie;
+	std::vector<odpowiedz> odpowiedzi;
 	int liczba_wyswietlen;
 
-	CPytanie(string pyt) : pytanie(pyt), liczba_wyswietlen(0) {}
-	void DodajOdp(string& odp) {
+	CPytanie(std::string pyt) : pytanie(pyt), liczba_wyswietlen(0) {}
+	void DodajOdp(std::string& odp) {
 		odpowiedz temp;
 		temp.desc = odp;
 		temp.isGood = false;
@@ -36,16 +35,16 @@ int pyt_sort(const CPytanie& pyt1, const CPytanie& pyt2) {
 }
 
 int bye(int status = 0) {
-	if (status != 0) cout << "BLAD WCZYTYWANIA PLIKU\n";
-	cout << "Naura\n";
+	if (status != 0) std::cout << "BLAD WCZYTYWANIA PLIKU\n";
+	std::cout << "Naura\n";
 
-	string stop;
-	getline(cin, stop);
+	std::string stop;
+	getline(std::cin, stop);
 
 	return status;
 }
 
-string& napraw_ogonki(string& napis) {
+std::string& napraw_ogonki(std::string& napis) {
 #if defined(WINDOWS) || defined(WIN32) || defined(_WIN32)
 	int l = napis.size();
 	for (int i = 0; i < l; ++i) {
@@ -76,26 +75,25 @@ string& napraw_ogonki(string& napis) {
 	return napis;
 }
 
-void debug(vector<CPytanie> pytania) {
+void debug(std::vector<CPytanie> pytania) {
 	for (int i = 0; i < pytania.size(); i++) {
-		cout << pytania[i].pytanie << "\n";
-		for (int j = 0; j < pytania[i].odpowiedzi.size(); j++) cout << (char)(j + 'a') << ". " << pytania[i].odpowiedzi[j].desc << "   |   " << pytania[i].odpowiedzi[j].isGood << "\n\n";
+		std::cout << pytania[i].pytanie << "\n";
+		for (int j = 0; j < pytania[i].odpowiedzi.size(); j++) std::cout << (char)(j + 'a') << ". " << pytania[i].odpowiedzi[j].desc << "   |   " << pytania[i].odpowiedzi[j].isGood << "\n\n";
 	}
 }
 
 int main(int argc, char* argv[]) {
-	cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
-	cout << "Tester ver 1.1" << endl;
-	cout << "Lemm @ 2012 in association with DS @ 2022 AND PG @ 2022" << endl;
-	vector<CPytanie> pytania;
-	ifstream plik("baza.txt", ifstream::in);
-	string temp, odp, ver, temp2, finaltemp;
+	std::cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
+	std::cout << "Tester ver 1.1\nLemm @ 2012 in association with DS @ 2022 AND PG @ 2022\n";
+	std::vector<CPytanie> pytania;
+	std::ifstream plik("baza.txt", std::ifstream::in);
+	std::string temp, odp, ver, temp2, finaltemp;
 	int lodpowiedzi, lpytan = 0;
 
 	if (!plik.good()) return bye(1);
 	while (plik.good()) {
 		getline(plik, temp);
-		
+
 		if (!temp.empty()) {
 			// Stworzenie nowego pytania o danej tresci
 			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
@@ -129,31 +127,31 @@ int main(int argc, char* argv[]) {
 	}
 
 	//debug(pytania);
-	cout << "Ilosc zaladowanych pytan: " << lpytan << "\n";
-	cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
-	string ans;
-	getline(cin, ans);
+	std::cout << "Ilosc zaladowanych pytan: " << lpytan << "\n";
+	std::cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
+	std::string ans;
+	getline(std::cin, ans);
 	int nrpyt = 0, poprawne = 0, indeks = 0;
 	srand(time(NULL));
 	auto rng = std::default_random_engine{};
 	int los = 0;
 	while (true) {
-		cout << "\nTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
-		
+		std::cout << "\nTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
+
 		// Niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
 		// Jeżeli doszło do sytuacji "przemielenia" wszystkich pytań to randomizujemy całą bazę żeby nie bylo powtorek przez chwile
 		if (nrpyt % lpytan == 0) std::shuffle(std::begin(pytania), std::end(pytania), rng);
 		else sort(pytania.begin(), pytania.end(), pyt_sort);
 		int los = rand() % (pytania.size()) / 4;
 
-		cout << pytania[los].pytanie << "\n";
+		std::cout << pytania[los].pytanie << "\n";
 		int lpyt = pytania[los].odpowiedzi.size();
 
 		std::shuffle(std::begin(pytania[los].odpowiedzi), std::end(pytania[los].odpowiedzi), rng);
 
-		for (int i = 0; i < lpyt; i++) cout << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
+		for (int i = 0; i < lpyt; i++) std::cout << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
 
-		getline(cin, ans);
+		getline(std::cin, ans);
 
 		int sum = 0;
 		for (int i = 0; i < pytania[los].odpowiedzi.size(); i++)
@@ -168,10 +166,10 @@ int main(int argc, char* argv[]) {
 					continue;
 				}
 				else {
-					cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+					std::cout << "      To niestety zla odpowiedz. Poprawne to: \n";
 					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
 						if (pytania[los].odpowiedzi[j].isGood)
-							cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
+							std::cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
 					check = true;
 					break;
 				}
@@ -179,14 +177,13 @@ int main(int argc, char* argv[]) {
 		}
 
 		if (sum > 0 && !check) {
-			cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+			std::cout << "      To niestety zla odpowiedz. Poprawne to: \n";
 			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
-				if (pytania[los].odpowiedzi[j].isGood)
-					cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
+				if (pytania[los].odpowiedzi[j].isGood) std::cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
 			check = true;
 		}
 		else if (!check) {
-			cout << "      Brawo! To byla poprawna odpowiedz.\n";
+			std::cout << "      Brawo! To byla poprawna odpowiedz.\n";
 			poprawne++;
 		}
 
