@@ -8,10 +8,10 @@ d
 
 Lokalny brak żywotności: 
 4
-powoduje całkowite zatrzymanie całości (lub części) aplikacji, 
-występuje wtedy gdy 2 lub więcej procesów wejdzie do sekcji krytycznej jednocześnie 
-polega na głodzeniu części procesów, może być to stwierdzone poprzez testowanie 
-jeżeli aplikacja jest niepoprawna, to może wystąpić lub nie 
+Powoduje całkowite zatrzymanie całości (lub części) aplikacji, 
+Występuje wtedy gdy 2 lub więcej procesów wejdzie do sekcji krytycznej jednocześnie 
+Polega na głodzeniu części procesów, może być to stwierdzone poprzez testowanie 
+Jeżeli aplikacja jest niepoprawna, to może wystąpić lub nie 
 d
 
 Globalny brak żywotności: 
@@ -24,10 +24,10 @@ a
 
 Globalny brak żywotności (deadlock): 
 4
-ma miejsce, gdy kilka procesów wchodzi jednocześnie do sekcji krytycznej, 
-polega na zaobserwowaniu chwilowego zatrzymania pracy części procesów aplikacji współbieżnej 
-to sytuacja, gdy kilka procesów jest czasowo wykluczonych 
-można to jednoznacznie stwierdzić przy obserwacji zachowania procesów   
+Ma miejsce, gdy kilka procesów wchodzi jednocześnie do sekcji krytycznej, 
+Polega na zaobserwowaniu chwilowego zatrzymania pracy części procesów aplikacji współbieżnej 
+To sytuacja, gdy kilka procesów jest czasowo wykluczonych 
+Można to jednoznacznie stwierdzić przy obserwacji zachowania procesów   
 d
 
 Instrukcje atomowe w przetwarzaniu współbieżnym: 
@@ -40,10 +40,10 @@ c
 
 Instrukcje atomowe w przetwarzaniu współbieżnym: 
 4
-nie istnieją na żadnym poziomie abstrakcji 
-polegają na współbieżnej realizacji wykonania procedur krytycznych 
-ich implementacja na poziomie systemowym (niższym) jest niepodzielna 
-żadna z odpowiedzi nie jest poprawna 
+Nie istnieją na żadnym poziomie abstrakcji 
+Polegają na współbieżnej realizacji wykonania procedur krytycznych 
+Ich implementacja na poziomie systemowym (niższym) jest niepodzielna 
+Żadna z odpowiedzi nie jest poprawna 
 d
 
 Program współbieżny jest poprawny: 
@@ -56,10 +56,10 @@ d
 
 Program współbieżny jest poprawny: 
 4
-gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy, 
-posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
-wszystkie procesy działają zgodnie ze specyfikacjami 
-wszystkie odpowiedzi są błędne 
+Gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy, 
+Posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
+Wszystkie procesy działają zgodnie ze specyfikacjami 
+Wszystkie odpowiedzi są błędne 
 d
 
 Semafor binarny: 
@@ -72,15 +72,15 @@ b
 
 Semafor uogólniony 
 4
-operacje podnoszenia i opuszczania nie są dla niego atomowe 
-przyjmuje wartości dodatnie oraz 0, a gdy opuszczony to ujemne 
-na podstawie jego wartości aplikacja określa jego stan 
-można go wykorzystać do kontroli dostępu wyjścia do sekcji krytycznej 
+Operacje podnoszenia i opuszczania nie są dla niego atomowe 
+Przyjmuje wartości dodatnie oraz 0, a gdy opuszczony to ujemne 
+Na podstawie jego wartości aplikacja określa jego stan 
+Można go wykorzystać do kontroli dostępu wyjścia do sekcji krytycznej 
 d
 
 Monitory: 
 4
-to obiekty aktywne mogą realizować operacje współbieżne 
+To obiekty aktywne mogą realizować operacje współbieżne 
 Mogą posiadać stan (zmienne) oraz dostarczają współdzielonych procedur 
 Proces jeżeli rozpocznie wykonywanie procedury monitora to na pewno ją zakończy 
 Dwa procesy mogą być w monitorze, jeden wykonuje procedurę "wait", drugi "signal" 
@@ -88,10 +88,10 @@ b
 
 Monitory: 
 4
-to obiekty pasywne, mogą realizować procedury współbieżne 
-nie mogą posiadać stanu (zmiennych), dostarczają tylko współdzielonych procedur 
-proces jeżeli rozpocznie procedurę monitora to ją zakończy w określonym czasie 
-wykonując procedurę wait proces zawsze zatrzymuje się 
+To obiekty pasywne, mogą realizować procedury współbieżne 
+Nie mogą posiadać stanu (zmiennych), dostarczają tylko współdzielonych procedur 
+Proces jeżeli rozpocznie procedurę monitora to ją zakończy w określonym czasie 
+Wykonując procedurę wait proces zawsze zatrzymuje się 
 d
 
 Operacje na zmiennej typu condition: 
@@ -99,15 +99,15 @@ Operacje na zmiennej typu condition:
 Implementują koncepcje semafora w procedurach monitorowych 
 Po sprawdzeniu warunku condition proces jest wstrzymywany lub nie 
 Są zmienne do operacji semaforowych w programowaniu współbieżnym 
-żadna z odpowiedzi nie jest poprawna 
+Żadna z odpowiedzi nie jest poprawna 
 d
 
 Operacje na zmiennej typu condition: 
 4
-implementują koncepcję współbieżności w wielowejściowych procedurach monitorowych 
-po sprawdzeniu warunku condition proces może zostać wstrzymany 
-wykonywane są w sposób wykluczający 
-są zamienne do operacji semaforowych w programowaniu współbieżnym 
+Implementują koncepcję współbieżności w wielowejściowych procedurach monitorowych 
+Po sprawdzeniu warunku condition proces może zostać wstrzymany 
+Wykonywane są w sposób wykluczający 
+Są zamienne do operacji semaforowych w programowaniu współbieżnym 
 c
 
 Monitory w zestawieniu z semaforami 
@@ -120,10 +120,10 @@ c
 
 Monitory w zestawieniu z semaforami 
 4
-są efektywniejsze i powodują wyższy stopień faktycznej współbieżności 
-występują w klasycznym (czystym) języku C 
-są niepraktyczne ze względu na skomplikowaną implementację operacji wykluczających 
-żadna odpowiedź nie jest prawdziwa 
+Są efektywniejsze i powodują wyższy stopień faktycznej współbieżności 
+Występują w klasycznym (czystym) języku C 
+Są niepraktyczne ze względu na skomplikowaną implementację operacji wykluczających 
+Żadna odpowiedź nie jest prawdziwa 
 d
 
 Wątek w odróżnieniu od procesu: 
@@ -136,10 +136,10 @@ d
 
 Wątek w odróżnieniu od procesu: 
 4
-nie posiada własnego wskaźnika stosu 
-może wywoływać wszystkie procedury dostępne w programie 
-ma dostęp do wartości dostępnych zmiennych w programie 
-żadna odpowiedź nie jest poprawna 
+Nie posiada własnego wskaźnika stosu 
+Może wywoływać wszystkie procedury dostępne w programie 
+Ma dostęp do wartości dostępnych zmiennych w programie 
+Żadna odpowiedź nie jest poprawna 
 d
 
 Procesy w środowisku LINDA synchronizują się: 
