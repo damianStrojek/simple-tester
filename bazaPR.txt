@@ -231,7 +231,7 @@ Ma dostęp do wartości dostępnych zmiennych w programie
 Żadna z odpowiedzi nie jest poprawna 
 e
 
-Globalny brak żywotności:
+Globalny brak żywotności (2 odpowiedzi poprawne):
 5
 Powoduje całkowite zatrzymanie całości (lub części) aplikacji
 Jest łatwy do zaobserwowania, gdy zaistnieje
@@ -240,7 +240,7 @@ Polega na głodzeniu części procesów
 Jest mniej groźny w skutkach niż lokalny brak żywotności
 ab
 
-Instrukcje atomowe w przetwarzaniu współbieżnym:
+Instrukcje atomowe w przetwarzaniu współbieżnym (2 odpowiedzi poprawne):
 5
 Nie istnieją na żadnym poziomie abstrakcji
 Polegają na współbieżnej realizacji wykonania procedur krytycznych
@@ -258,7 +258,7 @@ Wszystkie procesy działają zgodnie ze specyfikacjami
 Przeprowadzono (formalny) dowód poprawności (dla wszystkich scenariuszy)
 e
 
-Semafor binarny:
+Semafor binarny (2 odpowiedzi poprawne):
 5
 Nie można go podnosić, gdy jest podniesiony
 Operacje podnoszenia i opuszczania są dla niego atomowe
