@@ -1,4 +1,3 @@
-# Pytania niesprawdzone z simple testera na dysku
 Lokalny brak żywotności: 
 4
 Ma miejsce, gdy kilka procesów wchodzi jednocześnie do sekcji krytycznej 
@@ -232,7 +231,6 @@ Ma dostęp do wartości dostępnych zmiennych w programie
 Żadna z odpowiedzi nie jest poprawna 
 e
 
-# Pytania niesprawdzone z 3.pdf z dysku
 Globalny brak żywotności:
 5
 Powoduje całkowite zatrzymanie całości (lub części) aplikacji
