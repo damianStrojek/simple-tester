@@ -274,3 +274,11 @@ Mogą być zrealizowane poprawnie przy pomocy semaforów lub monitorów
 Nie mogą być zrealizowane poprawnie w środowisku LINDU
 Problemy te nie dotyczą zagadnień związanych z omawianą tematyką
 b
+
+Jako przykład miary obciążenia procesora w stacji roboczej mogącej być podstawą do równoważenia tego obciążenia może być:
+4
+Systemowy miernik obciążenia podający obciążenie procesora w %
+Ważona liczba procesów oczekujących w kolejce do zasobów 
+Ważona liczba procesów w kolejce procesów aktywnych
+Ilość otwartych połączeń internetowych
+c
