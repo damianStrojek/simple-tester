@@ -144,7 +144,7 @@ d
 
 Procesy w środowisku LINDA synchronizują się: 
 4
-Poprzez przestrzeń krotek bezpośrednio nadawca-adresat 
+Poprzez przestrzeń krotek: bezpośrednio nadawca-adresat 
 Nie mogą się synchronizować z natury stosowanych mechanizmów 
 Poprzez przestrzeń krotek: proces wystawia krotkę, którą inny może ew. pobrać 
 Procesy są całkowicie niezależne, mogą być synchronizowane przez proces zarządcy 
@@ -179,10 +179,10 @@ a
 
 Program rozproszony jest poprawny: 
 5
-Gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy 
-Posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
-Wszystkie procesy działają zgodnie ze specyfikacjami 
-Nie można w praktyce pokazać żadnego błędnego scenariusza wykonania  
+gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy 
+gdy posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
+gdy wszystkie procesy działają zgodnie ze specyfikacjami 
+gdy nie można w praktyce pokazać żadnego błędnego scenariusza wykonania  
 Wszystkie odpowiedzi są niepoprawne 
 e
 
@@ -195,7 +195,7 @@ Można go wykorzystywać do kontroli dostępu do sekcji krytycznej
 Wszystkie odpowiedzi są błędne
 d
 
-Monitory: 
+Co jest prawdą jeżeli mówimy o "monitorach"? 
 5
 To obiekty pasywne, eksportują procedury, które mogą być wykonywane jednocześnie 
 Nie posiadają stanu (zmiennych), dostarczają tylko współdzielonych procedur 
