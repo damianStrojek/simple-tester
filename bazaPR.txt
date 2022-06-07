@@ -175,7 +175,7 @@ Polegają na jednoczesnej realizacji wykonania procedur krytycznych
 Ich realizacja na poziomie niższym (np. systemowym) jest niepodzielna 
 Wszystkie wywołania procedur z poziomu niższego są atomowe  
 Żadna z odpowiedzi nie jest poprawna 
-a
+e
 
 Program rozproszony jest poprawny: 
 5
