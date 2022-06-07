@@ -35,8 +35,9 @@ int pyt_sort(const CPytanie& pyt1, const CPytanie& pyt2) {
 }
 
 int bye(int status = 0) {
-	if (status != 0) std::cout << "BLAD WCZYTYWANIA PLIKU\n";
-	std::cout << "Naura\n";
+	if (status) std::cout << "\tBLAD WCZYTYWANIA PLIKU\n";
+	else if (status == 2) std::cout << "\tBLAD WCZYTYWANIA ODPOWIEDZI\n";
+	std::cout << "\tNarazie\n";
 
 	std::string stop;
 	getline(std::cin, stop);
@@ -136,7 +137,7 @@ int main(int argc, char* argv[]) {
 	auto rng = std::default_random_engine{};
 	int los = 0;
 	while (true) {
-		std::cout << "\nTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
+		std::cout << "\n\tTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
 
 		// Niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
 		// Jeżeli doszło do sytuacji "przemielenia" wszystkich pytań to randomizujemy całą bazę żeby nie bylo powtorek przez chwile
@@ -144,12 +145,12 @@ int main(int argc, char* argv[]) {
 		else sort(pytania.begin(), pytania.end(), pyt_sort);
 		int los = rand() % (pytania.size()) / 4;
 
-		std::cout << pytania[los].pytanie << "\n";
+		std::cout << "\t" << pytania[los].pytanie << "\n";
 		int lpyt = pytania[los].odpowiedzi.size();
 
 		std::shuffle(std::begin(pytania[los].odpowiedzi), std::end(pytania[los].odpowiedzi), rng);
 
-		for (int i = 0; i < lpyt; i++) std::cout << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
+		for (int i = 0; i < lpyt; i++) std::cout << "\t\t" << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
 
 		getline(std::cin, ans);
 
@@ -161,15 +162,16 @@ int main(int argc, char* argv[]) {
 		for (int i = 0; i < ans.size(); i++) {
 			if (ans[i] > 96 && ans[i] < 105) {
 				int index = (int)ans[i] - 97;
+				if (index >= pytania[los].odpowiedzi.size()) return bye(2);
 				if (pytania[los].odpowiedzi[index].isGood) {
 					sum--;
 					continue;
 				}
 				else {
-					std::cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+					std::cout << "\t\tTo niestety zla odpowiedz. Poprawne to: \n";
 					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
 						if (pytania[los].odpowiedzi[j].isGood)
-							std::cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
+							std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
 					check = true;
 					break;
 				}
@@ -177,13 +179,13 @@ int main(int argc, char* argv[]) {
 		}
 
 		if (sum > 0 && !check) {
-			std::cout << "      To niestety zla odpowiedz. Poprawne to: \n";
+			std::cout << "\t\tTo niestety zla odpowiedz. Poprawne to: \n";
 			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
-				if (pytania[los].odpowiedzi[j].isGood) std::cout << "            " << pytania[los].odpowiedzi[j].desc << "\n";
+				if (pytania[los].odpowiedzi[j].isGood) std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
 			check = true;
 		}
 		else if (!check) {
-			std::cout << "      Brawo! To byla poprawna odpowiedz.\n";
+			std::cout << "\t\tBrawo! To byla poprawna odpowiedz.\n";
 			poprawne++;
 		}
 
