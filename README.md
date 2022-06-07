@@ -5,7 +5,7 @@ Simple tester made from the source code of @Lemm.
 
 - The questions are randomly selected from the database - if you answered a given question correctly, it goes to the end of the queue and should not appear soon, but if you answered the question incorrectly, it will appear again soon.
 - The answers are also randomly selected, so you always have to read them and enter a different answer.
-- The answer is in the format `a`,` ab`, `bc`,` dec`, etc. Before submitting it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
+- The answer is in the format `a`, `ab`, `bc`, `dec`, etc. Before submitting it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
 
 ## Database
 In order for it to work you need to provide a "baza.txt" ANSI encoded file. 
