@@ -3,7 +3,7 @@ Lokalny brak żywotności:
 Ma miejsce, gdy kilka procesów wchodzi jednocześnie do sekcji krytycznej 
 Polega na całkowitym zatrzymaniu pracy części aplikacji współbieżnej 
 To sytuacja gdy jeden lub kilka procesów jest wykluczony, ale nie wiadomo który 
-Nie można tego definitywnie stwierdzić przy obserwacji (testowaniu) aplikacj
+Nie można tego definitywnie stwierdzić przy obserwacji (testowaniu) aplikacji
 d
 
 Lokalny brak żywotności: 
@@ -56,9 +56,9 @@ d
 
 Program współbieżny jest poprawny: 
 4
-Gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy, 
-Posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
-Wszystkie procesy działają zgodnie ze specyfikacjami 
+gdy realizuje w sposób właściwy zadane operacje dla zadanych scenariuszy, 
+gdy posiada poprawne mechanizmy synchronizacji przy wejściu do sekcji krytycznej 
+gdy wszystkie procesy działają zgodnie ze specyfikacjami 
 Wszystkie odpowiedzi są błędne 
 d
 
@@ -215,7 +215,7 @@ c
 
 Monitory w zestawieniu z semaforami: 
 5
-Są wygodniejsze w zastosowaniu i zapewniają  wyższą efektywność aplikacji 
+Są wygodniejsze w zastosowaniu i zapewniają wyższą efektywność aplikacji 
 Występują w klasycznym (czystym) języku C  
 Są niepraktyczne ze względu na skomplikowaną implementację operacji wykluczających 
 Mogą powodować wstrzymywanie procesów z powodów niezwiązanych ze specyfikacjami 
