@@ -152,6 +152,7 @@ int main(int argc, char* argv[]) {
 
 		for (int i = 0; i < lpyt; i++) std::cout << "\t\t" << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
 
+		std::cout << "\t";
 		getline(std::cin, ans);
 
 		int sum = 0;
