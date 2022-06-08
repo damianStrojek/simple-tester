@@ -24,7 +24,7 @@ public:
 	void DodajOdp(std::string& odp) {
 		odpowiedz temp;
 		temp.desc = odp;
-		temp.isGood = false;
+		temp.isGood = 0;
 		odpowiedzi.push_back(temp);
 	}
 	void Wyswietlono() { liczba_wyswietlen++; }
@@ -118,7 +118,7 @@ int main(int argc, char* argv[]) {
 				for (int i = 0; i < temp.size(); i++) {
 					if (temp[i] > 96 && temp[i] < 105) {
 						int index = (int)temp[i] - 97;
-						nowe.odpowiedzi[index].isGood = true;
+						nowe.odpowiedzi[index].isGood = 1;
 					}
 				}
 				pytania.push_back(nowe);
@@ -135,8 +135,9 @@ int main(int argc, char* argv[]) {
 	int nrpyt = 0, poprawne = 0, indeks = 0;
 	srand(time(NULL));
 	auto rng = std::default_random_engine{};
-	int los = 0;
-	while (true) {
+	// counter - po 2 pytaniach sie czysci ekran
+	int los = 0, counter = 0;
+	while (1) {
 		std::cout << "\n\tTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
 
 		// Niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
@@ -159,7 +160,7 @@ int main(int argc, char* argv[]) {
 		for (int i = 0; i < pytania[los].odpowiedzi.size(); i++)
 			if (pytania[los].odpowiedzi[i].isGood) sum++;
 
-		bool check = false;
+		bool check = 0;
 		for (int i = 0; i < ans.size(); i++) {
 			if (ans[i] > 96 && ans[i] < 105) {
 				int index = (int)ans[i] - 97;
@@ -173,7 +174,7 @@ int main(int argc, char* argv[]) {
 					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
 						if (pytania[los].odpowiedzi[j].isGood)
 							std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
-					check = true;
+					check = 1;
 					break;
 				}
 			}
@@ -183,7 +184,7 @@ int main(int argc, char* argv[]) {
 			std::cout << "\t\tTo niestety zla odpowiedz. Poprawne to: \n";
 			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
 				if (pytania[los].odpowiedzi[j].isGood) std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
-			check = true;
+			check = 1;
 		}
 		else if (!check) {
 			std::cout << "\t\tBrawo! To byla poprawna odpowiedz.\n";
@@ -192,6 +193,14 @@ int main(int argc, char* argv[]) {
 
 		pytania[los].Wyswietlono();
 		nrpyt++;
+
+		// Clear
+		counter++;
+		if (counter == 2) {
+			counter = 0;
+			getline(std::cin, ans);
+			system("cls");
+		}
 	}
 	bye(0);
 	return 0;
