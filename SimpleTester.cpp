@@ -198,6 +198,7 @@ int main(int argc, char* argv[]) {
 		counter++;
 		if (counter == 2) {
 			counter = 0;
+			std::cout << "\t";
 			getline(std::cin, ans);
 			system("cls");
 		}
