@@ -110,20 +110,20 @@ Wykonywane są w sposób wykluczający
 Są zamienne do operacji semaforowych w programowaniu współbieżnym 
 c
 
-Monitory w zestawieniu z semaforami 
+Monitory w zestawieniu z semaforami ...
 4
-Są bardziej efektywne i powodują lepszy stopień faktycznej współbieżności 
-Nie występują w klasycznym (czystym) języku C 
-Są wygodne ze względu na systemową implementację sekcji krytycznej 
-Są dostarczane z poziomu systemowego 
-c
+są bardziej efektywne i powodują lepszy stopień faktycznej współbieżności 
+nie występują w klasycznym (czystym) języku C 
+są wygodne ze względu na systemową implementację sekcji krytycznej 
+są dostarczane z poziomu systemowego 
+bc
 
-Monitory w zestawieniu z semaforami 
+Monitory w zestawieniu z semaforami (2 poprawne odpowiedzi, ale brak pewności co do obu) ...
 4
-Są efektywniejsze i powodują wyższy stopień faktycznej współbieżności 
-Występują w klasycznym (czystym) języku C 
-Są niepraktyczne ze względu na skomplikowaną implementację operacji wykluczających 
-Żadna odpowiedź nie jest prawdziwa 
+są efektywniejsze i powodują wyższy stopień faktycznej współbieżności 
+występują w klasycznym (czystym) języku C 
+są niepraktyczne ze względu na skomplikowaną implementację operacji wykluczających 
+żadna odpowiedź nie jest prawdziwa 
 d
 
 Wątek w odróżnieniu od procesu: 
