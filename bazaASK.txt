@@ -1,0 +1,231 @@
+1. Mail delivery within localhost is done by:
+4
+all answers are correct
+Mail User Agent
+Mail Delivery Agent
+Mail Transfer Agent
+d
+
+2. The command: ssh -L 1234:Appserver:23 username@Sshdserver creates a tunnel that:
+4
+transfers all requests made to port 23 of localhost to port 1234 of Appserver, whole connection is encrypted
+transfers all connections made to port 23 of Sshdserver to port 1234 of Appserver, connection from Sshdserver to Appserver is encrypted
+only encrypts connection from Sshdserver to Appserver
+only encrypts connection from localhost to Sshdserver
+d
+
+3. Active Directory IS NOT:
+4
+equipped with DNS server support
+simple to administer
+equipped with security protocols (like IPsec, Kerberos, SSL)
+100% compatible with LDAP POSIX structure
+b
+
+4. PAM is:
+4
+Pluggable Authorization Modules - kernel module governing user access to home dirs
+Private Access Mechanism - a tool for setting complex access permissions in Linux
+no other answer is correct
+Pluggable Authentication Modules - modular authentication mechanism separating applications from authentication methods
+d
+
+5. LDAP is:
+4
+a database
+a server translating computer hostnames to their IP addresses
+directory service with attribute oriented content
+a library that simplifies user management in Linux
+c
+
+6. User account in Linux can be locked by:
+4
+setting non-existing file as a user shell
+deleting the account 
+revoking read/write permissions from the user home dir
+changing the login
+a
+
+7. BasicAuthentication:
+4
+sends hashed password
+sends login and password in plain text during each request after login in
+can be easily eavesdropped but only while entering the user and password
+uses encrypted connection by defaut
+b
+
+8. .htacess mechanism allows modification of:
+4
+it does not modify anything, it is used for web resources user authentication only
+settings not listed by AllowOverride rule
+every setting of Apache server a
+settings listed by AllowOverride rule
+d
+
+9. How many Named Virtual Hosts served on a SSL encrypted 443 port can be defined when SNI is not supported:
+4
+each virtual host requires dedicated instance of a web server
+virtual hosts cannot be defined for SSL connections
+any number but with common SSL certificate
+one
+d
+
+10. NFS is:
+4
+Network Forwarding System - a firewall commonly used in Linux systems
+Native File System - a file system used in Linux systems, characterized by high efficiency when handling large files
+Network File System - TCP and UDP based protocol for remote file system sharing
+no other answer is correct
+c
+
+11. Quality of Service (QoS):
+4
+all answers are correct
+allows splitting of the bandwidth-across-traffic with higher and lower priority
+extends bandwidth available for the user independent from the number of current network users
+allows extension of a bandwidth without investments in the infrastructure
+b
+
+12. SpamAssasin is responsible for:
+4
+virus detection
+sending mail to the users
+mail filtering based on user rules
+spam detection
+d
+
+13. Group Policy:
+4
+all answers are correct
+can be used to manage remote computers, regardless if it belongs to a domain or not
+is a tool designed for managing local policies of Windows Server
+allows managing policies within the domain
+d
+
+14. Samba:
+4
+is used only for managing users defined in ActiveDirectory on Windows Server machine
+in version 3 can act as NT domain controller and in version 4 can act as Active Directory domain controller
+in version 3 and 4 can act as Active Directory domain controller
+is a simple client for Windows shares
+b
+
+15. How many IP addresses can be assigned to a single network card?
+4
+more than one
+one
+zero
+10000
+a
+
+16. PowerShell:
+4
+is a command line shell similar to bash
+uses objects to transfer data between commandlets
+is a SSH implementation for Windows
+is designed to manage files and folders on a local computer
+b
+
+17. During mail transfer it is possible to encrypt:
+4
+only the moment of mail transfer
+the whole route that the email takes but the user can only be shure about authentication and direct connection to the mail server
+the whole route that the email takes without any added conditions
+only the moment of authentication
+b
+
+18. IPtables is:
+4
+robust stateless firewall
+a tool for managing QoS
+a very simple firewall used by some Linux distributions
+robust packet filter
+d
+
+19. Relaying is used for:
+4
+sending mail to multiple servers
+sending SPAM and viruses - should be always disabled, exists due to historical reasons
+sending and receiving mail via other mail server even if a local server is not accessible from the Internet
+sending mail via any host located behind a firewall
+c
+
+20. /etc/passwd file does not contain:
+4
+user shell
+user password
+username
+default user group
+b
+
+21. Linux kernel is:
+4
+fully modular
+hybrid as any kernel parameter can be compiled as a module or compiled statically into the kernel
+monolithic
+monolithic with loadable modules
+d
+
+22. DHCP server:
+4
+can assign up to 254 IP addresses from 192.168.0.1 - 192.168.0.254 range
+assigned IP address is always different
+can assign an IP address only based on the computer hostname
+allows auto configuration of network enabled devices with settings like IP address, network mask, gateway, hostname
+d
+
+23. Mark false statement about web server virtual hosts:
+4
+each VirtualHost requires dedicated Apache instance
+VirtualHosts allow serving of any number of domains using single IP address and port number
+domain name is located in the HTTP request header
+each domain served by a VirtualHost needs to have a DNS entry pointing to the web server IP address
+a
+
+24. In Linux user passwords are stored:
+4
+encrypted using public and privet keys pair
+encrypted using root user's password
+encrypted using a hash function
+in plain-text form in /etc/passwd file
+c
+
+25. A kernel is:
+4
+a program loaded during operating system start
+a basic program of the operating system
+all answers are correct
+a program that works as a proxy between software and the hardware by providing drivers and procedures
+c
+
+26. The Apache server administrator can limit usage of .htaccess by:
+4
+placing AllowOverride list of rules that can be overwritten in .htaccess rule in the main configuration file of the Apache server
+revoking write access to directories with web pages
+placing htaccess.conf file in Apache Serverlioot direetery-with entries like Restrict: <blocked rule>
+you cannot limit this mechanism
+a
+
+27. Kerberos protocol:
+4
+requires strict time synchronization
+is used to synchronize time between hosts
+does not require time synchronization as it is login and password based
+is used for remote logs monitoring
+a
+
+28. Aliases defined in "aliases" file allows:
+4
+any modification of user mail addresses
+translation of user names into DNS domain names
+changing name of mail server
+introduction of alternative email addresses within the same domain
+d
+
+29. In DNS servers we DO NOT define:
+4
+a forward lookup zone
+a reverse lookup zone
+a root hint server
+a demilitarized zone
+d

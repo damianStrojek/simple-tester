@@ -1,3 +1,4 @@
+// This code is really random lol
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -87,7 +88,12 @@ int main(int argc, char* argv[]) {
 	std::cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
 	std::cout << "Tester ver 1.1\nLemm @ 2012 in association with DS @ 2022 AND PG @ 2022\n";
 	std::vector<CPytanie> pytania;
-	std::ifstream plik("baza.txt", std::ifstream::in);
+		
+	std::string baza;
+	std::cout << "\nPodaj nazwę pliku z bazą danych (format ANSI): ";
+	std::cin >> baza;
+
+	std::ifstream plik(baza, std::ifstream::in);
 	std::string temp, odp, ver, temp2, finaltemp;
 	int lodpowiedzi, lpytan = 0;
 
@@ -153,7 +159,7 @@ int main(int argc, char* argv[]) {
 
 		for (int i = 0; i < lpyt; i++) std::cout << "\t\t" << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
 
-		std::cout << "\t";
+		std::cout << "\tOdpowiedz: ";
 		getline(std::cin, ans);
 
 		int sum = 0;
