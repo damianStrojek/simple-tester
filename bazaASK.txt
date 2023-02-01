@@ -1,118 +1,118 @@
-Dostarczanie poczty po localhoœcie jest obs³ugiwane przez:
+Dostarczanie poczty po localhoÅ›cie jest obsÅ‚ugiwane przez:
 4
-wszystkie odpowiedzi s¹ prawid³owe
+wszystkie odpowiedzi sÄ… prawidÅ‚owe
 Mail User Agent (MUA) 
 Mail Delivery Agent (MDA)
 Mail Transfer Agent (MTA)
 c
 
-Komenda: ssh -L 1234:Appserver:23 username@Sshdserver tworzy tunel, który:
+Komenda: ssh -L 1234:Appserver:23 username@Sshdserver tworzy tunel, ktÃ³ry:
 4
-przesy³a wszystkie utworzone ¿¹dania do portu 23 localhosta do portu 1234 Appservera, ca³e po³¹czenie jest szyfrowane
-przesy³a wszystkie utworzone po³¹czenia do portu 23 Sshdservera do portu 1234 Appservera, po³¹czenia z Sshdserver do Appserver jest szyfrowane 
-szyfruje tylko po³¹czenie z Sshdservera do Appservera
-szyfruje tylko po³¹czenie z localhosta do Sshdservera
+przesyÅ‚a wszystkie utworzone Å¼Ä…dania do portu 23 localhosta do portu 1234 Appservera, caÅ‚e poÅ‚Ä…czenie jest szyfrowane
+przesyÅ‚a wszystkie utworzone poÅ‚Ä…czenia do portu 23 Sshdservera do portu 1234 Appservera, poÅ‚Ä…czenia z Sshdserver do Appserver jest szyfrowane 
+szyfruje tylko poÅ‚Ä…czenie z Sshdservera do Appservera
+szyfruje tylko poÅ‚Ä…czenie z localhosta do Sshdservera
 d
 
 Active Directory NIE JEST:
 4
-wyposa¿one w wsparcie dla serwera DNS
-³atwe w administrowaniu
-wyposa¿one w protoko³y zabezpieczeñ (np. IPsec, Kerberos, SSL)
-w 100% kompatybilne ze struktur¹ LDAP POSIX
+wyposaÅ¼one w wsparcie dla serwera DNS
+Å‚atwe w administrowaniu
+wyposaÅ¼one w protokoÅ‚y zabezpieczeÅ„ (np. IPsec, Kerberos, SSL)
+w 100% kompatybilne ze strukturÄ… LDAP POSIX
 d
 
 PAM to:
 4
-Pluggable Authorization Modules - modu³ j¹dra reguluj¹cy dostêp u¿ytkowników do katalogów domowych
-Private Access Mechanism - narzêdzie do nadawania z³o¿onych praw dostêpu w Linuksie
-¿adna odpowiedŸ nie jest prawid³owa
-Pluggable Authentication Modules - modu³owy mechanizm uwierzytelniania oddzielaj¹cy aplikacje od metod uwierzytelniania
+Pluggable Authorization Modules - moduÅ‚ jÄ…dra regulujÄ…cy dostÄ™p uÅ¼ytkownikÃ³w do katalogÃ³w domowych
+Private Access Mechanism - narzÄ™dzie do nadawania zÅ‚oÅ¼onych praw dostÄ™pu w Linuksie
+Å¼adna odpowiedÅº nie jest prawidÅ‚owa
+Pluggable Authentication Modules - moduÅ‚owy mechanizm uwierzytelniania oddzielajÄ…cy aplikacje od metod uwierzytelniania
 d
 
 LDAP to:
 4
 baza danych
-serwer dokonuj¹cy translacji nazw hostów na ich adresy IP
-us³uga katalogowa z treœci¹ skierowan¹ na atrybuty
-biblioteka, która u³atwia zarz¹dzanie u¿ytkownikami w Linuksie
+serwer dokonujÄ…cy translacji nazw hostÃ³w na ich adresy IP
+usÅ‚uga katalogowa z treÅ›ciÄ… skierowanÄ… na atrybuty
+biblioteka, ktÃ³ra uÅ‚atwia zarzÄ…dzanie uÅ¼ytkownikami w Linuksie
 c
 
-Konto u¿ytkownika w Linuksie mo¿e byæ zablokowane przez:
+Konto uÅ¼ytkownika w Linuksie moÅ¼e byÄ‡ zablokowane przez:
 4
-ustawienie nieistniej¹cego pliku jako pow³oka u¿ytkownika
-usuniêcie konta
-wyw³aszczenie prawa odczytu/zapisu z katalogu domowego u¿ytkownika
-zmianê loginu
+ustawienie nieistniejÄ…cego pliku jako powÅ‚oka uÅ¼ytkownika
+usuniÄ™cie konta
+wywÅ‚aszczenie prawa odczytu/zapisu z katalogu domowego uÅ¼ytkownika
+zmianÄ™ loginu
 a
 
 BasicAuthentication:
 4
-wysy³a zahaszowane has³o
-wysy³a login i has³o w plain tekœcie podczas ka¿dego ¿¹dania po zalogowaniu
-mo¿e byæ ³atwo pods³uchiwane, ale tylko podczas wprowadzania u¿ytkownika i has³a
-standardowo u¿ywa zaszyfrowanego po³¹czenia
+wysyÅ‚a zahaszowane hasÅ‚o
+wysyÅ‚a login i hasÅ‚o w plain tekÅ›cie podczas kaÅ¼dego Å¼Ä…dania po zalogowaniu
+moÅ¼e byÄ‡ Å‚atwo podsÅ‚uchiwane, ale tylko podczas wprowadzania uÅ¼ytkownika i hasÅ‚a
+standardowo uÅ¼ywa zaszyfrowanego poÅ‚Ä…czenia
 b
 
-Mechanizm .htacess pozwala na modyfikacjê:
+Mechanizm .htacess pozwala na modyfikacjÄ™:
 4
-nie modyfikuje niczego, jest u¿ywane tylko do zasobów sieciowych uwierzytelnianych przez u¿ytkownika
-ustawieñ niezapisanych w regule AllowOverride
-wszystkich ustawieñ serwera Apache
-ustawieñ zapisanych w regule AllowOverride
+nie modyfikuje niczego, jest uÅ¼ywane tylko do zasobÃ³w sieciowych uwierzytelnianych przez uÅ¼ytkownika
+ustawieÅ„ niezapisanych w regule AllowOverride
+wszystkich ustawieÅ„ serwera Apache
+ustawieÅ„ zapisanych w regule AllowOverride
 d
 
-Ile Nazwanych Hostów Wirtualnych ustawionych na zaszyfrowanym porcie 443 us³ugi SSL mo¿e zostaæ zdefiniowanych, kiedy SNI nie jest wspierane?
+Ile Nazwanych HostÃ³w Wirtualnych ustawionych na zaszyfrowanym porcie 443 usÅ‚ugi SSL moÅ¼e zostaÄ‡ zdefiniowanych, kiedy SNI nie jest wspierane?
 4
-ka¿dy host wirtualny wymaga dedykowanej instancji serwera webowego
-hosty wirtualne nie mog¹ byæ zdefiniowane dla po³¹czeñ SSL
-ka¿da ich liczba, ale ze wspólnym certyfikatem SSL
+kaÅ¼dy host wirtualny wymaga dedykowanej instancji serwera webowego
+hosty wirtualne nie mogÄ… byÄ‡ zdefiniowane dla poÅ‚Ä…czeÅ„ SSL
+kaÅ¼da ich liczba, ale ze wspÃ³lnym certyfikatem SSL
 jeden
 c
 
 NFS to:
 4
-Network Forwarding System - firewall u¿ywany typowo w systemach Linux
-Native File System - system plików u¿ywany w Linuksie, charakteryzuj¹cy siê wysok¹ wydajnoœci¹ dla du¿ych plików
-Network File System - protokó³ oparty o TCP oraz UDP do zdalnego udostêpniania zasobów dyskowych
-¿adna odpowiedŸ nie jest prawid³owa
+Network Forwarding System - firewall uÅ¼ywany typowo w systemach Linux
+Native File System - system plikÃ³w uÅ¼ywany w Linuksie, charakteryzujÄ…cy siÄ™ wysokÄ… wydajnoÅ›ciÄ… dla duÅ¼ych plikÃ³w
+Network File System - protokÃ³Å‚ oparty o TCP oraz UDP do zdalnego udostÄ™pniania zasobÃ³w dyskowych
+Å¼adna odpowiedÅº nie jest prawidÅ‚owa
 c
 
 Quality of Service (QoS):
 4
-wszystkie odpowiedzi s¹ prawid³owe
-umo¿liwia rozdzielanie pasma dla ruchu sieciowego o wy¿szym oraz ni¿szym priorytecie
-rozszerza pasmo przeznaczone dla u¿ytkownika niezale¿nie od liczby u¿ytkowników w sieci
-umo¿liwia rozszerzenie pasma bez koniecznoœci ulepszania infrastruktury
+wszystkie odpowiedzi sÄ… prawidÅ‚owe
+umoÅ¼liwia rozdzielanie pasma dla ruchu sieciowego o wyÅ¼szym oraz niÅ¼szym priorytecie
+rozszerza pasmo przeznaczone dla uÅ¼ytkownika niezaleÅ¼nie od liczby uÅ¼ytkownikÃ³w w sieci
+umoÅ¼liwia rozszerzenie pasma bez koniecznoÅ›ci ulepszania infrastruktury
 b
 
 SpamAssasin jest odpowiedzialny za:
 4
-wykrywanie wirusów
-wysy³anie maili do u¿ytkowników
-filtrowanie maili w oparciu o regu³y u¿ytkownika
-detekcjê spamu
+wykrywanie wirusÃ³w
+wysyÅ‚anie maili do uÅ¼ytkownikÃ³w
+filtrowanie maili w oparciu o reguÅ‚y uÅ¼ytkownika
+detekcjÄ™ spamu
 d
 
 Zasady grupy (Group Policy):
 4
-wszystkie odpowiedzi s¹ prawid³owe
-mog¹ byæ u¿ywane do zarz¹dzania komputerami zdalnymi, bez znaczenia czy nale¿¹ do domeny czy nie
-to narzêdzie przeznaczone do zarz¹dzania lokalnymi zasadami systemu Windows Server
-zezwala na zarz¹dzanie regu³ami w domenie
+wszystkie odpowiedzi sÄ… prawidÅ‚owe
+mogÄ… byÄ‡ uÅ¼ywane do zarzÄ…dzania komputerami zdalnymi, bez znaczenia czy naleÅ¼Ä… do domeny czy nie
+to narzÄ™dzie przeznaczone do zarzÄ…dzania lokalnymi zasadami systemu Windows Server
+zezwala na zarzÄ…dzanie reguÅ‚ami w domenie
 d
 
 Samba:
 4
-jest u¿ywana tylko do zarz¹dzania u¿ytkownikami zdefiniowanymi w ActiveDirectory na maszynie z Windows Server
-w wersji 3-ciej dzia³a jak kontroler domeny NT, a wersji 4-tej dzia³a jak kontroler domeny Active Directory
-w wersji 3-ciej oraz 4-tej dzia³a jak kontroler domeny Active Directory
-jest prostym programem dla udostêpniania w Windowsie
+jest uÅ¼ywana tylko do zarzÄ…dzania uÅ¼ytkownikami zdefiniowanymi w ActiveDirectory na maszynie z Windows Server
+w wersji 3-ciej dziaÅ‚a jak kontroler domeny NT, a wersji 4-tej dziaÅ‚a jak kontroler domeny Active Directory
+w wersji 3-ciej oraz 4-tej dziaÅ‚a jak kontroler domeny Active Directory
+jest prostym programem dla udostÄ™pniania w Windowsie
 b
 
-Ile adresów IP mo¿e zostaæ przydzielonych do pojedynczej karty sieciowej?
+Ile adresÃ³w IP moÅ¼e zostaÄ‡ przydzielonych do pojedynczej karty sieciowej?
 4
-wiêcej ni¿ jedna
+wiÄ™cej niÅ¼ jedna
 jedna
 zero
 10000
@@ -120,122 +120,122 @@ a
 
 PowerShell:
 4
-jest konsol¹ linii poleceñ podobn¹ do basha
-u¿ywa obiektów do przesy³ania danych pomiêdzy komendami (commandlets)
-jest implementacj¹ SSH dla Windowsa
-jest zaprojektowany do zarz¹dzania plikami oraz folderami na komputerze lokalnym
+jest konsolÄ… linii poleceÅ„ podobnÄ… do basha
+uÅ¼ywa obiektÃ³w do przesyÅ‚ania danych pomiÄ™dzy komendami (commandlets)
+jest implementacjÄ… SSH dla Windowsa
+jest zaprojektowany do zarzÄ…dzania plikami oraz folderami na komputerze lokalnym
 b
 
-Podczas przesy³ania maila mo¿liwe jest szyfrowanie:
+Podczas przesyÅ‚ania maila moÅ¼liwe jest szyfrowanie:
 4
-tylko w czasie przesy³ania maila
-ca³ej trasy, któr¹ mail przechodzi, ale u¿ytkownik mo¿e mieæ pewnoœæ tylko uwierzytelnianiaj¹c siê i bezpoœrednio ³¹cz¹c siê do serwera pocztowego
-ca³ej trasy, któr¹ mail przechodzi bez dodatkowych warunków
+tylko w czasie przesyÅ‚ania maila
+caÅ‚ej trasy, ktÃ³rÄ… mail przechodzi, ale uÅ¼ytkownik moÅ¼e mieÄ‡ pewnoÅ›Ä‡ tylko uwierzytelnianiajÄ…c siÄ™ i bezpoÅ›rednio Å‚Ä…czÄ…c siÄ™ do serwera pocztowego
+caÅ‚ej trasy, ktÃ³rÄ… mail przechodzi bez dodatkowych warunkÃ³w
 tylko w momencie uwierzytelniania
 b
 
 IPtables to
 4
 solidny, bezstanowy firewall
-narzêdzie do zarz¹dzania QoS
-bardzo prosty firewall u¿ywany przez niektóre dystrybucje Linuxa
-solidny filtr pakietów
+narzÄ™dzie do zarzÄ…dzania QoS
+bardzo prosty firewall uÅ¼ywany przez niektÃ³re dystrybucje Linuxa
+solidny filtr pakietÃ³w
 d
 
-Przekazywanie (relaying) jest u¿ywane do:
+Przekazywanie (relaying) jest uÅ¼ywane do:
 4
-wysy³ania maila do wielu serwerów
-wysy³ania spamu i wirusów - powinno byæ zawsze wy³¹czone, istnieje tylko z powodów zasz³oœciowych
-wysy³ania i odbierania maili przez inny serwer pocztowy, nawet jeœli lokalny serwer nie jest dostêpny w Internecie
-wysy³ania maili przez jakiegokolwiek hosta znajduj¹cego siê za firewallem
+wysyÅ‚ania maila do wielu serwerÃ³w
+wysyÅ‚ania spamu i wirusÃ³w - powinno byÄ‡ zawsze wyÅ‚Ä…czone, istnieje tylko z powodÃ³w zaszÅ‚oÅ›ciowych
+wysyÅ‚ania i odbierania maili przez inny serwer pocztowy, nawet jeÅ›li lokalny serwer nie jest dostÄ™pny w Internecie
+wysyÅ‚ania maili przez jakiegokolwiek hosta znajdujÄ…cego siÄ™ za firewallem
 c
 
 plik /etc/passwd nie zawiera:
 4
-pow³oki u¿ytkownika 
-has³a u¿ytkownika 
-nazwy u¿ytkownika
+powÅ‚oki uÅ¼ytkownika 
+hasÅ‚a uÅ¼ytkownika 
+nazwy uÅ¼ytkownika
 standardowej nazwy grupy
 b
 
-J¹dro Linuksa jest:
+JÄ…dro Linuksa jest:
 4
-w pe³ni modularne
-hybryd¹, bo ka¿dy parametr j¹dra mo¿e byæ skompilowany jako modu³ lub skompilowany staycznie do j¹dra
+w peÅ‚ni modularne
+hybrydÄ…, bo kaÅ¼dy parametr jÄ…dra moÅ¼e byÄ‡ skompilowany jako moduÅ‚ lub skompilowany staycznie do jÄ…dra
 jednolite (monolityczne)
-jednolite z mo¿liwymi modu³ami do wgrania
+jednolite z moÅ¼liwymi moduÅ‚ami do wgrania
 d
 
 Serwer DHCP
 4
-mo¿e przypisaæ do 254 adresów IP w zakresie 192.168.0.1 - 192.168.0.254 
+moÅ¼e przypisaÄ‡ do 254 adresÃ³w IP w zakresie 192.168.0.1 - 192.168.0.254 
 przypisanie adresu IP jest zawsze trudne
-mo¿e przypisaæ adres IP tylko w oparciu o nazwê hosta komputera
-pozwala na automatyczn¹ konfiguracjê ustawieñ aktywnych urz¹dzeñ sieciowych takich jak IP, maska sieciowa, brama domyœlna, nazwa hosta
+moÅ¼e przypisaÄ‡ adres IP tylko w oparciu o nazwÄ™ hosta komputera
+pozwala na automatycznÄ… konfiguracjÄ™ ustawieÅ„ aktywnych urzÄ…dzeÅ„ sieciowych takich jak IP, maska sieciowa, brama domyÅ›lna, nazwa hosta
 d
 
-Zaznacz FA£SZYWE zdanie o wirtualnych hostach w serwerze webowym
+Zaznacz FAÅSZYWE zdanie o wirtualnych hostach w serwerze webowym
 4
-ka¿dy wirtualny host (VirtualHost) wymaga dedykowanej instancji serwera Apache
-wirtualne hosty (VirtualHosts) pozwalaj¹ na obs³ugê dowolnej liczby domen, wykorzystuj¹c pojedynczy adres IP i numer portu
-nazwa domeny jest przechowywana w nag³ówku ¿¹dania HTTP
-ka¿da domena obs³ugiwana przez wirtualnego hosta (VirtualHost) wymaga posiadania wpisu DNS, okreœlaj¹cego adres IP serwera webowego
+kaÅ¼dy wirtualny host (VirtualHost) wymaga dedykowanej instancji serwera Apache
+wirtualne hosty (VirtualHosts) pozwalajÄ… na obsÅ‚ugÄ™ dowolnej liczby domen, wykorzystujÄ…c pojedynczy adres IP i numer portu
+nazwa domeny jest przechowywana w nagÅ‚Ã³wku Å¼Ä…dania HTTP
+kaÅ¼da domena obsÅ‚ugiwana przez wirtualnego hosta (VirtualHost) wymaga posiadania wpisu DNS, okreÅ›lajÄ…cego adres IP serwera webowego
 a
 
-W Linuksie has³a u¿ytkownika przechowywane s¹ przechowywane:
+W Linuksie hasÅ‚a uÅ¼ytkownika przechowywane sÄ… przechowywane:
 4
-z szyfrowaniem par¹ kluczy prywatnego i publicznego
-z szyfrowaniem u¿ywaj¹c has³a roota
-z szyfrowaniem u¿ywaj¹c funkcji hashuj¹cych
-w plain tekœcie w pliku /etc/passwd 
+z szyfrowaniem parÄ… kluczy prywatnego i publicznego
+z szyfrowaniem uÅ¼ywajÄ…c hasÅ‚a roota
+z szyfrowaniem uÅ¼ywajÄ…c funkcji hashujÄ…cych
+w plain tekÅ›cie w pliku /etc/passwd 
 c
 
-J¹dro to:
+JÄ…dro to:
 4
-program ³adowany podczas startu systemu operacyjnego
+program Å‚adowany podczas startu systemu operacyjnego
 podstawowy program systemu operacyjnego
-wszystkie odpowiedzi s¹ prawid³owe
-program, który dzia³a jako poœrednik miêdzy oprogramowaniem i sprzêtem poprzez dostarczone sterowniki i procedury
+wszystkie odpowiedzi sÄ… prawidÅ‚owe
+program, ktÃ³ry dziaÅ‚a jako poÅ›rednik miÄ™dzy oprogramowaniem i sprzÄ™tem poprzez dostarczone sterowniki i procedury
 c
 
-Administrator serwera Apache mo¿e ograniczyæ u¿ycie .htaccess poprzez:
+Administrator serwera Apache moÅ¼e ograniczyÄ‡ uÅ¼ycie .htaccess poprzez:
 4
-umieszczenie regu³y AllowOverride <lista regu³, które mog¹ byæ nadpisywane w .htaccess> w g³ównym pliku konfiguracyjnym serwera Apache
-odebranie dostêpu do zapisu do katalogów ze stronami internetowymi
+umieszczenie reguÅ‚y AllowOverride <lista reguÅ‚, ktÃ³re mogÄ… byÄ‡ nadpisywane w .htaccess> w gÅ‚Ã³wnym pliku konfiguracyjnym serwera Apache
+odebranie dostÄ™pu do zapisu do katalogÃ³w ze stronami internetowymi
 umieszczenie pliku htaccess.conf w katalogi Apache ServerRoot z wpisami typu Restrict: <blocked rule>
-nie mo¿na ograniczyæ tego mechanizmu
+nie moÅ¼na ograniczyÄ‡ tego mechanizmu
 a
 
-Protokó³ Kerberos:
+ProtokÃ³Å‚ Kerberos:
 4
-wymaga œcis³ej synchronizacji czasowej
-jest u¿ywany do synchronizacji czasu miêdzy hostami
-nie wymaga synchronizacji czasowej, poniewa¿ dzia³a w oparciu login i has³o
-jest u¿ywany do zdalnego monitorowania logów
+wymaga Å›cisÅ‚ej synchronizacji czasowej
+jest uÅ¼ywany do synchronizacji czasu miÄ™dzy hostami
+nie wymaga synchronizacji czasowej, poniewaÅ¼ dziaÅ‚a w oparciu login i hasÅ‚o
+jest uÅ¼ywany do zdalnego monitorowania logÃ³w
 a
 
-Aliasy zdefiniowane w pliku "aliases" pozwalaj¹ na:
+Aliasy zdefiniowane w pliku "aliases" pozwalajÄ… na:
 4
-ka¿d¹ modyfikacjê adresu mailowego u¿ytkownika
-translacjê nazw u¿ytkownika w nazwy domeny DNS
-zmianê nazwy serwera pocztowego
+kaÅ¼dÄ… modyfikacjÄ™ adresu mailowego uÅ¼ytkownika
+translacjÄ™ nazw uÅ¼ytkownika w nazwy domeny DNS
+zmianÄ™ nazwy serwera pocztowego
 wprowadzenie alternatywnego adresu mailowego w tej samej domenie
 d
 
 W serwerach DNS NIE DEFINIUJEMY:
 4
-strefy przeszukiwania wprzód (forward lookup zone)
+strefy przeszukiwania wprzÃ³d (forward lookup zone)
 strefy przeszukiwania wstecz (reverse lookup zone)
-serwera z list¹ wskazañ DNS (root hint server)
+serwera z listÄ… wskazaÅ„ DNS (root hint server)
 strefy zdemilitaryzowanej
 d
 
 Uwierzytelnianie to:
 4
-sprawdzenie, czy u¿ytkownik w³aœciwie przestrzega³ zasad wyznawanej przez siebie wiary podczas pracy w Internecie
-sprawdzenie wiarygodnoœci: osób, stron w komunikacji, dokumentów, Ÿróde³ pochodzenia dokumentów, czasu ich utworzenia
-sprawdzenie uprawnieñ u¿ytkownika po zalogowaniu
-sprawdzenie, czy u¿ytkownik przestrzega zasad poprawnej pracy w systemie na podstawie analizy logów
+sprawdzenie, czy uÅ¼ytkownik wÅ‚aÅ›ciwie przestrzegaÅ‚ zasad wyznawanej przez siebie wiary podczas pracy w Internecie
+sprawdzenie wiarygodnoÅ›ci: osÃ³b, stron w komunikacji, dokumentÃ³w, ÅºrÃ³deÅ‚ pochodzenia dokumentÃ³w, czasu ich utworzenia
+sprawdzenie uprawnieÅ„ uÅ¼ytkownika po zalogowaniu
+sprawdzenie, czy uÅ¼ytkownik przestrzega zasad poprawnej pracy w systemie na podstawie analizy logÃ³w
 b
 
 PKI to:
@@ -246,30 +246,34 @@ Public Key Infrastructure
 Polskie Koleje Internetowe
 c
 
-Algorytmy symetryczne s³u¿¹ do:
+Algorytmy symetryczne sÅ‚uÅ¼Ä… do:
+4
 podpisu elektronicznego
 generacji liczb losowych
 szyfrowania danych i uwierzytelniania
-tajnych obliczeñ na klastrach
+tajnych obliczeÅ„ na klastrach
 c
 
-Na czym polega kontrola dostêpu typu MAC?
-administrator na proœbê u¿ytkownika udziela mu uprawnieñ u¿ytkownicy glosuj¹, komu nadaæ uprawnienia
-w³aœciciel danych decyduje o tym, komu nadaæ do nich uprawnienia
-administrator nadaje etykiety poufnoœci danym i u¿ytkownikom, a system decyduje o 
-dostêpie na podstawie kontroli etykiet
+Na czym polega kontrola dostÄ™pu typu MAC?
+4
+administrator na proÅ›bÄ™ uÅ¼ytkownika udziela mu uprawnieÅ„ uÅ¼ytkownicy glosujÄ…, komu nadaÄ‡ uprawnienia
+wÅ‚aÅ›ciciel danych decyduje o tym, komu nadaÄ‡ do nich uprawnienia
+administrator nadaje etykiety poufnoÅ›ci danym i uÅ¼ytkownikom, a system decyduje o 
+dostÄ™pie na podstawie kontroli etykiet
 d
 
-Na czym polega kontrola dostêpu typu DAC (Discretionary access control)?
-administrator na proœbê u¿ytkownika udziela mu uprawnieñ
-u¿ytkownicy g³osuj¹, komu nadaæ uprawnienia
-w³aœciciel danych decyduje o tym, komu nadaæ do nich uprawnienia
-administrator nadaje etykiety poufnoœci danym i u¿ytkownikom, a system decyduje o  dostêpie na podstawie kontroli etykiet
+Na czym polega kontrola dostÄ™pu typu DAC (Discretionary access control)?
+4
+administrator na proÅ›bÄ™ uÅ¼ytkownika udziela mu uprawnieÅ„
+uÅ¼ytkownicy gÅ‚osujÄ…, komu nadaÄ‡ uprawnienia
+wÅ‚aÅ›ciciel danych decyduje o tym, komu nadaÄ‡ do nich uprawnienia
+administrator nadaje etykiety poufnoÅ›ci danym i uÅ¼ytkownikom, a system decyduje o  dostÄ™pie na podstawie kontroli etykiet
 c
 
 Klucz publiczny RSA to:
-wyk³adnik potêgowania w ciele Galois mod n
-wyk³adnik potêgowania e i modu³ n=pq w ciele Galois mod n, gdzie p i q to liczby pierwsze utrzymywane w tajemnicy
-odwrotnoœæ klucza prywatnego e=l/d w ciele Galois mod n
+4
+wykÅ‚adnik potÄ™gowania w ciele Galois mod n
+wykÅ‚adnik potÄ™gowania e i moduÅ‚ n=pq w ciele Galois mod n, gdzie p i q to liczby pierwsze utrzymywane w tajemnicy
+odwrotnoÅ›Ä‡ klucza prywatnego e=l/d w ciele Galois mod n
 klucz otrzymany od instytucji publicznej
 b
