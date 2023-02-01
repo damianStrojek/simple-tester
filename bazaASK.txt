@@ -229,3 +229,47 @@ strefy przeszukiwania wstecz (reverse lookup zone)
 serwera z list¹ wskazañ DNS (root hint server)
 strefy zdemilitaryzowanej
 d
+
+Uwierzytelnianie to:
+4
+sprawdzenie, czy u¿ytkownik w³aœciwie przestrzega³ zasad wyznawanej przez siebie wiary podczas pracy w Internecie
+sprawdzenie wiarygodnoœci: osób, stron w komunikacji, dokumentów, Ÿróde³ pochodzenia dokumentów, czasu ich utworzenia
+sprawdzenie uprawnieñ u¿ytkownika po zalogowaniu
+sprawdzenie, czy u¿ytkownik przestrzega zasad poprawnej pracy w systemie na podstawie analizy logów
+b
+
+PKI to:
+4
+Protected Key Infrastructure
+Private Key Identifier
+Public Key Infrastructure
+Polskie Koleje Internetowe
+c
+
+Algorytmy symetryczne s³u¿¹ do:
+podpisu elektronicznego
+generacji liczb losowych
+szyfrowania danych i uwierzytelniania
+tajnych obliczeñ na klastrach
+c
+
+Na czym polega kontrola dostêpu typu MAC?
+administrator na proœbê u¿ytkownika udziela mu uprawnieñ u¿ytkownicy glosuj¹, komu nadaæ uprawnienia
+w³aœciciel danych decyduje o tym, komu nadaæ do nich uprawnienia
+administrator nadaje etykiety poufnoœci danym i u¿ytkownikom, a system decyduje o 
+dostêpie na podstawie kontroli etykiet
+d
+
+Na czym polega kontrola dostêpu typu DAC (Discretionary access control)?
+administrator na proœbê u¿ytkownika udziela mu uprawnieñ
+u¿ytkownicy g³osuj¹, komu nadaæ uprawnienia
+w³aœciciel danych decyduje o tym, komu nadaæ do nich uprawnienia
+administrator nadaje etykiety poufnoœci danym i u¿ytkownikom, a system decyduje o  dostêpie na podstawie kontroli etykiet
+c
+
+Klucz publiczny RSA to:
+wyk³adnik potêgowania w ciele Galois mod n
+wyk³adnik potêgowania e i modu³ n=pq w ciele Galois mod n, gdzie p i q to liczby pierwsze utrzymywane w tajemnicy
+odwrotnoœæ klucza prywatnego e=l/d w ciele Galois mod n
+klucz otrzymany od instytucji publicznej
+b
