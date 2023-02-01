@@ -1,231 +1,231 @@
-1. Mail delivery within localhost is done by:
+Dostarczanie poczty po localhoœcie jest obs³ugiwane przez:
 4
-all answers are correct
-Mail User Agent
-Mail Delivery Agent
-Mail Transfer Agent
-d
-
-2. The command: ssh -L 1234:Appserver:23 username@Sshdserver creates a tunnel that:
-4
-transfers all requests made to port 23 of localhost to port 1234 of Appserver, whole connection is encrypted
-transfers all connections made to port 23 of Sshdserver to port 1234 of Appserver, connection from Sshdserver to Appserver is encrypted
-only encrypts connection from Sshdserver to Appserver
-only encrypts connection from localhost to Sshdserver
-d
-
-3. Active Directory IS NOT:
-4
-equipped with DNS server support
-simple to administer
-equipped with security protocols (like IPsec, Kerberos, SSL)
-100% compatible with LDAP POSIX structure
-b
-
-4. PAM is:
-4
-Pluggable Authorization Modules - kernel module governing user access to home dirs
-Private Access Mechanism - a tool for setting complex access permissions in Linux
-no other answer is correct
-Pluggable Authentication Modules - modular authentication mechanism separating applications from authentication methods
-d
-
-5. LDAP is:
-4
-a database
-a server translating computer hostnames to their IP addresses
-directory service with attribute oriented content
-a library that simplifies user management in Linux
+wszystkie odpowiedzi s¹ prawid³owe
+Mail User Agent (MUA) 
+Mail Delivery Agent (MDA)
+Mail Transfer Agent (MTA)
 c
 
-6. User account in Linux can be locked by:
+Komenda: ssh -L 1234:Appserver:23 username@Sshdserver tworzy tunel, który:
 4
-setting non-existing file as a user shell
-deleting the account 
-revoking read/write permissions from the user home dir
-changing the login
+przesy³a wszystkie utworzone ¿¹dania do portu 23 localhosta do portu 1234 Appservera, ca³e po³¹czenie jest szyfrowane
+przesy³a wszystkie utworzone po³¹czenia do portu 23 Sshdservera do portu 1234 Appservera, po³¹czenia z Sshdserver do Appserver jest szyfrowane 
+szyfruje tylko po³¹czenie z Sshdservera do Appservera
+szyfruje tylko po³¹czenie z localhosta do Sshdservera
+d
+
+Active Directory NIE JEST:
+4
+wyposa¿one w wsparcie dla serwera DNS
+³atwe w administrowaniu
+wyposa¿one w protoko³y zabezpieczeñ (np. IPsec, Kerberos, SSL)
+w 100% kompatybilne ze struktur¹ LDAP POSIX
+d
+
+PAM to:
+4
+Pluggable Authorization Modules - modu³ j¹dra reguluj¹cy dostêp u¿ytkowników do katalogów domowych
+Private Access Mechanism - narzêdzie do nadawania z³o¿onych praw dostêpu w Linuksie
+¿adna odpowiedŸ nie jest prawid³owa
+Pluggable Authentication Modules - modu³owy mechanizm uwierzytelniania oddzielaj¹cy aplikacje od metod uwierzytelniania
+d
+
+LDAP to:
+4
+baza danych
+serwer dokonuj¹cy translacji nazw hostów na ich adresy IP
+us³uga katalogowa z treœci¹ skierowan¹ na atrybuty
+biblioteka, która u³atwia zarz¹dzanie u¿ytkownikami w Linuksie
+c
+
+Konto u¿ytkownika w Linuksie mo¿e byæ zablokowane przez:
+4
+ustawienie nieistniej¹cego pliku jako pow³oka u¿ytkownika
+usuniêcie konta
+wyw³aszczenie prawa odczytu/zapisu z katalogu domowego u¿ytkownika
+zmianê loginu
 a
 
-7. BasicAuthentication:
+BasicAuthentication:
 4
-sends hashed password
-sends login and password in plain text during each request after login in
-can be easily eavesdropped but only while entering the user and password
-uses encrypted connection by defaut
+wysy³a zahaszowane has³o
+wysy³a login i has³o w plain tekœcie podczas ka¿dego ¿¹dania po zalogowaniu
+mo¿e byæ ³atwo pods³uchiwane, ale tylko podczas wprowadzania u¿ytkownika i has³a
+standardowo u¿ywa zaszyfrowanego po³¹czenia
 b
 
-8. .htacess mechanism allows modification of:
+Mechanizm .htacess pozwala na modyfikacjê:
 4
-it does not modify anything, it is used for web resources user authentication only
-settings not listed by AllowOverride rule
-every setting of Apache server a
-settings listed by AllowOverride rule
+nie modyfikuje niczego, jest u¿ywane tylko do zasobów sieciowych uwierzytelnianych przez u¿ytkownika
+ustawieñ niezapisanych w regule AllowOverride
+wszystkich ustawieñ serwera Apache
+ustawieñ zapisanych w regule AllowOverride
 d
 
-9. How many Named Virtual Hosts served on a SSL encrypted 443 port can be defined when SNI is not supported:
+Ile Nazwanych Hostów Wirtualnych ustawionych na zaszyfrowanym porcie 443 us³ugi SSL mo¿e zostaæ zdefiniowanych, kiedy SNI nie jest wspierane?
 4
-each virtual host requires dedicated instance of a web server
-virtual hosts cannot be defined for SSL connections
-any number but with common SSL certificate
-one
-d
-
-10. NFS is:
-4
-Network Forwarding System - a firewall commonly used in Linux systems
-Native File System - a file system used in Linux systems, characterized by high efficiency when handling large files
-Network File System - TCP and UDP based protocol for remote file system sharing
-no other answer is correct
+ka¿dy host wirtualny wymaga dedykowanej instancji serwera webowego
+hosty wirtualne nie mog¹ byæ zdefiniowane dla po³¹czeñ SSL
+ka¿da ich liczba, ale ze wspólnym certyfikatem SSL
+jeden
 c
 
-11. Quality of Service (QoS):
+NFS to:
 4
-all answers are correct
-allows splitting of the bandwidth-across-traffic with higher and lower priority
-extends bandwidth available for the user independent from the number of current network users
-allows extension of a bandwidth without investments in the infrastructure
+Network Forwarding System - firewall u¿ywany typowo w systemach Linux
+Native File System - system plików u¿ywany w Linuksie, charakteryzuj¹cy siê wysok¹ wydajnoœci¹ dla du¿ych plików
+Network File System - protokó³ oparty o TCP oraz UDP do zdalnego udostêpniania zasobów dyskowych
+¿adna odpowiedŸ nie jest prawid³owa
+c
+
+Quality of Service (QoS):
+4
+wszystkie odpowiedzi s¹ prawid³owe
+umo¿liwia rozdzielanie pasma dla ruchu sieciowego o wy¿szym oraz ni¿szym priorytecie
+rozszerza pasmo przeznaczone dla u¿ytkownika niezale¿nie od liczby u¿ytkowników w sieci
+umo¿liwia rozszerzenie pasma bez koniecznoœci ulepszania infrastruktury
 b
 
-12. SpamAssasin is responsible for:
+SpamAssasin jest odpowiedzialny za:
 4
-virus detection
-sending mail to the users
-mail filtering based on user rules
-spam detection
+wykrywanie wirusów
+wysy³anie maili do u¿ytkowników
+filtrowanie maili w oparciu o regu³y u¿ytkownika
+detekcjê spamu
 d
 
-13. Group Policy:
+Zasady grupy (Group Policy):
 4
-all answers are correct
-can be used to manage remote computers, regardless if it belongs to a domain or not
-is a tool designed for managing local policies of Windows Server
-allows managing policies within the domain
+wszystkie odpowiedzi s¹ prawid³owe
+mog¹ byæ u¿ywane do zarz¹dzania komputerami zdalnymi, bez znaczenia czy nale¿¹ do domeny czy nie
+to narzêdzie przeznaczone do zarz¹dzania lokalnymi zasadami systemu Windows Server
+zezwala na zarz¹dzanie regu³ami w domenie
 d
 
-14. Samba:
+Samba:
 4
-is used only for managing users defined in ActiveDirectory on Windows Server machine
-in version 3 can act as NT domain controller and in version 4 can act as Active Directory domain controller
-in version 3 and 4 can act as Active Directory domain controller
-is a simple client for Windows shares
+jest u¿ywana tylko do zarz¹dzania u¿ytkownikami zdefiniowanymi w ActiveDirectory na maszynie z Windows Server
+w wersji 3-ciej dzia³a jak kontroler domeny NT, a wersji 4-tej dzia³a jak kontroler domeny Active Directory
+w wersji 3-ciej oraz 4-tej dzia³a jak kontroler domeny Active Directory
+jest prostym programem dla udostêpniania w Windowsie
 b
 
-15. How many IP addresses can be assigned to a single network card?
+Ile adresów IP mo¿e zostaæ przydzielonych do pojedynczej karty sieciowej?
 4
-more than one
-one
+wiêcej ni¿ jedna
+jedna
 zero
 10000
 a
 
-16. PowerShell:
+PowerShell:
 4
-is a command line shell similar to bash
-uses objects to transfer data between commandlets
-is a SSH implementation for Windows
-is designed to manage files and folders on a local computer
+jest konsol¹ linii poleceñ podobn¹ do basha
+u¿ywa obiektów do przesy³ania danych pomiêdzy komendami (commandlets)
+jest implementacj¹ SSH dla Windowsa
+jest zaprojektowany do zarz¹dzania plikami oraz folderami na komputerze lokalnym
 b
 
-17. During mail transfer it is possible to encrypt:
+Podczas przesy³ania maila mo¿liwe jest szyfrowanie:
 4
-only the moment of mail transfer
-the whole route that the email takes but the user can only be shure about authentication and direct connection to the mail server
-the whole route that the email takes without any added conditions
-only the moment of authentication
+tylko w czasie przesy³ania maila
+ca³ej trasy, któr¹ mail przechodzi, ale u¿ytkownik mo¿e mieæ pewnoœæ tylko uwierzytelnianiaj¹c siê i bezpoœrednio ³¹cz¹c siê do serwera pocztowego
+ca³ej trasy, któr¹ mail przechodzi bez dodatkowych warunków
+tylko w momencie uwierzytelniania
 b
 
-18. IPtables is:
+IPtables to
 4
-robust stateless firewall
-a tool for managing QoS
-a very simple firewall used by some Linux distributions
-robust packet filter
+solidny, bezstanowy firewall
+narzêdzie do zarz¹dzania QoS
+bardzo prosty firewall u¿ywany przez niektóre dystrybucje Linuxa
+solidny filtr pakietów
 d
 
-19. Relaying is used for:
+Przekazywanie (relaying) jest u¿ywane do:
 4
-sending mail to multiple servers
-sending SPAM and viruses - should be always disabled, exists due to historical reasons
-sending and receiving mail via other mail server even if a local server is not accessible from the Internet
-sending mail via any host located behind a firewall
+wysy³ania maila do wielu serwerów
+wysy³ania spamu i wirusów - powinno byæ zawsze wy³¹czone, istnieje tylko z powodów zasz³oœciowych
+wysy³ania i odbierania maili przez inny serwer pocztowy, nawet jeœli lokalny serwer nie jest dostêpny w Internecie
+wysy³ania maili przez jakiegokolwiek hosta znajduj¹cego siê za firewallem
 c
 
-20. /etc/passwd file does not contain:
+plik /etc/passwd nie zawiera:
 4
-user shell
-user password
-username
-default user group
+pow³oki u¿ytkownika 
+has³a u¿ytkownika 
+nazwy u¿ytkownika
+standardowej nazwy grupy
 b
 
-21. Linux kernel is:
+J¹dro Linuksa jest:
 4
-fully modular
-hybrid as any kernel parameter can be compiled as a module or compiled statically into the kernel
-monolithic
-monolithic with loadable modules
+w pe³ni modularne
+hybryd¹, bo ka¿dy parametr j¹dra mo¿e byæ skompilowany jako modu³ lub skompilowany staycznie do j¹dra
+jednolite (monolityczne)
+jednolite z mo¿liwymi modu³ami do wgrania
 d
 
-22. DHCP server:
+Serwer DHCP
 4
-can assign up to 254 IP addresses from 192.168.0.1 - 192.168.0.254 range
-assigned IP address is always different
-can assign an IP address only based on the computer hostname
-allows auto configuration of network enabled devices with settings like IP address, network mask, gateway, hostname
+mo¿e przypisaæ do 254 adresów IP w zakresie 192.168.0.1 - 192.168.0.254 
+przypisanie adresu IP jest zawsze trudne
+mo¿e przypisaæ adres IP tylko w oparciu o nazwê hosta komputera
+pozwala na automatyczn¹ konfiguracjê ustawieñ aktywnych urz¹dzeñ sieciowych takich jak IP, maska sieciowa, brama domyœlna, nazwa hosta
 d
 
-23. Mark false statement about web server virtual hosts:
+Zaznacz FA£SZYWE zdanie o wirtualnych hostach w serwerze webowym
 4
-each VirtualHost requires dedicated Apache instance
-VirtualHosts allow serving of any number of domains using single IP address and port number
-domain name is located in the HTTP request header
-each domain served by a VirtualHost needs to have a DNS entry pointing to the web server IP address
+ka¿dy wirtualny host (VirtualHost) wymaga dedykowanej instancji serwera Apache
+wirtualne hosty (VirtualHosts) pozwalaj¹ na obs³ugê dowolnej liczby domen, wykorzystuj¹c pojedynczy adres IP i numer portu
+nazwa domeny jest przechowywana w nag³ówku ¿¹dania HTTP
+ka¿da domena obs³ugiwana przez wirtualnego hosta (VirtualHost) wymaga posiadania wpisu DNS, okreœlaj¹cego adres IP serwera webowego
 a
 
-24. In Linux user passwords are stored:
+W Linuksie has³a u¿ytkownika przechowywane s¹ przechowywane:
 4
-encrypted using public and privet keys pair
-encrypted using root user's password
-encrypted using a hash function
-in plain-text form in /etc/passwd file
+z szyfrowaniem par¹ kluczy prywatnego i publicznego
+z szyfrowaniem u¿ywaj¹c has³a roota
+z szyfrowaniem u¿ywaj¹c funkcji hashuj¹cych
+w plain tekœcie w pliku /etc/passwd 
 c
 
-25. A kernel is:
+J¹dro to:
 4
-a program loaded during operating system start
-a basic program of the operating system
-all answers are correct
-a program that works as a proxy between software and the hardware by providing drivers and procedures
+program ³adowany podczas startu systemu operacyjnego
+podstawowy program systemu operacyjnego
+wszystkie odpowiedzi s¹ prawid³owe
+program, który dzia³a jako poœrednik miêdzy oprogramowaniem i sprzêtem poprzez dostarczone sterowniki i procedury
 c
 
-26. The Apache server administrator can limit usage of .htaccess by:
+Administrator serwera Apache mo¿e ograniczyæ u¿ycie .htaccess poprzez:
 4
-placing AllowOverride list of rules that can be overwritten in .htaccess rule in the main configuration file of the Apache server
-revoking write access to directories with web pages
-placing htaccess.conf file in Apache Serverlioot direetery-with entries like Restrict: <blocked rule>
-you cannot limit this mechanism
+umieszczenie regu³y AllowOverride <lista regu³, które mog¹ byæ nadpisywane w .htaccess> w g³ównym pliku konfiguracyjnym serwera Apache
+odebranie dostêpu do zapisu do katalogów ze stronami internetowymi
+umieszczenie pliku htaccess.conf w katalogi Apache ServerRoot z wpisami typu Restrict: <blocked rule>
+nie mo¿na ograniczyæ tego mechanizmu
 a
 
-27. Kerberos protocol:
+Protokó³ Kerberos:
 4
-requires strict time synchronization
-is used to synchronize time between hosts
-does not require time synchronization as it is login and password based
-is used for remote logs monitoring
+wymaga œcis³ej synchronizacji czasowej
+jest u¿ywany do synchronizacji czasu miêdzy hostami
+nie wymaga synchronizacji czasowej, poniewa¿ dzia³a w oparciu login i has³o
+jest u¿ywany do zdalnego monitorowania logów
 a
 
-28. Aliases defined in "aliases" file allows:
+Aliasy zdefiniowane w pliku "aliases" pozwalaj¹ na:
 4
-any modification of user mail addresses
-translation of user names into DNS domain names
-changing name of mail server
-introduction of alternative email addresses within the same domain
+ka¿d¹ modyfikacjê adresu mailowego u¿ytkownika
+translacjê nazw u¿ytkownika w nazwy domeny DNS
+zmianê nazwy serwera pocztowego
+wprowadzenie alternatywnego adresu mailowego w tej samej domenie
 d
 
-29. In DNS servers we DO NOT define:
+W serwerach DNS NIE DEFINIUJEMY:
 4
-a forward lookup zone
-a reverse lookup zone
-a root hint server
-a demilitarized zone
+strefy przeszukiwania wprzód (forward lookup zone)
+strefy przeszukiwania wstecz (reverse lookup zone)
+serwera z list¹ wskazañ DNS (root hint server)
+strefy zdemilitaryzowanej
 d
