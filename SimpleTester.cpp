@@ -23,20 +23,14 @@ private:
 	std::vector<answer> answers;
 	int timesViewed;
 	int numberOfCorrectAnswers;
-
 public:
 	Question(std::string _question) : question(_question), timesViewed(0) {}
 	
 	std::string getCorrectAnswer() { return this->correctAnswer; }
-
 	std::string getQuestion() { return this->question; }
-
-	std::vector<answer> getAnswers() { return this->answers; } 
-
+	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
-
 	int getTimesViewed() { return this->timesViewed; }
-
 	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
 	void setCorrectAnswerIndex(const int index) { 
@@ -57,7 +51,7 @@ public:
 };
 
 int sortQuestions(Question _question1, Question _question2);
-int invokeError(int status = 0);
+int invokeError(int status);
 void helloMessage();
 std::ifstream loadFile();
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions,
@@ -96,7 +90,7 @@ int sortQuestions(Question _question1, Question _question2) {
 	return _question1.getTimesViewed() < _question2.getTimesViewed();
 };
 
-int invokeError(int status = 0) {
+int invokeError(int status) {
 	if (status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
 	else if (!status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
 	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
@@ -106,6 +100,7 @@ int invokeError(int status = 0) {
 	getline(std::cin, stop);
 
 	exit(1);
+	return status;
 };
 
 void helloMessage(){
@@ -123,7 +118,7 @@ std::ifstream loadFile(){
 
 	std::ifstream inputFile;
 	inputFile.open(databaseName, std::ios::in);
-	if(!inputFile.good()) invokeError();
+	if(!inputFile.good()) invokeError(0);
 
 	return inputFile;
 };
@@ -160,9 +155,8 @@ void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &qu
 };
 
 void displayQuestions(int &correctAnswers, std::vector<Question> &questions){
+	
 	std::string answer;
-	std::getline(std::cin, answer);
-
 	int counterOfQuestions = 0;
 	std::cout << "\n\tYour actual score: " << (double)((double)correctAnswers / 
 			(double)(counterOfQuestions == 0 ? 1 : counterOfQuestions)) * 100.0f << 
