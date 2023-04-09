@@ -1,6 +1,6 @@
-// Damian Strojek
-// Tester ver 2.0 Lemm@2012 was original creator
-// In 2022 DS refactored this code and created repository
+// Simple Tester v3.0
+// Damian Strojek s184407
+// Refactored this code in 04.2023
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -24,7 +24,7 @@ private:
 	int timesViewed;
 	int numberOfCorrectAnswers;
 public:
-	Question(std::string _question) : question(_question), timesViewed(0) {}
+	Question(std::string _question) : question(_question), timesViewed(0), numberOfCorrectAnswers(0) {}
 	
 	std::string getCorrectAnswer() { return this->correctAnswer; }
 	std::string getQuestion() { return this->question; }
@@ -82,7 +82,7 @@ int main(int argc, char* argv[]) {
 		displayQuestions(correctAnswers, questions);
 	}
 
-	invokeError(0);
+	invokeError(1);
 	return 0;
 };
 
@@ -91,8 +91,8 @@ int sortQuestions(Question _question1, Question _question2) {
 };
 
 int invokeError(int status) {
-	if (status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
-	else if (!status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
+	if (!status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
+	else if (status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
 	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
 	
 	// Pause for end user
