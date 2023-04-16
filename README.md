@@ -1,5 +1,12 @@
-# simpleTester
-Simple tester made from the source code of @Lemm. 
+# simpleTester 3.0 Release
+
+Simple tester inspired by the source code of @Lemm Tester. Basic version has a `system("clear")` command implemented because I prefer to work on Linux. If you want it to work properly on Windows change it to `system("cls")`.
+
+## Compile GNU/Linux
+
+```bash
+g++ SimpleTester.cpp -o simpleTester
+```
 
 ## Improvements
 
@@ -8,21 +15,25 @@ Simple tester made from the source code of @Lemm.
 - The answer is in the format `a`, `ab`, `bc`, `dec`, etc. Before submitting it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
 
 ## Database
-In order for it to work you need to provide a "baza.txt" ANSI encoded file. 
-The questions look like this:
+In order for it to work you need to provide a `.txt` database file. If you are worried about state of your database you can always use the `checkQuestions(questions)` function.
+
+Template of a question looks like this:
+
 ```c#
-<number of question>.<question>
+<question>
 <number of answers>
-<answer nr 1>
-<answer nr 2>
-<answer nr 3>
-<answer nr 4>
+<answer nr n1>
+<answer nr n2>
+<answer nr n3>
+<answer nr n4>
 <proper answer>
-<enter>
+<ENTER>
 ```
+
 For example:
+
 ```
-1. W przypadku klas w Javie (1 poprawna):
+W przypadku klas w Javie (1 poprawna):
 4
 Nie istnieje możliwość implementowania wielu interfejsów
 Nie istnieje możliwość dziedziczenia po wielu klasach bazowych
@@ -30,7 +41,7 @@ Wszystkie metody klasy bazowej muszą być nadpisane w klasie potomnej
 Żadne z powyższych
 b
 
-2. W przypadku kolekcji TreeSet (1 poprawna):
+W przypadku kolekcji TreeSet (1 poprawna):
 4
 Wyszukiwanie elementów cechuje się złożonością liniową O(n)
 Wyszukiwanie elementów cechuje się złożonością logarytmiczną O(log n)
