@@ -1,4 +1,6 @@
-// This code is really random lol
+// Simple Tester v3.0
+// Damian Strojek s184407
+// Refactored this code in 04.2023
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -9,206 +11,238 @@
 #include <algorithm>
 #include <random>
 
-struct odpowiedz {
+#define LIMITCORRECT 200
+#define QUESTIONINDEX 0
+
+struct answer {
 	std::string desc;
-	bool isGood;
+	bool isCorrect;
 };
 
-class CPytanie {
+class Question {
+private:
+	std::string question;			// Question itself
+	std::vector<answer> answers;	// All of the answers
+	int numberOfCorrectAnswers;		// Number of correct answers
+	std::string correctAnswer;		// Array of correct answers
+	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
 public:
-	std::string poprawna;
-	std::string pytanie;
-	std::vector<odpowiedz> odpowiedzi;
-	int liczba_wyswietlen;
+	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0) {}
+	
+	std::string getQuestion() { return this->question; }
+	std::vector<answer> &getAnswers() { return this->answers; } 
+	answer getAnswerIndex(const int index) { return this->answers[index]; }
+	int getAnsweredCorrectly() { return this->answeredCorrectly; }
+	std::string getCorrectAnswer() { return this->correctAnswer; }
+	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
-	CPytanie(std::string pyt) : pytanie(pyt), liczba_wyswietlen(0) {}
-	void DodajOdp(std::string& odp) {
-		odpowiedz temp;
-		temp.desc = odp;
-		temp.isGood = 0;
-		odpowiedzi.push_back(temp);
+	void setCorrectAnswerIndex(const int index) { 
+		this->answers[index].isCorrect = true; 
+		this->correctAnswer += (char)(index + 'a');
+		this->numberOfCorrectAnswers++;
 	}
-	void Wyswietlono() { liczba_wyswietlen++; }
+
+	void setQuestion(std::string _question) { this->question = _question; }
+
+	void addAnswer(std::string _answer) {
+		answer temp;
+		temp.desc = _answer;
+		temp.isCorrect = false;
+		this->answers.push_back(temp);
+	}
+
+	void addAnsweredCorrectly() { this->answeredCorrectly++; }
+
+	void reorganizeAnswers() { std::random_shuffle(std::begin(this->answers), std::end(this->answers)); }
 };
 
-int pyt_sort(const CPytanie& pyt1, const CPytanie& pyt2) {
-	return pyt1.liczba_wyswietlen < pyt2.liczba_wyswietlen;
-}
+int sortQuestions(Question _question1, Question _question2);
+int invokeError(int status);
+void helloMessage();
+std::ifstream loadFile();
+void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions,
+							 std::string _question, int &numberOfQuestions);
+void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector<Question> &questions, 
+						const bool &seeCorrect, const int &numberOfQuestions);
+void displayCorrectAnswers(const int index, std::vector<Question> &questions);
+void checkQuestions(std::vector<Question> &questions);
 
-int bye(int status = 0) {
-	if (status) std::cout << "\tBLAD WCZYTYWANIA PLIKU\n";
-	else if (status == 2) std::cout << "\tBLAD WCZYTYWANIA ODPOWIEDZI\n";
-	std::cout << "\tNarazie\n";
+int main(int argc, char* argv[]) {
 
+	helloMessage();
+	std::srand(unsigned(std::time(0)));
+	std::ifstream databaseFile = loadFile();
+	std::vector<Question> questions;
+	std::string temp;
+	int numberOfQuestions = 0;
+
+	while(databaseFile.good()){
+		std::getline(databaseFile, temp);
+		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
+	}
+
+	checkQuestions(questions);
+
+	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
+			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";
+	bool seeCorrect = false;
+	std::cin >> temp;
+	if (temp == "y") seeCorrect = true;
+
+	std::cout << "\n\tPress ENTER if you are ready for the first question. ";
+	std::getline(std::cin, temp);
+
+	// Had to come up with something better than while(true)
+	// Two variables needed to keep track of statistics
+	int correctQuestions = 0, allQuestionsAsked = 0;
+	while(correctQuestions < LIMITCORRECT)
+		displayQuestions(correctQuestions, allQuestionsAsked, questions, seeCorrect, numberOfQuestions);
+
+	invokeError(1);
+	return 0;
+};
+
+int sortQuestions(Question _question1, Question _question2) {
+	return _question1.getAnsweredCorrectly() < _question2.getAnsweredCorrectly();
+};
+
+int invokeError(int status) {
+	if (!status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
+	else if (status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
+	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
+	
+	// Pause for end user
 	std::string stop;
 	getline(std::cin, stop);
 
+	exit(1);
 	return status;
-}
+};
 
-std::string& napraw_ogonki(std::string& napis) {
-#if defined(WINDOWS) || defined(WIN32) || defined(_WIN32)
-	int l = napis.size();
-	for (int i = 0; i < l; ++i) {
-		if (napis[i] < 0) {
-			switch (napis[i]) {
-			case -54: napis[i] = 168; break;
-			case -81: napis[i] = 189; break;
-			case -113: napis[i] = 141; break;
-			case -58: napis[i] = 143; break;
-			case -116: napis[i] = 151; break;
-			case -47: napis[i] = 227; break;
-			case -45: napis[i] = 224; break;
-			case -93: napis[i] = 157; break;
-			case -91: napis[i] = 164; break;
-			case -71: napis[i] = 165; break;
-			case -22: napis[i] = 169; break;
-			case -97: napis[i] = 171; break;
-			case -26: napis[i] = 134; break;
-			case -100: napis[i] = 152; break;
-			case -77: napis[i] = 136; break;
-			case -65: napis[i] = 190; break;
-			case -15: napis[i] = 228; break;
-			case -13: napis[i] = 162; break;
+void helloMessage(){
+	//system("cls");	// Windows version
+	system("clear");	// Linux version
+	std::cout << "\n\n\tSimpleTester release 3.0\n\n\tContributors: damianStrojek@2023" << 
+					", Lemm@2012, Pitya@2022\n\n\tHave fun learning. Fuck GUT.\n\n";
+	return;
+};
+
+std::ifstream loadFile(){
+	std::cout << "\t\tInsert name of the database file [ANSI encoded]: ";
+	std::string databaseName;
+	std::cin >> databaseName;
+
+	std::ifstream inputFile;
+	inputFile.open(databaseName, std::ios::in);
+	if(!inputFile.good()) invokeError(0);
+
+	return inputFile;
+};
+
+void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
+							std::string _question, int &numberOfQuestions){
+	
+	// Load all of the answers
+	std::string temp;
+	std::getline(databaseFile, temp);
+	Question newQuestion(_question);
+	int numberOfAnswers = temp[0] - '0', i, index;
+	for(i = 0; i < numberOfAnswers && databaseFile.good(); i++){
+		std::getline(databaseFile, temp);
+		newQuestion.addAnswer(temp);
+	}
+	
+	// Load the correct answer
+	if(i == numberOfAnswers){
+		std::getline(databaseFile, temp);
+		for(int j = 0; j < temp.size(); j++){
+			if(temp[j] > 96 && temp[j] < 105){
+				index = (int)temp[j] - 97;
+				newQuestion.setCorrectAnswerIndex(index);
+			}
+		}
+		questions.push_back(newQuestion);
+		numberOfQuestions++;
+	}
+};
+
+void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector<Question> &questions, 
+						const bool &seeCorrect, const int &numberOfQuestions){
+	//system("cls");	// Linux version
+	system("clear");	// Windows version
+
+	std::string answer;
+	std::cout << "\n\tYour actual score: " << (double)((double)correctQuestions / 
+			(double)(allQuestionsAsked == 0 ? 1 : allQuestionsAsked)) * 100.0f << 
+			"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
+
+	// Sorting Mechanism for Questions
+	if (!(correctQuestions % numberOfQuestions)) std::random_shuffle(std::begin(questions), std::end(questions));
+		else sort(questions.begin(), questions.end(), sortQuestions);
+
+	std::cout << "\n\t" << questions[QUESTIONINDEX].getQuestion();
+	allQuestionsAsked++;
+	if(seeCorrect) std::cout << " [" << questions[QUESTIONINDEX].getNumberCorrect() << " correct numbers]";
+	int numberOfAnswers = questions[QUESTIONINDEX].getAnswers().size();
+	
+	// Shuffle answers and display
+	questions[QUESTIONINDEX].reorganizeAnswers();
+	for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << 
+												questions[QUESTIONINDEX].getAnswers()[i].desc;
+	
+	std::cout << "\n\n\tYour answer: ";
+	std::getline(std::cin, answer);
+	bool answeredCorrectly = false;
+
+	// Compare user answer with the correct answer
+	for(int i = 0; i < answer.size(); i++){
+		if(answer[i] > 96 && answer[i] < 105){
+			int answerIndex = (int)answer[i] - 97;
+			// If index is out of scope
+			if(answerIndex >= questions[QUESTIONINDEX].getAnswers().size()) invokeError(2);
+			// If this part of answer is correct we continue checking
+			else if(questions[QUESTIONINDEX].getAnswers()[answerIndex].isCorrect){
+				answeredCorrectly = true;
+				continue;
+			}
+			// Else we break from the for loop and have the wrong answer
+			else {
+				answeredCorrectly = false;
+				break;
 			}
 		}
 	}
-#endif
-	return napis;
-}
 
-void debug(std::vector<CPytanie> pytania) {
-	for (int i = 0; i < pytania.size(); i++) {
-		std::cout << pytania[i].pytanie << "\n";
-		for (int j = 0; j < pytania[i].odpowiedzi.size(); j++) std::cout << (char)(j + 'a') << ". " << pytania[i].odpowiedzi[j].desc << "   |   " << pytania[i].odpowiedzi[j].isGood << "\n\n";
-	}
-}
-
-int main(int argc, char* argv[]) {
-	std::cout << "ZEBY TEN TESTER DZIALAL NALEZY BAZA.TXT ZAPISYWAC Z ENKODOWANIEM ANSII\n";
-	std::cout << "Tester ver 1.1\nLemm @ 2012 in association with DS @ 2022 AND PG @ 2022\n";
-	std::vector<CPytanie> pytania;
-		
-	std::string baza;
-	std::cout << "\nPodaj nazwę pliku z bazą danych (format ANSI): ";
-	std::cin >> baza;
-
-	std::ifstream plik(baza, std::ifstream::in);
-	std::string temp, odp, ver, temp2, finaltemp;
-	int lodpowiedzi, lpytan = 0;
-
-	if (!plik.good()) return bye(1);
-	while (plik.good()) {
-		getline(plik, temp);
-
-		if (!temp.empty()) {
-			// Stworzenie nowego pytania o danej tresci
-			finaltemp = temp; //finaltemp zawiera ostateczne pytanie
-			getline(plik, temp);
-			while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { //sprawdzenie czy pierwszy znak nowej linii jest liczbą
-				if (!((int)temp[0] > 48 && (int)temp[0] < 57)) finaltemp += '\n' + temp; // dodanie nowej linii do pytania
-				getline(plik, temp);
-			}
-			CPytanie nowe(napraw_ogonki(finaltemp));
-			lodpowiedzi = temp[0] - '0';
-			// wyciecie entera
-			int i = 0;
-			// Dodawanie nowych odpowiedzi
-			for (i = 0; i < lodpowiedzi && plik.good(); i++) {
-				getline(plik, temp);
-				nowe.DodajOdp(napraw_ogonki(temp));
-			}
-			if (i == lodpowiedzi) {
-				// wziecie calej odpowiedzi
-				getline(plik, temp);
-				for (int i = 0; i < temp.size(); i++) {
-					if (temp[i] > 96 && temp[i] < 105) {
-						int index = (int)temp[i] - 97;
-						nowe.odpowiedzi[index].isGood = 1;
-					}
-				}
-				pytania.push_back(nowe);
-				lpytan++;
-			}
-		}
+	// Output if the user was right or not
+	if(!answeredCorrectly)
+		displayCorrectAnswers(QUESTIONINDEX, questions);
+	else {
+		std::cout << "\n\t\t[CORRECT] Well done!";
+		questions[QUESTIONINDEX].addAnsweredCorrectly();
+		correctQuestions++;
 	}
 
-	//debug(pytania);
-	std::cout << "Ilosc zaladowanych pytan: " << lpytan << "\n";
-	std::cout << "Nacisnij enter jezeli jestes gotow na 1sze pytanie\n";
-	std::string ans;
-	getline(std::cin, ans);
-	int nrpyt = 0, poprawne = 0, indeks = 0;
-	srand(time(NULL));
-	auto rng = std::default_random_engine{};
-	// counter - po 2 pytaniach sie czysci ekran
-	int los = 0, counter = 0;
-	while (1) {
-		std::cout << "\n\tTwoj aktualny wynik to: " << (double)((double)poprawne / (double)(nrpyt == 0 ? 1 : nrpyt)) * 100.0f << "% (" << poprawne << "/" << nrpyt << ")\n\n";
+	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER";
+	std::getline(std::cin, answer);
+};
 
-		// Niech wybiera pytania najmniej razy pokazane, lub ze zlymi odp.
-		// Jeżeli doszło do sytuacji "przemielenia" wszystkich pytań to randomizujemy całą bazę żeby nie bylo powtorek przez chwile
-		if (nrpyt % lpytan == 0) std::shuffle(std::begin(pytania), std::end(pytania), rng);
-		else sort(pytania.begin(), pytania.end(), pyt_sort);
-		int los = rand() % (pytania.size()) / 4;
+void displayCorrectAnswers(const int index, std::vector<Question> &questions){
+	std::cout << "\n\t[WRONG] Correct answers:";
+	for(int j = 0; j < questions[index].getAnswers().size(); j++)
+		if(questions[index].getAnswers()[j].isCorrect)
+			std::cout << "\n\t\t" << questions[index].getAnswers()[j].desc;
+};
 
-		std::cout << "\t" << pytania[los].pytanie << "\n";
-		int lpyt = pytania[los].odpowiedzi.size();
-
-		std::shuffle(std::begin(pytania[los].odpowiedzi), std::end(pytania[los].odpowiedzi), rng);
-
-		for (int i = 0; i < lpyt; i++) std::cout << "\t\t" << (char)(i + 'a') << ". " << pytania[los].odpowiedzi[i].desc << "\n";
-
-		std::cout << "\tOdpowiedz: ";
-		getline(std::cin, ans);
-
-		int sum = 0;
-		for (int i = 0; i < pytania[los].odpowiedzi.size(); i++)
-			if (pytania[los].odpowiedzi[i].isGood) sum++;
-
-		bool check = 0;
-		for (int i = 0; i < ans.size(); i++) {
-			if (ans[i] > 96 && ans[i] < 105) {
-				int index = (int)ans[i] - 97;
-				if (index >= pytania[los].odpowiedzi.size()) return bye(2);
-				if (pytania[los].odpowiedzi[index].isGood) {
-					sum--;
-					continue;
-				}
-				else {
-					std::cout << "\t\tTo niestety zla odpowiedz. Poprawne to: \n";
-					for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
-						if (pytania[los].odpowiedzi[j].isGood)
-							std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
-					check = 1;
-					break;
-				}
-			}
-		}
-
-		if (sum > 0 && !check) {
-			std::cout << "\t\tTo niestety zla odpowiedz. Poprawne to: \n";
-			for (int j = 0; j < pytania[los].odpowiedzi.size(); j++)
-				if (pytania[los].odpowiedzi[j].isGood) std::cout << "\t\t\t" << pytania[los].odpowiedzi[j].desc << "\n";
-			check = 1;
-		}
-		else if (!check) {
-			std::cout << "\t\tBrawo! To byla poprawna odpowiedz.\n";
-			poprawne++;
-		}
-
-		pytania[los].Wyswietlono();
-		nrpyt++;
-
-		// Clear
-		counter++;
-		if (counter == 2) {
-			counter = 0;
-			std::cout << "\t";
-			getline(std::cin, ans);
-			system("cls");
-		}
+void checkQuestions(std::vector<Question> &questions) {
+	int i;
+	for (i = 0; i < questions.size(); i++) {
+		std::cout << "\n\t" << questions[i].getQuestion();
+		for (int j = 0; j < questions[i].getAnswers().size(); j++)
+			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswerIndex(j).desc << 
+							"\t[CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
 	}
-	bye(0);
-	return 0;
-}
+
+	std::cout << "\n\n\t[ANSWERS ONLY]\n";
+	for(i = 0; i < questions.size(); i++)
+		std::cout << "\n\t\t[QUESTION " << i+1 << "] Correct answer: " << questions[i].getCorrectAnswer();
+};

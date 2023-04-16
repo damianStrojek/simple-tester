@@ -1,0 +1,542 @@
+Tłumienność sygnału dla skrętki w funkcji częstotliwości sygnału jest:
+3
+maleje
+stała
+zwiększa się
+c
+
+Która z techniki odwzorowania informacji w fali elektromagnetycznej jest aktualnie najczęściej stosowana:
+2
+cyfrowa
+analogowa
+a
+
+W skład numeru abonenta dla numeracji stosowanej w klasycznej sieci TKM wchodzą:
+3
+wskaźnik kraju, wskaźnik strefy
+wskaźnik kraju, wskaźnik w strefie, numer w strefie
+wskaźnik strefy, numer w strefie
+b
+
+Rdzeń światłowodu jednomodowego ma większy przekrój niż wielomodowego:
+2
+NIE
+TAK
+a
+
+Rozgałęźnik zastosowany w linii długiej powoduje:
+4
+poprawienie jakości sygnału
+rozdzielenie sygnałów przemieszczających się w przeciwnych kierunkach
+obniżenie stosunku mocy sygnału do mocy szumu
+zwiększenie zasięgu
+b
+
+System SDH STM-1 umożliwia realizację maksymalnej liczby łączy o przepływności 2Mbit/s równej:
+5
+32
+63
+31
+64
+65
+b
+
+Po stronie odbiorczej odbiór sygnału cyfrowego odbywa się według zegara:
+3
+centralnego dla sieci
+lokalnego strony odbierającej
+lokalnego strony nadającej
+c
+
+Czym przede wszystkim zainteresowany jest operator telekomunikacyjny:
+5
+zakresem udostępnianych usług
+kosztem usługi
+zyskiem
+dostępnością do usługi
+jakością realizacji usługi
+c
+
+Na sygnale przy przetwarzaniu z postaci analogowej na cyfrową realizowane są następujące operacje:
+4
+kwantowanie, kodowanie
+próbkowanie, kwantowanie
+próbkowanie, kwantowanie, kodowanie
+próbkowanie, kodowanie
+c
+
+Podmioty procesu telekomunikacji to:
+3
+operator
+abonent, operator
+abonent
+b
+
+Relacja między przepustowością kanału cyfrowego a szybkością strumienia binarnego przesyłanego przez ten kanał musi być następująca:
+3
+przepustowość większa od szybkości
+przepustowość większa równa szybkości
+przepustowość mniejsza od szybkość
+b
+
+Za obsługę zgłoszenia (żądania usługi) w węźle komutacyjnym sieci zorientowanej połączeniowo odpowiedzialny jest element:
+3
+pole komutacyjne
+Call Control
+moduły wyposażeń
+b
+
+Stwierdzenie, że SWI jest „Systemem Czasu Rzeczywistego” implikuje:
+4
+natychmiastowe uzyskanie dostępu do usługi i natychmiastowe przesyłanie informacji użytkownika
+określone górne granice czasów dla uzyskania dostępu do usługi i przesyłania informacji użytkownika
+natychmiastowe przesyłanie informacji użytkownika
+natychmiastowe uzyskanie dostępu do usługi
+b
+
+W systemie GSM stosujemy multipleksację w dziedzinie:
+3
+częstotliwości i czasu
+częstotliwości
+czasu
+a
+
+Widmo sygnału z kodowaniem AMI w stosunku do kodowania HDB3 jest:
+3
+większe
+mniejsze
+takie samo
+c
+
+Element funkcjonalny, który separuje abonenta od rozwiązania Systemu Wymiany Informacji to:
+4
+węzeł dostępowy
+terminal (stacja końcowa)
+łącze dostępowe
+węzeł
+b
+
+Węzeł komutacyjny pracujący w sieci zorientowanej bezpołączeniowo odróżnia się od węzła pracującego w sieci zorientowanej połączeniowo:
+5
+obecnością buforowania i brakiem sygnalizacji
+brakiem buforowania
+brakiem sygnalizacji
+brakiem buforowania i obecnością sygnalizacji
+obecnością buforowania
+a
+
+Wielkości charakteryzujące kanał to:
+4
+opóźnienie
+tłumienność, opóźnienie, szumy i zakłócenia
+tłumienność
+szumy i zakłócenia
+b
+
+Dla kanału cyfrowego wielkość BER, gdy stosunek S/N rośnie:
+3
+rośnie
+nie zmienia się
+maleje
+c
+
+Podstawowe rodzaje zasobów w sieci TKM z komutacją kanałów to:
+5
+moc obliczeniowa
+łącza, węzły
+łącza, węzły i moc obliczeniowa
+łącza
+węzły
+b
+
+Pojęcie protokołu dotyczy zasad komunikacji między:
+4
+odpowiadającymi sobie warstwami dwóch połączonych ze sobą urządzeń
+sąsiednimi warstwami tego samego urządzenia
+warstwami dwóch połączonych ze sobą urządzeń
+warstwami tego samego urządzenia
+a
+
+Sieć sygnalizacyjna jest siecią:
+2
+zorientowaną połączeniowo
+zorientowaną bezpołączeniowo
+b
+
+Skrót TDM(A) określa:
+3
+architekturę systemu
+rodzaj komutacji
+rodzaj multipleksacji
+c
+
+Ile poziomów ma hierarchiczna struktura sterowania w węźle komutacyjnym:
+4
+2
+4
+3
+5
+b
+
+W sieci zorientowanej bezpołączeniowo kanały są tworzone od końca do końca:
+4
+to zależy od rodzaju usługi
+tak
+tylko w jednym kierunku
+nie
+d
+
+W przypadku systemów transmisyjnych zrealizowanych w technice analogowej czynnikiem ograniczającym zasięg połączenia jest:
+4
+tłumienność i dyspersja linii
+dyspersja linii
+tłumienność linii
+addytywność szumów
+d
+
+Zmiany amplitudy napięcia wzdłuż linii długiej mają charakter:
+4
+wielomianowy
+wykładniczy
+liniowy
+hiperboliczny
+b
+
+Telekomutacja to:
+3
+transmisja
+tworzenie i likwidacja połączeń
+komutacja
+b
+
+Ile poziomów napięcia ma sygnał z kodowaniem 2B1Q:
+4
+trzy
+dwa
+pięć
+cztery
+d
+
+Które z wymienionych zadań realizowane są przez funkcję rutingu:
+4
+określenie zbioru dróg między źródłem i odbiorcą
+określenie zbioru dróg między źródłem i odbiorcą oraz wybranie według określonego kryterium jednej z dróg między źródłem i odbiorcą
+wybranie według określonego kryterium jednej z dróg między źródłem i odbiorcą
+wybranie jednej z dróg między źródłem i odbiorcą
+b
+
+Które rodzaje połączeń realizuje tranzytowy węzeł komutacyjny:
+4
+przychodzące - końcowe, przychodzące – tranzytowe
+lokalne, wychodzące
+przychodzące – tranzytowe
+lokalne, przychodzące – tranzytowe
+c
+
+Wzór na obliczenie tłumienia w decybelach to:
+4
+A=20ln(P1/P2)
+A=(1/2)ln(P1/P2)
+A=10ln(P1/P2)
+A=10lg(P1/P2)
+d
+
+System Wymiany Informacji jest realizowany w postaci:
+4
+grafu
+węzłów
+łączy
+sieci
+d
+
+Relacja między szerokością pasma kanału analogowego a szerokością widma sygnału przesyłanego przez ten kanał musi być następująca:
+3
+pasmo większe od widma
+pasmo mniejsze od widma
+pasmo większe równe widmie
+c
+
+Do budowy połączenia między dwoma węzłami zastosowano system DWDM z 80 długościami fal. Na każdej z nich osadzono system SDH STM-256. Uzyskana przepływność binarna między tymi węzłami wynosi:
+4
+100Gbit/s
+1.6Tbit/s
+1Tbit/s
+3.2Tbit/s
+d
+
+W numeracji abonenta prefiks operatora międzymiastowego:
+3
+nie należy do numeru abonenta
+należy do numeru abonenta
+to czy należy do numeru abonenta zależy od operatora sieci do której należy dany abonent
+a
+
+Operacje (funkcje) realizowane po stronie odbiorczej między kanałem a odbiorcą informacji to:
+5
+dekodowanie źródłowe
+dekodowanie liniowe, dekodowanie źródłowe
+dekodowanie liniowe
+demodulacja
+demodulacja albo dekodowanie liniowe, dekodowanie źródłowe
+e
+
+W przypadku usługi czasu rzeczywistego (np. mowa), który z parametrów musi być brany pod uwagę przy wyborze drogi połączeniowej realizowanej przez funkcję rutingu:
+3
+średnie opóźnienie na drodze
+odległość fizyczna
+liczba węzłów w drodze
+a
+
+Którą z cech musi posiadać publiczny SWI, który jest Systemem Masowej Obsług:
+3
+bardzo dużą jakość usług
+obsługiwać dużą liczbę abonentów
+najniższą cenę usług
+b
+
+Zwiększenie zysków operator uzyskuje poprzez:
+4
+zwiększenie intensywności żądań usług
+nowe technologie
+obniżenie kosztów zasobów sieci
+obniżenie kosztów zasobów sieci, nowe technologie, zwiększenie intensywności żądań usług
+d
+
+W przypadku modulacji wielowartościowych symbol przenosi informację o wartości:
+4
+n bitów, gdzie n>1
+ośmiu bitów
+jednego bitu
+trzech bitów
+a
+
+Który z wzorów umożliwia obliczenie tłumienia w Neperach:
+4
+A=20ln(P1/P2)
+A=(1/2)ln(P1/P2)
+A=10lg(P1/P2)
+A=10ln(P1/P2)
+b
+
+Zasoby dla realizacji usługi są zajmowane w fazie:
+3
+zgłoszenia
+wymiany informacji
+rozłączenia
+a
+
+Płaszczyzny klasycznej hierarchicznej sieci telekomunikacyjnej to:
+4
+międzymiastowa i międzynarodowa
+miejscowa i międzynarodowa
+miejscowa, międzymiastowa i międzynarodowa
+miejscowa i międzymiastowa
+c
+
+Multipleksacja została wprowadzona dla:
+3
+zwiększenia jakości usług
+obniżenia kosztów połączenia
+zwiększenia zasięgu połączeń
+b
+
+Dla systemu PCM częstość próbkowania sygnału mowy wynosi:
+4
+4000 na sekundę
+1000 na sekundę
+64000 na sekundę
+8000 na sekundę
+d
+
+Pole komutacyjne węzła zdefiniowane jest przez:
+4
+strukturę
+strukturę, typ selekcji
+sterowanie, typ selekcji
+strukturę, sterowanie, typ selekcji
+d
+
+Relacja między przepływnością binarną Rb i szybkością modulacji Rm w przypadku stosowania jako medium pary kablowej albo światłowodu jest:
+2
+taka sama
+różna
+b
+
+W stosie protokołów między CC dwóch węzłów komutacyjnych klasycznej sieci telekomunikacyjnej abonentów stacjonarnych protokół ISUP jest umieszczony nad:
+3
+MTP2
+MTP1
+MTP3
+c
+
+Dla realizacji modulatora BFSK konieczny(e) jest albo są:
+3
+jeden sygnał nośny
+dwa sygnały nośne
+cztery sygnały nośne
+b
+
+W tworzeniu drogi połączeniowej według algorytmu „hop-by-hop”:
+3
+końcowy węzeł wyznacza wszystkie węzły drogi
+początkowy węzeł wyznacza wszystkie węzły drogi
+kolejny węzeł począwszy od początkowego wyznacza następny węzeł drogi
+c
+
+Moc obliczeniowa i pasmo to zasoby w:
+4
+węzeł – moc obliczeniowa, łącze – pasmo
+węzeł i łącze – pasmo
+węzeł – pasmo, łącze – moc obliczeniowa
+węzeł i łącze – moc obliczeniowa
+a
+
+Impuls prostokątny po przejściu przez linię długą ma zmieniony(ą):
+4
+kształt
+fazę
+amplitudę
+częstotliwość
+a
+
+Przesyłanie informacji sterującej (sygnalizacyjnej) i użytkownika w paśmie wymaga:
+3
+wspólnych zasobów
+oddzielnych zasobów
+to nie ma znaczenia
+a
+
+Która z wiadomości sygnalizacyjnych zawiera informację o adresie żądanego abonenta oraz atrybuty usługi:
+5
+RLC
+ACM
+ANM
+IAM
+REL
+d
+
+W systemie GSM ramka czasowa ma liczbę szczelin czasowych równą:
+4
+8
+4
+16
+32
+a
+
+System PCM30/32 umożliwia realizację maksymalnej liczby łączy o przepływności 64kbit/s równej:
+5
+30
+15
+32
+16
+31
+e
+
+W module wyniesionym węzła komutacyjnego stosujemy typ selekcji:
+3
+T=(I,G)
+T=(I,S)
+T=(I,I)
+b
+
+Teletransmisja to:
+3
+przenoszenie na odległość informacji z portu wyjściowego węzła do portu wejściowego kolejnego węzła
+przenoszenie informacji z portu wejściowego do portu wyjściowego węzła
+przenoszenie informacji z portu wyjściowego węzła do portu wejściowego kolejnego węzła
+a
+
+W przypadku impulsu prostokątnego po przejście przez linię długą jej dyspersja powoduje:
+4
+zawężenie impulsu
+zachowanie amplitudy
+zachowanie kształtu
+poszerzenie impulsu
+d
+
+Podmiot(y) biorące udział w tworzeniu Systemu Wymiany Informacji to:
+5
+producent
+RD, producent i operator
+RD
+operator
+producent i operator
+b
+
+Sieć zorientowana połączeniowo musi mieć fazę (y):
+5
+połączenia
+zgłoszenia
+zgłoszenia, połączenia
+zgłoszenia, połączenia, rozłączenia
+rozłączenia
+d
+
+Które z medium jest prowadnicą zamkniętą:
+4
+skrętka
+wolna przestrzeń
+para symetryczna
+światłowód
+d
+
+Cechą charakterystyczną węzła sieci zorientowanej połączeniowo jest:
+4
+brak buforowania informacji
+brak sygnalizacji
+obecność sygnalizacji i brak buforowania informacji
+obecność sygnalizacji
+c
+
+Pozyskiwanie w sieci telekomunikacyjnej informacji koniecznych dla realizacji funkcji sterowania połączeniem odbywa się w sposób:
+4
+zcentralizowany
+to zależy od rozwiązania
+mieszany
+lokalnie
+b
+
+Tłumienność w trzecim oknie światłowodu wyrażona w dB/km wynosi około:
+5
+0.8
+1.6
+3.2
+0.4
+0.2
+e
+
+Wymagane w Polsce rodzaje (postacie) wymienianych informacji poprzez SWI to:
+4
+mowa, dane, obraz
+mowa, obraz, tekst
+mowa, obraz, dokument
+mowa, dokument, dane
+d
+
+W systemach DWDM oprócz wzmacniaczy optycznych stosuje się regeneratory ponieważ:
+3
+musimy odtworzyć zegar
+są tańsze
+mamy addytywność szumów
+c
+
+Czy prawdziwe jest zdanie, że "Modulację pasmową od modulacji dolnopasmowej nazywanej też kodowaniem transmisyjnym lub kodowaniem liniowym, w sposób istotny różni obecność sygnału częstotliwości nośnej".
+2
+nie
+tak
+b
+
+W klasycznej sieci telekomunikacyjnej zorientowanej połączeniowo systemy sygnalizacji na styku UNI i NNI są:
+2
+takie same
+różne
+b
+
+W jakich parametrach sygnału możemy umieścić informację, którą chcemy przesłać:
+5
+fazie
+amplitudzie
+częstotliwości
+amplitudzie i fazie
+punkty a, b i c
+e

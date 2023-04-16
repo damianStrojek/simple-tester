@@ -259,8 +259,7 @@ Na czym polega kontrola dostępu typu MAC?
 administrator na prośbę użytkownika udziela mu uprawnień 
 użytkownicy glosują, komu nadać uprawnienia
 właściciel danych decyduje o tym, komu nadać do nich uprawnienia
-administrator nadaje etykiety poufności danym i użytkownikom, a system decyduje o 
-dostępie na podstawie kontroli etykiet
+administrator nadaje etykiety poufności danym i użytkownikom, a system decyduje o dostępie na podstawie kontroli etykiet
 d
 
 Na czym polega kontrola dostępu typu DAC (Discretionary access control)?
