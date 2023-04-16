@@ -52,6 +52,8 @@ public:
 	}
 
 	void addAnsweredCorrectly() { this->answeredCorrectly++; }
+
+	void reorganizeAnswers() { std::random_shuffle(std::begin(this->answers), std::end(this->answers)); }
 };
 
 int sortQuestions(Question _question1, Question _question2);
@@ -139,18 +141,10 @@ std::ifstream loadFile(){
 
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
 							std::string _question, int &numberOfQuestions){
+	
+	// Load all of the answers
 	std::string temp;
 	std::getline(databaseFile, temp);
-
-	// [REFACTOR] Didn't check edge cases for this while() function
-	// Check if the first symbol is a number
-	// This while is to make sure that the "multiple line questions" will get processed too
-	while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
-		if (!((int)temp[0] > 48 && (int)temp[0] < 57)) _question += '\n' + temp;
-		std::getline(databaseFile, temp);
-	}
-
-	// Load all of the answers
 	Question newQuestion(_question);
 	int numberOfAnswers = temp[0] - '0', i, index;
 	for(i = 0; i < numberOfAnswers && databaseFile.good(); i++){
@@ -182,7 +176,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 			(double)(allQuestionsAsked == 0 ? 1 : allQuestionsAsked)) * 100.0f << 
 			"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
 
-	// Sorting mechanism
+	// Sorting Mechanism for Questions
 	if (!(correctQuestions % numberOfQuestions)) std::random_shuffle(std::begin(questions), std::end(questions));
 		else sort(questions.begin(), questions.end(), sortQuestions);
 
@@ -191,7 +185,8 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	if(seeCorrect) std::cout << " [" << questions[QUESTIONINDEX].getNumberCorrect() << " correct numbers]";
 	int numberOfAnswers = questions[QUESTIONINDEX].getAnswers().size();
 	
-	// Display the answers
+	// Shuffle answers and display
+	questions[QUESTIONINDEX].reorganizeAnswers();
 	for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << 
 												questions[QUESTIONINDEX].getAnswers()[i].desc;
 	
@@ -242,10 +237,9 @@ void checkQuestions(std::vector<Question> &questions) {
 	int i;
 	for (i = 0; i < questions.size(); i++) {
 		std::cout << "\n\t" << questions[i].getQuestion();
-		for (int j = 0; j < questions[i].getAnswers().size(); j++){
+		for (int j = 0; j < questions[i].getAnswers().size(); j++)
 			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswerIndex(j).desc << 
-							" [CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
-		}
+							"\t[CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
 	}
 
 	std::cout << "\n\n\t[ANSWERS ONLY]\n";

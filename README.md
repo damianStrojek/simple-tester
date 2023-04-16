@@ -4,20 +4,20 @@ Simple tester inspired by the source code of @Lemm Tester.
 
 Basic version has a `system("clear")` command implemented because I prefer to work on Linux. If you want it to work properly on Windows change it to `system("cls")`.
 
+## Functionality
+
+- The questions are randomly selected from the database - if you answered a given question correctly, it goes to the end of the queue and should not appear soon, but if you answered the question incorrectly, it will appear again soon.
+- Asnwers are also randomly selected, so you always have to read them and enter a different answer.
+- One answer is in the format `a`, `ab`, `bc`, `dec`, etc. Before submitting, it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
+- I've added a function that gives the information about amount of the correct answers. 
+
 ## Compile GNU/Linux
 
 ```bash
 g++ SimpleTester.cpp -o simpleTester
 ```
 
-## Improvements
-
-- The questions are randomly selected from the database - if you answered a given question correctly, it goes to the end of the queue and should not appear soon, but if you answered the question incorrectly, it will appear again soon.
-- Asnwers are also randomly selected, so you always have to read them and enter a different answer.
-- One answer is in the format `a`, `ab`, `bc`, `dec`, etc. Before submitting it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
-- I've added a function that gives the information about amount of the correct answers. 
-
-## Database
+## Database Source File
 
 In order for it to work you need to provide a `.txt` database file. If you are worried about state of your database you can always use the `checkQuestions(questions);` function.
 
@@ -53,4 +53,26 @@ Wyszukiwanie elementów odbywa się w czasie stałym O(1)
 Dane mają postać par (klucz -> wartość)
 b
 
+```
+
+## Known Problems
+
+Sometimes there is a problem with the source file. On Linux I've observed that the file has to be configured with **End of Line Sequence** that equals to `LF` (right bottom corner when editing file in Visual Studio Code).
+
+## Multi-line Questions
+
+If you have multi-line questions in your database file you need to somehow check if you are still reading question or an answer. I have deleted this function from the main release and pasted it here for the future.
+
+```c++
+void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
+							std::string _question, int &numberOfQuestions){
+[...]           
+// Check if the first symbol is a number
+// This while is to make sure that the "multiple line questions" will get processed too
+while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
+    if (!((int)temp[0] > 48 && (int)temp[0] < 57)) _question += '\n' + temp;
+    std::getline(databaseFile, temp);
+}
+
+}
 ```
