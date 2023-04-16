@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
 		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
 	}
 
-	//checkQuestions(questions);
+	checkQuestions(questions);
 
 	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
 			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";
@@ -142,6 +142,7 @@ void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &qu
 	std::string temp;
 	std::getline(databaseFile, temp);
 
+	// [REFACTOR] Didn't check edge cases for this while() function
 	// Check if the first symbol is a number
 	// This while is to make sure that the "multiple line questions" will get processed too
 	while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
@@ -241,9 +242,10 @@ void checkQuestions(std::vector<Question> &questions) {
 	int i;
 	for (i = 0; i < questions.size(); i++) {
 		std::cout << "\n\t" << questions[i].getQuestion();
-		for (int j = 0; j < questions[i].getAnswers().size(); j++)
-			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswerIndex(j).desc <<
-						 " [CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
+		for (int j = 0; j < questions[i].getAnswers().size(); j++){
+			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswerIndex(j).desc << 
+							" [CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
+		}
 	}
 
 	std::cout << "\n\n\t[ANSWERS ONLY]\n";
