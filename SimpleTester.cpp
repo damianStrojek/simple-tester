@@ -6,7 +6,6 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include <list>
 #include <ctime>
 #include <algorithm>
 #include <random>
@@ -28,7 +27,6 @@ private:
 	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
 public:
 	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0) {}
-	
 	std::string getQuestion() { return this->question; }
 	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
