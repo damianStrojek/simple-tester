@@ -6,7 +6,6 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include <list>
 #include <ctime>
 #include <algorithm>
 #include <random>
@@ -28,7 +27,6 @@ private:
 	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
 public:
 	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0) {}
-	
 	std::string getQuestion() { return this->question; }
 	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
@@ -81,7 +79,7 @@ int main(int argc, char* argv[]) {
 		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
 	}
 
-	checkQuestions(questions);
+	//checkQuestions(questions);
 
 	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
 			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";

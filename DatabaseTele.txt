@@ -1,38 +1,38 @@
-Tłumienność sygnału dla skrętki w funkcji częstotliwości sygnału jest:
+Tlumiennosc sygnalu dla skretki w funkcji czestotliwosci sygnalu jest:
 3
 maleje
-stała
-zwiększa się
+stala
+zwieksza sie
 c
 
-Która z techniki odwzorowania informacji w fali elektromagnetycznej jest aktualnie najczęściej stosowana:
+Ktora z techniki odwzorowania informacji w fali elektromagnetycznej jest aktualnie najczesciej stosowana:
 2
 cyfrowa
 analogowa
 a
 
-W skład numeru abonenta dla numeracji stosowanej w klasycznej sieci TKM wchodzą:
+W sklad numeru abonenta dla numeracji stosowanej w klasycznej sieci TKM wchodza:
 3
-wskaźnik kraju, wskaźnik strefy
-wskaźnik kraju, wskaźnik w strefie, numer w strefie
-wskaźnik strefy, numer w strefie
+wskaznik kraju, wskaznik strefy
+wskaznik kraju, wskaznik w strefie, numer w strefie
+wskaznik strefy, numer w strefie
 b
 
-Rdzeń światłowodu jednomodowego ma większy przekrój niż wielomodowego:
+Rdzen swiatlowodu jednomodowego ma wiekszy przekroj niz wielomodowego:
 2
 NIE
 TAK
 a
 
-Rozgałęźnik zastosowany w linii długiej powoduje:
+Rozgaleznik zastosowany w linii dlugiej powoduje:
 4
-poprawienie jakości sygnału
-rozdzielenie sygnałów przemieszczających się w przeciwnych kierunkach
-obniżenie stosunku mocy sygnału do mocy szumu
-zwiększenie zasięgu
+poprawienie jakosci sygnalu
+rozdzielenie sygnalow przemieszczajacych sie w przeciwnych kierunkach
+obnizenie stosunku mocy sygnalu do mocy szumu
+zwiekszenie zasiegu
 b
 
-System SDH STM-1 umożliwia realizację maksymalnej liczby łączy o przepływności 2Mbit/s równej:
+System SDH STM-1 umozliwia realizacje maksymalnej liczby laczy o przeplywnosci 2Mbit/s rownej:
 5
 32
 63
@@ -41,28 +41,28 @@ System SDH STM-1 umożliwia realizację maksymalnej liczby łączy o przepływno
 65
 b
 
-Po stronie odbiorczej odbiór sygnału cyfrowego odbywa się według zegara:
+Po stronie odbiorczej odbior sygnalu cyfrowego odbywa sie wedlug zegara:
 3
 centralnego dla sieci
-lokalnego strony odbierającej
-lokalnego strony nadającej
+lokalnego strony odbierajacej
+lokalnego strony nadajacej
 c
 
 Czym przede wszystkim zainteresowany jest operator telekomunikacyjny:
 5
-zakresem udostępnianych usług
-kosztem usługi
+zakresem udostepnianych uslug
+kosztem uslugi
 zyskiem
-dostępnością do usługi
-jakością realizacji usługi
+dostepnoscia do uslugi
+jakoscia realizacji uslugi
 c
 
-Na sygnale przy przetwarzaniu z postaci analogowej na cyfrową realizowane są następujące operacje:
+Na sygnale przy przetwarzaniu z postaci analogowej na cyfrowa realizowane sa nastepujace operacje:
 4
 kwantowanie, kodowanie
-próbkowanie, kwantowanie
-próbkowanie, kwantowanie, kodowanie
-próbkowanie, kodowanie
+probkowanie, kwantowanie
+probkowanie, kwantowanie, kodowanie
+probkowanie, kodowanie
 c
 
 Podmioty procesu telekomunikacji to:
@@ -72,105 +72,105 @@ abonent, operator
 abonent
 b
 
-Relacja między przepustowością kanału cyfrowego a szybkością strumienia binarnego przesyłanego przez ten kanał musi być następująca:
+Relacja miedzy przepustowoscia kanalu cyfrowego a szybkoscia strumienia binarnego przesylanego przez ten kanal musi byc nastepujaca:
 3
-przepustowość większa od szybkości
-przepustowość większa równa szybkości
-przepustowość mniejsza od szybkość
+przepustowosc wieksza od szybkosci
+przepustowosc wieksza rowna szybkosci
+przepustowosc mniejsza od szybkosc
 b
 
-Za obsługę zgłoszenia (żądania usługi) w węźle komutacyjnym sieci zorientowanej połączeniowo odpowiedzialny jest element:
+Za obsluge zgloszenia (zadania uslugi) w wezle komutacyjnym sieci zorientowanej polaczeniowo odpowiedzialny jest element:
 3
 pole komutacyjne
 Call Control
-moduły wyposażeń
+moduly wyposazen
 b
 
-Stwierdzenie, że SWI jest „Systemem Czasu Rzeczywistego” implikuje:
+Stwierdzenie, ze SWI jest „Systemem Czasu Rzeczywistego” implikuje:
 4
-natychmiastowe uzyskanie dostępu do usługi i natychmiastowe przesyłanie informacji użytkownika
-określone górne granice czasów dla uzyskania dostępu do usługi i przesyłania informacji użytkownika
-natychmiastowe przesyłanie informacji użytkownika
-natychmiastowe uzyskanie dostępu do usługi
+natychmiastowe uzyskanie dostepu do uslugi i natychmiastowe przesylanie informacji uzytkownika
+okreslone gorne granice czasow dla uzyskania dostepu do uslugi i przesylania informacji uzytkownika
+natychmiastowe przesylanie informacji uzytkownika
+natychmiastowe uzyskanie dostepu do uslugi
 b
 
-W systemie GSM stosujemy multipleksację w dziedzinie:
+W systemie GSM stosujemy multipleksacje w dziedzinie:
 3
-częstotliwości i czasu
-częstotliwości
+czestotliwosci i czasu
+czestotliwosci
 czasu
 a
 
-Widmo sygnału z kodowaniem AMI w stosunku do kodowania HDB3 jest:
+Widmo sygnalu z kodowaniem AMI w stosunku do kodowania HDB3 jest:
 3
-większe
+wieksze
 mniejsze
 takie samo
 c
 
-Element funkcjonalny, który separuje abonenta od rozwiązania Systemu Wymiany Informacji to:
+Element funkcjonalny, ktory separuje abonenta od rozwiazania Systemu Wymiany Informacji to:
 4
-węzeł dostępowy
-terminal (stacja końcowa)
-łącze dostępowe
-węzeł
+wezel dostepowy
+terminal (stacja koncowa)
+lacze dostepowe
+wezel
 b
 
-Węzeł komutacyjny pracujący w sieci zorientowanej bezpołączeniowo odróżnia się od węzła pracującego w sieci zorientowanej połączeniowo:
+Wezel komutacyjny pracujacy w sieci zorientowanej bezpolaczeniowo odroznia sie od wezla pracujacego w sieci zorientowanej polaczeniowo:
 5
-obecnością buforowania i brakiem sygnalizacji
+obecnoscia buforowania i brakiem sygnalizacji
 brakiem buforowania
 brakiem sygnalizacji
-brakiem buforowania i obecnością sygnalizacji
-obecnością buforowania
+brakiem buforowania i obecnoscia sygnalizacji
+obecnoscia buforowania
 a
 
-Wielkości charakteryzujące kanał to:
+Wielkosci charakteryzujace kanal to:
 4
-opóźnienie
-tłumienność, opóźnienie, szumy i zakłócenia
-tłumienność
-szumy i zakłócenia
+opoznienie
+tlumiennosc, opoznienie, szumy i zaklocenia
+tlumiennosc
+szumy i zaklocenia
 b
 
-Dla kanału cyfrowego wielkość BER, gdy stosunek S/N rośnie:
+Dla kanalu cyfrowego wielkosc BER, gdy stosunek S/N rosnie:
 3
-rośnie
-nie zmienia się
+rosnie
+nie zmienia sie
 maleje
 c
 
-Podstawowe rodzaje zasobów w sieci TKM z komutacją kanałów to:
+Podstawowe rodzaje zasobow w sieci TKM z komutacja kanalow to:
 5
 moc obliczeniowa
-łącza, węzły
-łącza, węzły i moc obliczeniowa
-łącza
-węzły
+lacza, wezly
+lacza, wezly i moc obliczeniowa
+lacza
+wezly
 b
 
-Pojęcie protokołu dotyczy zasad komunikacji między:
+Pojecie protokolu dotyczy zasad komunikacji miedzy:
 4
-odpowiadającymi sobie warstwami dwóch połączonych ze sobą urządzeń
-sąsiednimi warstwami tego samego urządzenia
-warstwami dwóch połączonych ze sobą urządzeń
-warstwami tego samego urządzenia
+odpowiadajacymi sobie warstwami dwoch polaczonych ze soba urzadzen
+sasiednimi warstwami tego samego urzadzenia
+warstwami dwoch polaczonych ze soba urzadzen
+warstwami tego samego urzadzenia
 a
 
-Sieć sygnalizacyjna jest siecią:
+Siec sygnalizacyjna jest siecia:
 2
-zorientowaną połączeniowo
-zorientowaną bezpołączeniowo
+zorientowana polaczeniowo
+zorientowana bezpolaczeniowo
 b
 
-Skrót TDM(A) określa:
+Skrot TDM(A) okresla:
 3
-architekturę systemu
+architekture systemu
 rodzaj komutacji
 rodzaj multipleksacji
 c
 
-Ile poziomów ma hierarchiczna struktura sterowania w węźle komutacyjnym:
+Ile poziomow ma hierarchiczna struktura sterowania w wezle komutacyjnym:
 4
 2
 4
@@ -178,26 +178,26 @@ Ile poziomów ma hierarchiczna struktura sterowania w węźle komutacyjnym:
 5
 b
 
-W sieci zorientowanej bezpołączeniowo kanały są tworzone od końca do końca:
+W sieci zorientowanej bezpolaczeniowo kanaly sa tworzone od konca do konca:
 4
-to zależy od rodzaju usługi
+to zalezy od rodzaju uslugi
 tak
 tylko w jednym kierunku
 nie
 d
 
-W przypadku systemów transmisyjnych zrealizowanych w technice analogowej czynnikiem ograniczającym zasięg połączenia jest:
+W przypadku systemow transmisyjnych zrealizowanych w technice analogowej czynnikiem ograniczajacym zasieg polaczenia jest:
 4
-tłumienność i dyspersja linii
+tlumiennosc i dyspersja linii
 dyspersja linii
-tłumienność linii
-addytywność szumów
+tlumiennosc linii
+addytywnosc szumow
 d
 
-Zmiany amplitudy napięcia wzdłuż linii długiej mają charakter:
+Zmiany amplitudy napiecia wzdluz linii dlugiej maja charakter:
 4
 wielomianowy
-wykładniczy
+wykladniczy
 liniowy
 hiperboliczny
 b
@@ -205,35 +205,35 @@ b
 Telekomutacja to:
 3
 transmisja
-tworzenie i likwidacja połączeń
+tworzenie i likwidacja polaczen
 komutacja
 b
 
-Ile poziomów napięcia ma sygnał z kodowaniem 2B1Q:
+Ile poziomow napiecia ma sygnal z kodowaniem 2B1Q:
 4
 trzy
 dwa
-pięć
+piec
 cztery
 d
 
-Które z wymienionych zadań realizowane są przez funkcję rutingu:
+Ktore z wymienionych zadan realizowane sa przez funkcje rutingu:
 4
-określenie zbioru dróg między źródłem i odbiorcą
-określenie zbioru dróg między źródłem i odbiorcą oraz wybranie według określonego kryterium jednej z dróg między źródłem i odbiorcą
-wybranie według określonego kryterium jednej z dróg między źródłem i odbiorcą
-wybranie jednej z dróg między źródłem i odbiorcą
+okreslenie zbioru drog miedzy zrodlem i odbiorca
+okreslenie zbioru drog miedzy zrodlem i odbiorca oraz wybranie wedlug okreslonego kryterium jednej z drog miedzy zrodlem i odbiorca
+wybranie wedlug okreslonego kryterium jednej z drog miedzy zrodlem i odbiorca
+wybranie jednej z drog miedzy zrodlem i odbiorca
 b
 
-Które rodzaje połączeń realizuje tranzytowy węzeł komutacyjny:
+Ktore rodzaje polaczen realizuje tranzytowy wezel komutacyjny:
 4
-przychodzące - końcowe, przychodzące – tranzytowe
-lokalne, wychodzące
-przychodzące – tranzytowe
-lokalne, przychodzące – tranzytowe
+przychodzace - koncowe, przychodzace – tranzytowe
+lokalne, wychodzace
+przychodzace – tranzytowe
+lokalne, przychodzace – tranzytowe
 c
 
-Wzór na obliczenie tłumienia w decybelach to:
+Wzor na obliczenie tlumienia w decybelach to:
 4
 A=20ln(P1/P2)
 A=(1/2)ln(P1/P2)
@@ -244,19 +244,19 @@ d
 System Wymiany Informacji jest realizowany w postaci:
 4
 grafu
-węzłów
-łączy
+wezlow
+laczy
 sieci
 d
 
-Relacja między szerokością pasma kanału analogowego a szerokością widma sygnału przesyłanego przez ten kanał musi być następująca:
+Relacja miedzy szerokoscia pasma kanalu analogowego a szerokoscia widma sygnalu przesylanego przez ten kanal musi byc nastepujaca:
 3
-pasmo większe od widma
+pasmo wieksze od widma
 pasmo mniejsze od widma
-pasmo większe równe widmie
+pasmo wieksze rowne widmie
 c
 
-Do budowy połączenia między dwoma węzłami zastosowano system DWDM z 80 długościami fal. Na każdej z nich osadzono system SDH STM-256. Uzyskana przepływność binarna między tymi węzłami wynosi:
+Do budowy polaczenia miedzy dwoma wezlami zastosowano system DWDM z 80 dlugosciami fal. Na kazdej z nich osadzono system SDH STM-256. Uzyskana przeplywnosc binarna miedzy tymi wezlami wynosi:
 4
 100Gbit/s
 1.6Tbit/s
@@ -264,53 +264,53 @@ Do budowy połączenia między dwoma węzłami zastosowano system DWDM z 80 dłu
 3.2Tbit/s
 d
 
-W numeracji abonenta prefiks operatora międzymiastowego:
+W numeracji abonenta prefiks operatora miedzymiastowego:
 3
-nie należy do numeru abonenta
-należy do numeru abonenta
-to czy należy do numeru abonenta zależy od operatora sieci do której należy dany abonent
+nie nalezy do numeru abonenta
+nalezy do numeru abonenta
+to czy nalezy do numeru abonenta zalezy od operatora sieci do ktorej nalezy dany abonent
 a
 
-Operacje (funkcje) realizowane po stronie odbiorczej między kanałem a odbiorcą informacji to:
+Operacje (funkcje) realizowane po stronie odbiorczej miedzy kanalem a odbiorca informacji to:
 5
-dekodowanie źródłowe
-dekodowanie liniowe, dekodowanie źródłowe
+dekodowanie zrodlowe
+dekodowanie liniowe, dekodowanie zrodlowe
 dekodowanie liniowe
 demodulacja
-demodulacja albo dekodowanie liniowe, dekodowanie źródłowe
+demodulacja albo dekodowanie liniowe, dekodowanie zrodlowe
 e
 
-W przypadku usługi czasu rzeczywistego (np. mowa), który z parametrów musi być brany pod uwagę przy wyborze drogi połączeniowej realizowanej przez funkcję rutingu:
+W przypadku uslugi czasu rzeczywistego (np. mowa), ktory z parametrow musi byc brany pod uwage przy wyborze drogi polaczeniowej realizowanej przez funkcje rutingu:
 3
-średnie opóźnienie na drodze
-odległość fizyczna
-liczba węzłów w drodze
+srednie opoznienie na drodze
+odleglosc fizyczna
+liczba wezlow w drodze
 a
 
-Którą z cech musi posiadać publiczny SWI, który jest Systemem Masowej Obsług:
+Ktora z cech musi posiadac publiczny SWI, ktory jest Systemem Masowej Obslug:
 3
-bardzo dużą jakość usług
-obsługiwać dużą liczbę abonentów
-najniższą cenę usług
+bardzo duza jakosc uslug
+obslugiwac duza liczbe abonentow
+najnizsza cene uslug
 b
 
-Zwiększenie zysków operator uzyskuje poprzez:
+Zwiekszenie zyskow operator uzyskuje poprzez:
 4
-zwiększenie intensywności żądań usług
+zwiekszenie intensywnosci zadan uslug
 nowe technologie
-obniżenie kosztów zasobów sieci
-obniżenie kosztów zasobów sieci, nowe technologie, zwiększenie intensywności żądań usług
+obnizenie kosztow zasobow sieci
+obnizenie kosztow zasobow sieci, nowe technologie, zwiekszenie intensywnosci zadan uslug
 d
 
-W przypadku modulacji wielowartościowych symbol przenosi informację o wartości:
+W przypadku modulacji wielowartosciowych symbol przenosi informacje o wartosci:
 4
-n bitów, gdzie n>1
-ośmiu bitów
+n bitow, gdzie n>1
+osmiu bitow
 jednego bitu
-trzech bitów
+trzech bitow
 a
 
-Który z wzorów umożliwia obliczenie tłumienia w Neperach:
+Ktory z wzorow umozliwia obliczenie tlumienia w Neperach:
 4
 A=20ln(P1/P2)
 A=(1/2)ln(P1/P2)
@@ -318,95 +318,95 @@ A=10lg(P1/P2)
 A=10ln(P1/P2)
 b
 
-Zasoby dla realizacji usługi są zajmowane w fazie:
+Zasoby dla realizacji uslugi sa zajmowane w fazie:
 3
-zgłoszenia
+zgloszenia
 wymiany informacji
-rozłączenia
+rozlaczenia
 a
 
-Płaszczyzny klasycznej hierarchicznej sieci telekomunikacyjnej to:
+Plaszczyzny klasycznej hierarchicznej sieci telekomunikacyjnej to:
 4
-międzymiastowa i międzynarodowa
-miejscowa i międzynarodowa
-miejscowa, międzymiastowa i międzynarodowa
-miejscowa i międzymiastowa
+miedzymiastowa i miedzynarodowa
+miejscowa i miedzynarodowa
+miejscowa, miedzymiastowa i miedzynarodowa
+miejscowa i miedzymiastowa
 c
 
-Multipleksacja została wprowadzona dla:
+Multipleksacja zostala wprowadzona dla:
 3
-zwiększenia jakości usług
-obniżenia kosztów połączenia
-zwiększenia zasięgu połączeń
+zwiekszenia jakosci uslug
+obnizenia kosztow polaczenia
+zwiekszenia zasiegu polaczen
 b
 
-Dla systemu PCM częstość próbkowania sygnału mowy wynosi:
+Dla systemu PCM czestosc probkowania sygnalu mowy wynosi:
 4
-4000 na sekundę
-1000 na sekundę
-64000 na sekundę
-8000 na sekundę
+4000 na sekunde
+1000 na sekunde
+64000 na sekunde
+8000 na sekunde
 d
 
-Pole komutacyjne węzła zdefiniowane jest przez:
+Pole komutacyjne wezla zdefiniowane jest przez:
 4
-strukturę
-strukturę, typ selekcji
+strukture
+strukture, typ selekcji
 sterowanie, typ selekcji
-strukturę, sterowanie, typ selekcji
+strukture, sterowanie, typ selekcji
 d
 
-Relacja między przepływnością binarną Rb i szybkością modulacji Rm w przypadku stosowania jako medium pary kablowej albo światłowodu jest:
+Relacja miedzy przeplywnoscia binarna Rb i szybkoscia modulacji Rm w przypadku stosowania jako medium pary kablowej albo swiatlowodu jest:
 2
 taka sama
-różna
+rozna
 b
 
-W stosie protokołów między CC dwóch węzłów komutacyjnych klasycznej sieci telekomunikacyjnej abonentów stacjonarnych protokół ISUP jest umieszczony nad:
+W stosie protokolow miedzy CC dwoch wezlow komutacyjnych klasycznej sieci telekomunikacyjnej abonentow stacjonarnych protokol ISUP jest umieszczony nad:
 3
 MTP2
 MTP1
 MTP3
 c
 
-Dla realizacji modulatora BFSK konieczny(e) jest albo są:
+Dla realizacji modulatora BFSK konieczny(e) jest albo sa:
 3
-jeden sygnał nośny
-dwa sygnały nośne
-cztery sygnały nośne
+jeden sygnal nosny
+dwa sygnaly nosne
+cztery sygnaly nosne
 b
 
-W tworzeniu drogi połączeniowej według algorytmu „hop-by-hop”:
+W tworzeniu drogi polaczeniowej wedlug algorytmu „hop-by-hop”:
 3
-końcowy węzeł wyznacza wszystkie węzły drogi
-początkowy węzeł wyznacza wszystkie węzły drogi
-kolejny węzeł począwszy od początkowego wyznacza następny węzeł drogi
+koncowy wezel wyznacza wszystkie wezly drogi
+poczatkowy wezel wyznacza wszystkie wezly drogi
+kolejny wezel poczawszy od poczatkowego wyznacza nastepny wezel drogi
 c
 
 Moc obliczeniowa i pasmo to zasoby w:
 4
-węzeł – moc obliczeniowa, łącze – pasmo
-węzeł i łącze – pasmo
-węzeł – pasmo, łącze – moc obliczeniowa
-węzeł i łącze – moc obliczeniowa
+wezel – moc obliczeniowa, lacze – pasmo
+wezel i lacze – pasmo
+wezel – pasmo, lacze – moc obliczeniowa
+wezel i lacze – moc obliczeniowa
 a
 
-Impuls prostokątny po przejściu przez linię długą ma zmieniony(ą):
+Impuls prostokatny po przejsciu przez linie dluga ma zmieniony(a):
 4
-kształt
-fazę
-amplitudę
-częstotliwość
+ksztalt
+faze
+amplitude
+czestotliwosc
 a
 
-Przesyłanie informacji sterującej (sygnalizacyjnej) i użytkownika w paśmie wymaga:
+Przesylanie informacji sterujacej (sygnalizacyjnej) i uzytkownika w pasmie wymaga:
 3
-wspólnych zasobów
-oddzielnych zasobów
+wspolnych zasobow
+oddzielnych zasobow
 to nie ma znaczenia
 a
 
-Która z wiadomości sygnalizacyjnych zawiera informację o adresie żądanego abonenta oraz atrybuty usługi:
+Ktora z wiadomosci sygnalizacyjnych zawiera informacje o adresie zadanego abonenta oraz atrybuty uslugi:
 5
 RLC
 ACM
@@ -415,7 +415,7 @@ IAM
 REL
 d
 
-W systemie GSM ramka czasowa ma liczbę szczelin czasowych równą:
+W systemie GSM ramka czasowa ma liczbe szczelin czasowych rowna:
 4
 8
 4
@@ -423,7 +423,7 @@ W systemie GSM ramka czasowa ma liczbę szczelin czasowych równą:
 32
 a
 
-System PCM30/32 umożliwia realizację maksymalnej liczby łączy o przepływności 64kbit/s równej:
+System PCM30/32 umozliwia realizacje maksymalnej liczby laczy o przeplywnosci 64kbit/s rownej:
 5
 30
 15
@@ -432,7 +432,7 @@ System PCM30/32 umożliwia realizację maksymalnej liczby łączy o przepływno�
 31
 e
 
-W module wyniesionym węzła komutacyjnego stosujemy typ selekcji:
+W module wyniesionym wezla komutacyjnego stosujemy typ selekcji:
 3
 T=(I,G)
 T=(I,S)
@@ -441,20 +441,20 @@ b
 
 Teletransmisja to:
 3
-przenoszenie na odległość informacji z portu wyjściowego węzła do portu wejściowego kolejnego węzła
-przenoszenie informacji z portu wejściowego do portu wyjściowego węzła
-przenoszenie informacji z portu wyjściowego węzła do portu wejściowego kolejnego węzła
+przenoszenie na odleglosc informacji z portu wyjsciowego wezla do portu wejsciowego kolejnego wezla
+przenoszenie informacji z portu wejsciowego do portu wyjsciowego wezla
+przenoszenie informacji z portu wyjsciowego wezla do portu wejsciowego kolejnego wezla
 a
 
-W przypadku impulsu prostokątnego po przejście przez linię długą jej dyspersja powoduje:
+W przypadku impulsu prostokatnego po przejscie przez linie dluga jej dyspersja powoduje:
 4
-zawężenie impulsu
+zawezenie impulsu
 zachowanie amplitudy
-zachowanie kształtu
+zachowanie ksztaltu
 poszerzenie impulsu
 d
 
-Podmiot(y) biorące udział w tworzeniu Systemu Wymiany Informacji to:
+Podmiot(y) biorace udzial w tworzeniu Systemu Wymiany Informacji to:
 5
 producent
 RD, producent i operator
@@ -463,40 +463,40 @@ operator
 producent i operator
 b
 
-Sieć zorientowana połączeniowo musi mieć fazę (y):
+Siec zorientowana polaczeniowo musi miec faze (y):
 5
-połączenia
-zgłoszenia
-zgłoszenia, połączenia
-zgłoszenia, połączenia, rozłączenia
-rozłączenia
+polaczenia
+zgloszenia
+zgloszenia, polaczenia
+zgloszenia, polaczenia, rozlaczenia
+rozlaczenia
 d
 
-Które z medium jest prowadnicą zamkniętą:
+Ktore z medium jest prowadnica zamknieta:
 4
-skrętka
-wolna przestrzeń
+skretka
+wolna przestrzen
 para symetryczna
-światłowód
+swiatlowod
 d
 
-Cechą charakterystyczną węzła sieci zorientowanej połączeniowo jest:
+Cecha charakterystyczna wezla sieci zorientowanej polaczeniowo jest:
 4
 brak buforowania informacji
 brak sygnalizacji
-obecność sygnalizacji i brak buforowania informacji
-obecność sygnalizacji
+obecnosc sygnalizacji i brak buforowania informacji
+obecnosc sygnalizacji
 c
 
-Pozyskiwanie w sieci telekomunikacyjnej informacji koniecznych dla realizacji funkcji sterowania połączeniem odbywa się w sposób:
+Pozyskiwanie w sieci telekomunikacyjnej informacji koniecznych dla realizacji funkcji sterowania polaczeniem odbywa sie w sposob:
 4
 zcentralizowany
-to zależy od rozwiązania
+to zalezy od rozwiazania
 mieszany
 lokalnie
 b
 
-Tłumienność w trzecim oknie światłowodu wyrażona w dB/km wynosi około:
+Tlumiennosc w trzecim oknie swiatlowodu wyrazona w dB/km wynosi okolo:
 5
 0.8
 1.6
@@ -513,30 +513,30 @@ mowa, obraz, dokument
 mowa, dokument, dane
 d
 
-W systemach DWDM oprócz wzmacniaczy optycznych stosuje się regeneratory ponieważ:
+W systemach DWDM oprocz wzmacniaczy optycznych stosuje sie regeneratory poniewaz:
 3
-musimy odtworzyć zegar
-są tańsze
-mamy addytywność szumów
+musimy odtworzyc zegar
+sa tansze
+mamy addytywnosc szumow
 c
 
-Czy prawdziwe jest zdanie, że "Modulację pasmową od modulacji dolnopasmowej nazywanej też kodowaniem transmisyjnym lub kodowaniem liniowym, w sposób istotny różni obecność sygnału częstotliwości nośnej".
+Czy prawdziwe jest zdanie, ze "Modulacje pasmowa od modulacji dolnopasmowej nazywanej tez kodowaniem transmisyjnym lub kodowaniem liniowym, w sposob istotny rozni obecnosc sygnalu czestotliwosci nosnej".
 2
 nie
 tak
 b
 
-W klasycznej sieci telekomunikacyjnej zorientowanej połączeniowo systemy sygnalizacji na styku UNI i NNI są:
+W klasycznej sieci telekomunikacyjnej zorientowanej polaczeniowo systemy sygnalizacji na styku UNI i NNI sa:
 2
 takie same
-różne
+rozne
 b
 
-W jakich parametrach sygnału możemy umieścić informację, którą chcemy przesłać:
+W jakich parametrach sygnalu mozemy umiescic informacje, ktora chcemy przeslac:
 5
 fazie
 amplitudzie
-częstotliwości
+czestotliwosci
 amplitudzie i fazie
 punkty a, b i c
 e
