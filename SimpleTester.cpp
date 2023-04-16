@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
 	}
 
-	checkQuestions(questions);
+	//checkQuestions(questions);
 
 	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
 			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";
