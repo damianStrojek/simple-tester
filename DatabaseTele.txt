@@ -538,5 +538,5 @@ fazie
 amplitudzie
 czestotliwosci
 amplitudzie i fazie
-punkty a, b i c
+amplitudzie, fazie i czestotliwosci
 e

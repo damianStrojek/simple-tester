@@ -10,8 +10,11 @@
 #include <algorithm>
 #include <random>
 
-#define LIMITCORRECT 200
+#define LIMITCORRECT 500
 #define QUESTIONINDEX 0
+#define ERRORFILE 0
+#define EXIT 1
+#define ERRORANSWER 2
 
 struct answer {
 	std::string desc;
@@ -54,18 +57,17 @@ public:
 	void reorganizeAnswers() { std::random_shuffle(std::begin(this->answers), std::end(this->answers)); }
 };
 
-int sortQuestions(Question _question1, Question _question2);
-int invokeError(int status);
+int sortQuestions(Question, Question);
+int invokeExit(int);
 void helloMessage();
 std::ifstream loadFile();
-void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions,
-							 std::string _question, int &numberOfQuestions);
-void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector<Question> &questions, 
-						const bool &seeCorrect, const int &numberOfQuestions);
-void displayCorrectAnswers(const int index, std::vector<Question> &questions);
-void checkQuestions(std::vector<Question> &questions);
+void loadQuestionsAnswers(std::ifstream&, std::vector<Question>&, std::string, int&);
+void displayQuestions(int&, int&, std::vector<Question>&, const bool&, const int&);
+void displayCorrectAnswers(const int, std::vector<Question>&);
+void checkQuestions(std::vector<Question>&);
+void countQuestions(std::vector<Question>&);
 
-int main(int argc, char* argv[]) {
+int main(){
 
 	helloMessage();
 	std::srand(unsigned(std::time(0)));
@@ -78,8 +80,6 @@ int main(int argc, char* argv[]) {
 		std::getline(databaseFile, temp);
 		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
 	}
-
-	//checkQuestions(questions);
 
 	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
 			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";
@@ -96,7 +96,7 @@ int main(int argc, char* argv[]) {
 	while(correctQuestions < LIMITCORRECT)
 		displayQuestions(correctQuestions, allQuestionsAsked, questions, seeCorrect, numberOfQuestions);
 
-	invokeError(1);
+	invokeExit(EXIT);
 	return 0;
 };
 
@@ -104,7 +104,7 @@ int sortQuestions(Question _question1, Question _question2) {
 	return _question1.getAnsweredCorrectly() < _question2.getAnsweredCorrectly();
 };
 
-int invokeError(int status) {
+int invokeExit(int status) {
 	if (!status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
 	else if (status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
 	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
@@ -132,7 +132,7 @@ std::ifstream loadFile(){
 
 	std::ifstream inputFile;
 	inputFile.open(databaseName, std::ios::in);
-	if(!inputFile.good()) invokeError(0);
+	if(!inputFile.good()) invokeExit(ERRORFILE);
 
 	return inputFile;
 };
@@ -190,23 +190,34 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	
 	std::cout << "\n\n\tYour answer: ";
 	std::getline(std::cin, answer);
-	bool answeredCorrectly = false;
+	bool answeredCorrectly = true;
 
-	// Compare user answer with the correct answer
-	for(int i = 0; i < answer.size(); i++){
-		if(answer[i] > 96 && answer[i] < 105){
-			int answerIndex = (int)answer[i] - 97;
-			// If index is out of scope
-			if(answerIndex >= questions[QUESTIONINDEX].getAnswers().size()) invokeError(2);
-			// If this part of answer is correct we continue checking
-			else if(questions[QUESTIONINDEX].getAnswers()[answerIndex].isCorrect){
-				answeredCorrectly = true;
-				continue;
-			}
-			// Else we break from the for loop and have the wrong answer
-			else {
-				answeredCorrectly = false;
-				break;
+	if(answer == "check")
+		// Check the database file
+		checkQuestions(questions);
+	else if(answer == "count")
+		// Prints how many times each question have been answered correctly
+		countQuestions(questions);
+	else if(answer == "exit")
+		// Exit the program
+		invokeExit(EXIT);
+	else {
+		// Compare user answer with the correct answer
+		for(int i = 0; i < answer.size(); i++){
+			if(answer[i] > 96 && answer[i] < 105){
+				int answerIndex = (int)answer[i] - 97;
+				// If index is out of scope
+				if(answerIndex >= questions[QUESTIONINDEX].getAnswers().size()) invokeExit(ERRORANSWER);
+				// If this part of answer is correct we continue checking
+				else if(questions[QUESTIONINDEX].getAnswers()[answerIndex].isCorrect){
+					answeredCorrectly = true;
+					continue;
+				}
+				// Else we break from the for loop and have the wrong answer
+				else {
+					answeredCorrectly = false;
+					break;
+				}
 			}
 		}
 	}
@@ -232,6 +243,7 @@ void displayCorrectAnswers(const int index, std::vector<Question> &questions){
 };
 
 void checkQuestions(std::vector<Question> &questions) {
+	std::cout << "\n\n\t[QUESTIONS]";
 	int i;
 	for (i = 0; i < questions.size(); i++) {
 		std::cout << "\n\t" << questions[i].getQuestion();
@@ -243,4 +255,12 @@ void checkQuestions(std::vector<Question> &questions) {
 	std::cout << "\n\n\t[ANSWERS ONLY]\n";
 	for(i = 0; i < questions.size(); i++)
 		std::cout << "\n\t\t[QUESTION " << i+1 << "] Correct answer: " << questions[i].getCorrectAnswer();
+};
+
+void countQuestions(std::vector<Question> &questions){
+	std::cout << "\n\n\t[QUESTIONS]";
+	for (int i = 0; i < questions.size(); i++) {
+		std::cout << "\n\t" << questions[i].getQuestion() << "\t[TIMES: " << 
+						questions[i].getAnsweredCorrectly() << "]\n"; 
+	}
 };
