@@ -1,10 +1,12 @@
 # simpleTester 3.0 Release
 
-Simple tester inspired by the source code of @Lemm Tester. 
+"Simple Tester" inspired by the source code of @Lemm Tester. 
+
+The program is made for students who want to learn abcd questions for the exam. The databases in the repository are prepared for one of the main Computer Science courses that have the abcd tests at the Gdańsk University of Technology.
 
 Basic version has a `system("clear")` command implemented because I prefer to work on Linux. If you want it to work properly on Windows change it to `system("cls")`.
 
-## Functionality
+## Improved functions
 
 - The questions are randomly selected from the database - if you answered a given question correctly, it goes to the end of the queue and should not appear soon, but if you answered the question incorrectly, it will appear again soon.
 - Asnwers are also randomly selected, so you always have to read them and enter a different answer.
@@ -14,7 +16,8 @@ Basic version has a `system("clear")` command implemented because I prefer to wo
 ## Compile GNU/Linux
 
 ```bash
-g++ SimpleTester.cpp -o simpleTester
+g++ simple-tester.cpp -o simple-tester
+chmod +x simple-tester
 ```
 
 ## Database Source File
