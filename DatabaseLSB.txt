@@ -1,0 +1,177 @@
+Opcjonalna wersja pracy sieci 802.11 - w trybie DCF/EDCA - zwiazana jest ze stosowaniem ramek RTS/CTS. Ich celem jest:
+wstepna rezerwacja medium, a prez to ograniczenie wplywu tzw. stacji ukrytych
+ograniczenie wplywu interferencji dtugich ramek DATA
+eliminacja niepozadanego wplywu stacji ukrytych
+
+Urzadzenia ZigBee o pelnej funkcjonalnosci, tzw. Full-function devices (FFDs) - wykorzystywane wrozwiazaniu
+WPN - ZigBee pozwalaja a prace w trybie:
+Koordynatora PAN (PAN Coordinator) oraz Koordynatora (Coordinator)
+Koordynatora PAN oraz Urzadzenia (Device)
+Koordynatora i Urzadzenia
+Koordynatora PAN, Koordynatora lub urzadzenia.
+
+Protokót PEAP jest odmiana protokolu EAP, w której:
+Dane przesylane sa szyfrowanym tunelem TLS.
+b. Dane przesylane sa bez zadnego zabezpieczenia.
+Dane przesylane sa szyfrowanym tunelem SSL.
+Dane presylane sa szyfrowanym tunelem TLS, a klient jest w stanie potwierdzic tozsamosc serwera.
+
+Atak Fragmentation:
+Jest atakiem pasywnym.
+Pozwala ustalic prawidtowy ciag szyfrujacy dla okreslonego klucza tajnego WEP iwektora inicjalizujacego.
+Jego celem jest wygenerowanie ruchu w sieci.
+Umozliwia restartowanie punktu dostepowego.
+
+W przypadku asymptotycznej analizy metody dostepu NP- CSMA uzyskiwana maksymalna efektownosc wykorzystania medium:
+Wszystkie trzy odpowiedzi
+zmierza do zera, gdy unormowane opóznienie propagacyjne przyjmuje wartosci wieksze od zera, a obciazenie medium zmierza do nieskonczonosci.
+jest rzedu 1/2e, gdy unormowane opóznienie propagacyne zmierza do jednosci
+osaga wartosci zmierzajace do jednosci, gdy unormowane opóznienie propagacyjne zmierza do zera, a obciazenie sieci zmierza do nieskonczonosci
+
+Sieci LAN typu 802.3/Ethernet i WLAN - typu 802.11 moga ze soba wspólpracowac...ale...
+Wymagane jest uzycie punktow dostepowych dokonujacych miedzy innymi konwersji struktur ramek (realizacja funkcji portal)
+Moga ze soba wspotpracowac bez najmniejszych ograniczen
+Urzadzenia stacjonarne sieci Ethernet musza by wyposazone w dodatkowe karty bezprzewodowe
+Dostep do sieci Ethernet musi byc szyfrowany i poprzedzony procedura wierzytelniania
+
+W jaki sposob wybierany MUSI by (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
+Cyklicznie powiekszany co pewna liczbe ramek.
+Standard nie precyzuje sposobu wyboru IV.
+Musi pozostawac staty dla danego urzadzenia prez caly okres pracy w danej sieci.
+Losowany co pewna liczbe ramek.
+
+Rozwiazanie Proxy Mobile IP:
+jest implementacja podejscia host-based mobility
+jest implementacja podejscia network-based mobility
+korzysta z agenta lokalnego
+moze powodowac problem routing trojkatnego
+
+Rozwiazania standardu IEEE 802.15.4 - ZigBee sa projektowane do pracy w pasmach czestotliwosci:
+450MHz, 902 MHz, 2.4 GHz,
+450MHz, 1.8 GHz, 2.4. GHz
+868 MHz, 1.8. GHz, 2.4.GHz
+868MHz, 902 MHz, 2.4 GHz
+
+Atak chop-chop:
+Pozwala na ustalanie klucza szyfrujacego WEP.
+Bazuje na stabosci mechanizmu uwierzytelniania.
+Bazuje na stabosci mechanizmu ochrony poufnosci.
+Pozwala na odszyfrowanie ramki WEP bez znajomosci klucza szyfrujacego.
+
+Ktory z ponizszych komponentow nie jest uwzgledniany jako sktadnik wptywajacy na czas procedury pretaczania miedzy punktami dostepowymi w sieci IEEE 802.11:
+Czas skanowania
+Czas wykrycia utraty polaczenia
+Czas potrzebny na wymiane kluczy
+Czas potrzeby na konfiguracje adresu IP
+
+Maksymalne wartosci efektywnego wykorzystania medium w systemach ALOHA i S-ALOHA otrzymujemy w przypadkach, gdy srednia liczba ramek przesylanych przez medium w czasie jednostkowym (rownym czasowi transmisji ramki) wynosi odpowiednio:
+1 i 2
+e i 2e
+0.5 i 1
+0.5 i 2
+
+W sieciach IEEE 802.11 rozszerzeniem pozwalajacym na skrocenie czasu przelaczania miedzy punktami dostepowymi jest:
+IEEE 802.11г
+IEEE 802.11i
+IEEE 802.11s
+IEEE 802.11ac
+
+Wskaz stwierdzenie najlepiej opisujace zasieg interferencji:
+Mozliwe wykrycie sygnatu, ale komunikacja nie jest mozliwa
+Mozliwosc komunikacji z wysoka stopa biedów
+Mozliwosc komunikacji z niska stopa bredów
+Brak mozliwosci wykrycia sygnatu, wplywa na szum ta
+
+W sieci Bluetooth 1.0 urzadzenia typu slave moga przebywac w róznych stanach. Wskaz poprawny zestaw takich stanow.
+Scanning, Stand by, Advertising, Initiating, Connecting
+Unconnected, Transition, Active, Low power mode
+Stand by, Inquiry, Page, Connected, TXRX, Park/Hold/ Sniff O d. AiB
+
+W sieciach WLAN standardu IEEE 802.11 mozliwa jest wstepna rezerwacja medium, z uzyciem NAV, dzieki:
+pracy sieci WLAN w trybie PCF
+procedurom skanowania i asocjacji z AP,
+wykorzystaniu ramek RTS oraz CTS
+wykorzystaniu ramek RTS oraz Probe Response,
+
+Podaj zestaw róznych ról pelnionych prez urzadzenia w architekturze BLE 4.0
+master/slave/ advertiser/ descriptor
+master/slave/ advertiser/scanner
+master/slave/ advertiser/scanner/sensor
+master/slave/ advertiser/ security manager
+
+Podstawowe tryby pracy sieci WLAN standardu 802.11 to:
+Contention Free Access, Contention Access
+Distributed Coordination Access, Point Coordination Access
+Collision Avoidance, Contention Free Access
+Distributed Coordination Function, Point Coordination Function
+
+Jaka jest dlugosc wektora inicjalizacyjnego IV da szyfrowania WEP z 64 bitowym kluczem RC4?
+24 bity
+48 bitów
+64 bity
+40 bitów
+
+Stacje ukryte w sieciach WLAN, to stacje:
+nie majace tacznosciz punktem dostepowym w sieci WLAN
+pozostajace poza zasiegiem wajemnej, bezposredniej komunikacji
+majace polaczenie z punktem dostepowym wylacznie za posrednictwem innej stacji
+nie majace aktualnego powiazania (asocjacji) z punktem dostepowym
+
+Wskaz w przypadku ktorych typów pakietow ACL przesylanych w sieci Bluetooth 1.0 uzyskamy najwyzsza, a w ktorych najnizza efektywna szybkosc przekazu.
+najwyzsza DH5 - najnizza DM1
+najwyzsza DM5 - najnizza DH1
+typ pakietu nie ma znaczenia - szybkosc ta zalezy wylacznie od warstwy fizycznej
+najwyzsza DM5 - najnizza DM1
+
+Sieci osobiste Bluetooth (typu BRE) oferuja, w swej podstawowej wersji, obstuge uzytkowników:
+na obszarze o promieniu do 1 km i prace z szybkoscia do 1 Mb/s
+na obszarze o promieniu do 100 m i prace z szybkoscia do 1 Mb/s
+na obszarze o promieniu 10 m i prace z szybkoscia do 5 Mb/s
+na obszarze o promieniu 10 m i prace z szybkoscia do 1 Mb/s
+
+Wskaz prawidtowy zestaw warstw w architekturze Bluetooth Low Energy 4.0
+Applications/ Generic Access Profile/ Generic Attribute Profile/ Attribute Protocol/ Security Manager/ Logical Link Control and Adaptation Protocol/ Host Controller Interface/Link Layer/ Direct Test Mode/ Physical Layer
+Applications/ Generic Access Profile /Attribute Protocol/ Security Manager/ Generic Attribute Profile/ Host Controller Interface/ Logical Link Control and Adaptation Protocol/ Link Layer/ Direct Test Mode/ Physical Layer
+Applications/ Attribute Protocol/ Generic Attribute Profile/ Generic Access Profile/ Security Manager/ Host Controller Interface/ Logical Link Control and Adaptation Protocol/ Link Layer/ Direct Test Mode/ Physical Layer
+Applications/ Generic Attribute Profile/ Generic Access Profile /Attribute Protocol/ Host Controller Interface/ Service Directory Protocol/Link Layer/ Direct Test Mode/ Physical Layer
+
+W architekturze systemow iBeacons, urzadzenia iBeacons:
+przekazuja pelna informacje zarowno o "reklamowanym" obiekcie, jak tez dane wykorzystywane do celów lokalizacji
+stuza wylacznie do celow lokalizacji
+dostarczaja informacji identyfikujacych urzadzenie ora pelny opis reklamowanego obiektu.
+dostarczaja dane wykorzystywane do celów lokalizacji oraz informacje pozwalajace na identyfikacje danego urzadzenia
+
+Ktory z podanych przedziatow czestotliwosci nie nalezy do nielicencjonowanych pasm ISM:
+3.4-3.8 GHz
+5.725-5.85GHz
+Wsystkie pasma sa nielicencjonowane
+2.4-2.483GHz
+
+Ciag szyfrujacy wygenerowany prez koder RC4 laczony jest z danymi, celem ich zaszyfrowania, z uzyciem funkcji:
+dodawania modulo 256
+XOR OR
+AND
+
+Czy wspólczesnie rozwijane sieci WLAN standardu IEEE 802.11 pozwalaja na przekazy z maksymalnymi szybkosciami:
+Ok. 1.3 Gb/s
+Ponad 5 Gb/s 
+Ok. 600 Mb/s 
+Ok. 100 Mb/s
+
+Wskaz poprawny zestaw podstawowych zjawisk fizycznych wplywajacych a propagacje sygnatow radiowych
+Odbicie, Wielodrogowosc, Interference, Szum zewnetrzny, Interference miedzysymbolowe
+Wszystkie zestawy sa poprawne
+Tumienie, Przestanianie, Rozpraszanie, Dyspersja czasowa, Interference miedzysymbolowe, Zaklócenia impulsowe
+Przestanianie, Odbicie, Zatamanie, Rozpraszanie, Ugiecie
+
+Urzadzenia sieci WLAN standard IEEE 802.11 pracujace zgodnie z opcja DCF (Distributed Coordination Function) realizuja:
+dostep rywalizacyny, zgodnie z protokolem CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
+dostep rywalizacyjny CSMA/CA, polaczony z mozliwoscia rezerwacji medium prez AP
+dostep rywalizacyjny typu CSMA/CD (CSMA with Collision Detection)
+dostep do kanalu na zasadach rywalizacji CSMA/CA, polaczony z przepytywaniem stacji prez AP
+
+Procedura okreslana mianem nastuchu wirtualnego w trybie DC sieci WLAN, zwiazana jest z odiozeniem transmisji przez czas okreslony w NAV, w zwiazku z:
+odbiorem ramki Probe Response z parametrami NAV
+odbiorem ramki RTS lub CTS z parametrami NAV
+wykryciem zajetosci medium przy próbie nadawania
+odbiorem ramki zarzadzajacej Beacon
