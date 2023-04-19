@@ -31,3 +31,7 @@ Ktora z techniki odwzorowania informacji w fali elektromagnetycznej jest aktualn
 cyfrowa
 analogowa
 a
+
+Czym sa iBeacony?
+o
+iBeacony to male urzadzenia bezprzewodowe korzystające z Bluetooth Low Energy. Glownym przeznaczeniem takich urzadzen jest regularne wysylanie ramek o stalych danych (z 1Hz - 10Hz).

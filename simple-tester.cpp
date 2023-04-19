@@ -219,7 +219,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	// Sorting Mechanism for Questions and selecting next question
 	if (!(correctQuestions % numberOfQuestions)) std::random_shuffle(std::begin(questions), std::end(questions));
 		else sort(questions.begin(), questions.end(), sortQuestions);
-	Question activeQuestion = questions.front();
+	Question activeQuestion = questions[0];
 
 	// Print next question and answer
 	if(activeQuestion.isOpen()) {
@@ -265,10 +265,11 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	allQuestionsAsked++;
 
 	// Output if the user was right or not
-	if(answeredCorrectly)
+	if(answeredCorrectly){
 		std::cout << "\n\t\t[CORRECT] Well done!";
 		activeQuestion.addAnsweredCorrectly();
 		correctQuestions++;
+	}
 	else activeQuestion.displayCorrectAnswers();
 
 	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT: ";
