@@ -12,6 +12,7 @@ Basic version has a `system("clear")` command implemented because I prefer to wo
 - Asnwers are also randomly selected, so you always have to read them and enter a different answer.
 - One answer is in the format `a`, `ab`, `bc`, `dec`, etc. Before submitting, it is sorted and all white spaces are deleted so you can type it in every combination you would like and it should work.
 - I've added a function that gives the information about amount of the correct answers. 
+- There is a new type of questions - "open questions". Now you can learn how to answer open questions correctly. I didn't introduce any type of buffer for wrong questions - the answer has to be 100% perfect.
 
 ## Compile GNU/Linux
 
@@ -26,7 +27,8 @@ In order for it to work you need to provide a `.txt` database file. If you are w
 
 Template of a question looks like this:
 
-```c#
+```c++
+// abcd questions
 <question>
 <number of answers>
 <answer nr n1>
@@ -34,6 +36,12 @@ Template of a question looks like this:
 <answer nr n3>
 <answer nr n4>
 <proper answer>
+<ENTER>
+
+// open questions
+<question>
+o
+<answer>
 <ENTER>
 ```
 
@@ -56,6 +64,7 @@ Wyszukiwanie elementów odbywa się w czasie stałym O(1)
 Dane mają postać par (klucz -> wartość)
 b
 
+
 ```
 
 ## Known Problems
@@ -69,13 +78,12 @@ If you have multi-line questions in your database file you need to somehow check
 ```c++
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
 							std::string _question, int &numberOfQuestions){
-[...]           
-// Check if the first symbol is a number
-// This while is to make sure that the "multiple line questions" will get processed too
-while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
-    if (!((int)temp[0] > 48 && (int)temp[0] < 57)) _question += '\n' + temp;
-    std::getline(databaseFile, temp);
-}
-
+    [...]           
+    // Check if the first symbol is a number
+    // This while is to make sure that the "multiple line questions" will get processed too
+    while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
+        if (!((int)temp[0] > 48 && (int)temp[0] < 57)) _question += '\n' + temp;
+        std::getline(databaseFile, temp);
+    }
 }
 ```

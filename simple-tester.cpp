@@ -39,13 +39,15 @@ private:
 	int numberOfCorrectAnswers;		// Number of correct answers
 	std::string correctAnswer;		// Array of correct answers
 	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
+	bool isOpen;				// Check if this question is open
 public:
-	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0) {}
+	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0), isOpen(false) {}
 	std::string getQuestion() { return this->question; }
 	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
 	int getAnsweredCorrectly() { return this->answeredCorrectly; }
 	std::string getCorrectAnswer() { return this->correctAnswer; }
+	bool isOpen(){ return this->isOpen; }
 	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
 	void setCorrectAnswerIndex(const int index) { 
@@ -56,10 +58,19 @@ public:
 
 	void setQuestion(std::string _question) { this->question = _question; }
 
+	void setOpen() { this->isOpen = true; }
+
 	void addAnswer(std::string _answer) {
 		answer temp;
 		temp.desc = _answer;
-		temp.isCorrect = false;
+		
+		// If question is open then there is only one correct answer
+		if(this->isOpen) {
+			temp.isCorrect = true;
+			this->correctAnswer = _answer;
+		}
+		else temp.isCorrect = false;
+
 		this->answers.push_back(temp);
 	}
 
@@ -69,7 +80,7 @@ public:
 };
 
 int sortQuestions(Question, Question);
-int invokeExit(int);
+void invokeExit(int);
 void helloMessage();
 std::ifstream loadFile();
 void loadQuestionsAnswers(std::ifstream&, std::vector<Question>&, std::string, int&);
@@ -115,7 +126,7 @@ int sortQuestions(Question _question1, Question _question2) {
 	return _question1.getAnsweredCorrectly() < _question2.getAnsweredCorrectly();
 };
 
-int invokeExit(int status) {
+void invokeExit(int status) {
 	if (!status) std::cout << "\n\t[ERROR] Loading of the file failed.\n";
 	else if (status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
 	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
@@ -125,13 +136,12 @@ int invokeExit(int status) {
 	getline(std::cin, stop);
 
 	exit(1);
-	return status;
 };
 
 void helloMessage(){
 	//system("cls");	// Windows version
 	system("clear");	// Linux version
-	std::cout << "\n\n\tSimpleTester release 3.0\n\n\tContributors: damianStrojek@2023" << 
+	std::cout << "\n\n\tSimpleTester release 3.1\n\n\tContributors: damianStrojek@2023" << 
 		", Lemm@2012, Pitya@2022\n\n\tHave fun learning. Fuck GUT.\n\n";
 	return;
 };
@@ -151,28 +161,40 @@ std::ifstream loadFile(){
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
 				std::string _question, int &numberOfQuestions){
 	
+	Question newQuestion(_question);
+	
 	// Load all of the answers
 	std::string temp;
 	std::getline(databaseFile, temp);
-	Question newQuestion(_question);
-	int numberOfAnswers = temp[0] - '0', i, index;
-	for(i = 0; i < numberOfAnswers && databaseFile.good(); i++){
+	// Check whether this is an open or abcd question
+	if(temp == "o"){
 		std::getline(databaseFile, temp);
+		newQuestion.setOpen();
 		newQuestion.addAnswer(temp);
 	}
-	
-	// Load the correct answer
-	if(i == numberOfAnswers){
-		std::getline(databaseFile, temp);
-		for(int j = 0; j < temp.size(); j++){
-			if(temp[j] > 96 && temp[j] < 105){
-				index = (int)temp[j] - 97;
-				newQuestion.setCorrectAnswerIndex(index);
+	else {
+		int numberOfAnswers = temp[0] - '0', i, index;
+		for(i = 0; i < numberOfAnswers && databaseFile.good(); i++){
+			std::getline(databaseFile, temp);
+			newQuestion.addAnswer(temp);
+		}
+		
+		// Load the correct answer
+		if(i == numberOfAnswers){
+			std::getline(databaseFile, temp);
+			// This could be numerical (answers in source files)
+			// but I would have to reformat all databases
+			for(int j = 0; j < temp.size(); j++){
+				if(temp[j] > 96 && temp[j] < 105){
+					index = (int)temp[j] - 97;
+					newQuestion.setCorrectAnswerIndex(index);
+				}
 			}
 		}
-		questions.push_back(newQuestion);
-		numberOfQuestions++;
 	}
+
+	questions.push_back(newQuestion);
+	numberOfQuestions++;
 };
 
 void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector<Question> &questions, 
@@ -181,6 +203,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	system("clear");	// Windows version
 
 	std::string answer;
+	bool answeredCorrectly = false;
 	std::cout << "\n\tYour actual score: " << (double)((double)correctQuestions / 
 		(double)(allQuestionsAsked == 0 ? 1 : allQuestionsAsked)) * 100.0f << 
 		"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
@@ -191,27 +214,26 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 
 	std::cout << "\n\t" << questions[QUESTIONINDEX].getQuestion();
 	allQuestionsAsked++;
-	if(seeCorrect) std::cout << " [" << questions[QUESTIONINDEX].getNumberCorrect() << " correct numbers]";
-	int numberOfAnswers = questions[QUESTIONINDEX].getAnswers().size();
-	
-	// Shuffle answers and display
-	questions[QUESTIONINDEX].reorganizeAnswers();
-	for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << questions[QUESTIONINDEX].getAnswers()[i].desc;
-	
-	std::cout << "\n\n\tYour answer: ";
-	std::getline(std::cin, answer);
-	bool answeredCorrectly = true;
 
-	if(answer == "check")
-		// Check the database file
-		checkQuestions(questions);
-	else if(answer == "count")
-		// Prints how many times each question have been answered correctly
-		countQuestions(questions);
-	else if(answer == "exit")
-		// Exit the program
-		invokeExit(EXIT);
+	if(questions[QUESTIONINDEX].isOpen()) {
+		std::cout << " [OPEN QUESTION]\n\t\t" << questions[QUESTIONINDEX].getAnswers()[0].desc <<
+				"\n\n\tYour answer: ";
+		std::getline(std::cin, answer);
+
+		// Compare user answer with the correct answer
+		if(questions[QUESTIONINDEX].getAnswers()[0].desc == answer) answeredCorrectly = true;
+	}
 	else {
+		if(seeCorrect) std::cout << " [" << questions[QUESTIONINDEX].getNumberCorrect() << " correct numbers]";
+		int numberOfAnswers = questions[QUESTIONINDEX].getAnswers().size();
+		
+		// Shuffle answers and display
+		questions[QUESTIONINDEX].reorganizeAnswers();
+		for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << questions[QUESTIONINDEX].getAnswers()[i].desc;
+		
+		std::cout << "\n\n\tYour answer: ";
+		std::getline(std::cin, answer);
+
 		// Compare user answer with the correct answer
 		for(int i = 0; i < answer.size(); i++){
 			if(answer[i] > 96 && answer[i] < 105){
@@ -241,15 +263,29 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		correctQuestions++;
 	}
 
-	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER";
+	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT";
 	std::getline(std::cin, answer);
+	if(answer == "check" || answer == "CHECK")
+		// Check the database file
+		checkQuestions(questions);
+	else if(answer == "count" || answer == "COUNT")
+		// Prints how many times each question have been answered correctly
+		countQuestions(questions);
+	else if(answer == "exit" || answer == "EXIT")
+		// Exit the program
+		invokeExit(EXIT);
 };
 
 void displayCorrectAnswers(const int index, std::vector<Question> &questions){
-	std::cout << "\n\t[WRONG] Correct answers:";
-	for(int j = 0; j < questions[index].getAnswers().size(); j++)
-		if(questions[index].getAnswers()[j].isCorrect)
-			std::cout << "\n\t\t" << questions[index].getAnswers()[j].desc;
+	if(questions[index].isOpen()){
+		std::cout << "\n\t[WRONG] Correct answer:\n\t\t" << questions[index].getAnswers()[0].desc;
+	}
+	else {
+		std::cout << "\n\t[WRONG] Correct answers:";
+		for(int j = 0; j < questions[index].getAnswers().size(); j++)
+			if(questions[index].getAnswers()[j].isCorrect)
+				std::cout << "\n\t\t" << questions[index].getAnswers()[j].desc;
+}
 };
 
 void checkQuestions(std::vector<Question> &questions) {
