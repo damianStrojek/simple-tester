@@ -120,7 +120,7 @@ int main(){
 	if (temp == "y") seeCorrect = true;
 
 	std::cout << "\n\tPress ENTER if you are ready for the first question. ";
-	std::getline(std::cin, temp);
+	std::cin.ignore();
 
 	// Had to come up with something better than while(true)
 	// Two variables needed to keep track of statistics
@@ -141,10 +141,8 @@ void invokeExit(int status) {
 	else if (status) std::cout << "\n\t[GOODBYE] Thank you for using SimpleTester.\n";
 	else if (status == 2) std::cout << "\n\t[ERROR] Loading of an answer failed.\n";
 	
-	// Pause for end user
-	std::string stop;
-	getline(std::cin, stop);
-
+	// Pause for end user and exit the program
+	std::cin.ignore();
 	exit(1);
 };
 
@@ -171,11 +169,11 @@ std::ifstream loadFile(){
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
 				std::string _question, int &numberOfQuestions){
 	
-	Question newQuestion(_question);
 	
 	// Load all of the answers
 	std::string temp;
 	std::getline(databaseFile, temp);
+	Question newQuestion(_question);
 	// Check whether this is an open or abcd question
 	if(temp == "o"){
 		std::getline(databaseFile, temp);
@@ -267,15 +265,13 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	allQuestionsAsked++;
 
 	// Output if the user was right or not
-	if(!answeredCorrectly)
-		activeQuestion.displayCorrectAnswers();
-	else {
+	if(answeredCorrectly)
 		std::cout << "\n\t\t[CORRECT] Well done!";
 		activeQuestion.addAnsweredCorrectly();
 		correctQuestions++;
-	}
+	else activeQuestion.displayCorrectAnswers();
 
-	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT ";
+	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT: ";
 	std::getline(std::cin, answer);
 	if(answer == "check" || answer == "CHECK")
 		// Check the database file
