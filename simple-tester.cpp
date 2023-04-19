@@ -36,7 +36,6 @@ private:
 	std::string question;			// Question itself
 	std::vector<answer> answers;		// All of the answers
 	int numberOfCorrectAnswers;		// Number of correct answers
-	std::string correctAnswer;		// Array of correct answers
 	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
 	bool openQuestion;			// Check if this question is open
 public:
@@ -45,13 +44,11 @@ public:
 	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
 	int getAnsweredCorrectly() { return this->answeredCorrectly; }
-	std::string getCorrectAnswer() { return this->correctAnswer; }
 	bool isOpen(){ return this->openQuestion; }
 	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
 	void setCorrectAnswerIndex(const int index) { 
-		this->answers[index].isCorrect = true; 
-		this->correctAnswer += (char)(index + 'a');
+		this->answers[index].isCorrect = true;
 		this->numberOfCorrectAnswers++;
 	}
 
@@ -64,10 +61,7 @@ public:
 		temp.desc = _answer;
 		
 		// If question is open then there is only one correct answer
-		if(this->openQuestion) {
-			temp.isCorrect = true;
-			this->correctAnswer = _answer;
-		}
+		if(this->openQuestion) temp.isCorrect = true;
 		else temp.isCorrect = false;
 
 		this->answers.push_back(temp);
@@ -79,13 +73,12 @@ public:
 
 	void displayCorrectAnswers(){
 		if(this->openQuestion)
-			std::cout << "\n\t[WRONG] Correct answer:\n\t\t" << this->correctAnswer;
+			std::cout << "\n\t[WRONG] Correct answer:\n\t\t" << this->answers[0].desc;
 		else {
 			std::cout << "\n\t[WRONG] Correct answers:";
-			for(int i = 0; i < this->numberOfCorrectAnswers; i++){
-				int answerIndex = (int)correctAnswer[i] - 97;
-				std::cout << "\n\t\t" << this->answers[answerIndex].desc;
-			}
+			for(int i = 0; i < this->answers.size(); i++)
+				if(answers[i].isCorrect)
+					std::cout << "\n\t\t" << answers[i].desc;
 		}
 	};
 };
@@ -217,9 +210,9 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
 
 	// Sorting Mechanism for Questions and selecting next question
-	if (!(correctQuestions % numberOfQuestions)) std::random_shuffle(std::begin(questions), std::end(questions));
-		else sort(questions.begin(), questions.end(), sortQuestions);
-	Question activeQuestion = questions[0];
+	std::random_shuffle(std::begin(questions), std::end(questions));
+	sort(questions.begin(), questions.end(), sortQuestions);
+	Question &activeQuestion = questions.front();
 
 	// Print next question and answer
 	if(activeQuestion.isOpen()) {
