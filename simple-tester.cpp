@@ -39,15 +39,15 @@ private:
 	int numberOfCorrectAnswers;		// Number of correct answers
 	std::string correctAnswer;		// Array of correct answers
 	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
-	bool isOpen;				// Check if this question is open
+	bool openQuestion;			// Check if this question is open
 public:
-	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0), isOpen(false) {}
+	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0), openQuestion(false) {}
 	std::string getQuestion() { return this->question; }
 	std::vector<answer> &getAnswers() { return this->answers; } 
 	answer getAnswerIndex(const int index) { return this->answers[index]; }
 	int getAnsweredCorrectly() { return this->answeredCorrectly; }
 	std::string getCorrectAnswer() { return this->correctAnswer; }
-	bool isOpen(){ return this->isOpen; }
+	bool isOpen(){ return this->openQuestion; }
 	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
 	void setCorrectAnswerIndex(const int index) { 
@@ -58,14 +58,14 @@ public:
 
 	void setQuestion(std::string _question) { this->question = _question; }
 
-	void setOpen() { this->isOpen = true; }
+	void setOpen() { this->openQuestion = true; }
 
 	void addAnswer(std::string _answer) {
 		answer temp;
 		temp.desc = _answer;
 		
 		// If question is open then there is only one correct answer
-		if(this->isOpen) {
+		if(this->openQuestion) {
 			temp.isCorrect = true;
 			this->correctAnswer = _answer;
 		}
