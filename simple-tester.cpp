@@ -22,7 +22,6 @@
 #include <random>
 
 #define LIMITCORRECT 500
-#define QUESTIONINDEX 0
 #define ERRORFILE 0
 #define EXIT 1
 #define ERRORANSWER 2
@@ -77,6 +76,18 @@ public:
 	void addAnsweredCorrectly() { this->answeredCorrectly++; }
 
 	void reorganizeAnswers() { std::random_shuffle(std::begin(this->answers), std::end(this->answers)); }
+
+	void displayCorrectAnswers(){
+		if(this->openQuestion)
+			std::cout << "\n\t[WRONG] Correct answer:\n\t\t" << this->correctAnswer;
+		else {
+			std::cout << "\n\t[WRONG] Correct answers:";
+			for(int i = 0; i < this->numberOfCorrectAnswers; i++){
+				int answerIndex = (int)correctAnswer[i] - 97;
+				std::cout << "\n\t\t" << this->answers[answerIndex].desc;
+			}
+		}
+	};
 };
 
 int sortQuestions(Question, Question);
@@ -85,7 +96,6 @@ void helloMessage();
 std::ifstream loadFile();
 void loadQuestionsAnswers(std::ifstream&, std::vector<Question>&, std::string, int&);
 void displayQuestions(int&, int&, std::vector<Question>&, const bool&, const int&);
-void displayCorrectAnswers(const int, std::vector<Question>&);
 void checkQuestions(std::vector<Question>&);
 void countQuestions(std::vector<Question>&);
 
@@ -208,28 +218,26 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		(double)(allQuestionsAsked == 0 ? 1 : allQuestionsAsked)) * 100.0f << 
 		"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
 
-	// Sorting Mechanism for Questions
+	// Sorting Mechanism for Questions and selecting next question
 	if (!(correctQuestions % numberOfQuestions)) std::random_shuffle(std::begin(questions), std::end(questions));
 		else sort(questions.begin(), questions.end(), sortQuestions);
+	Question activeQuestion = questions.front();
 
-	std::cout << "\n\t" << questions[QUESTIONINDEX].getQuestion();
-	allQuestionsAsked++;
-
-	if(questions[QUESTIONINDEX].isOpen()) {
-		std::cout << " [OPEN QUESTION]\n\t\t" << questions[QUESTIONINDEX].getAnswers()[0].desc <<
-				"\n\n\tYour answer: ";
+	// Print next question and answer
+	if(activeQuestion.isOpen()) {
+		std::cout << "\n\t[OPEN QUESTION] " << activeQuestion.getQuestion() << "\n\n\tYour answer: ";
 		std::getline(std::cin, answer);
 
 		// Compare user answer with the correct answer
-		if(questions[QUESTIONINDEX].getAnswers()[0].desc == answer) answeredCorrectly = true;
+		if(activeQuestion.getAnswers()[0].desc == answer) answeredCorrectly = true;
 	}
 	else {
-		if(seeCorrect) std::cout << " [" << questions[QUESTIONINDEX].getNumberCorrect() << " correct numbers]";
-		int numberOfAnswers = questions[QUESTIONINDEX].getAnswers().size();
+		if(seeCorrect) std::cout << " [" << activeQuestion.getNumberCorrect() << " correct numbers]";
+		int numberOfAnswers = activeQuestion.getAnswers().size();
 		
 		// Shuffle answers and display
-		questions[QUESTIONINDEX].reorganizeAnswers();
-		for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << questions[QUESTIONINDEX].getAnswers()[i].desc;
+		activeQuestion.reorganizeAnswers();
+		for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << activeQuestion.getAnswers()[i].desc;
 		
 		std::cout << "\n\n\tYour answer: ";
 		std::getline(std::cin, answer);
@@ -239,9 +247,9 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 			if(answer[i] > 96 && answer[i] < 105){
 				int answerIndex = (int)answer[i] - 97;
 				// If index is out of scope
-				if(answerIndex >= questions[QUESTIONINDEX].getAnswers().size()) invokeExit(ERRORANSWER);
+				if(answerIndex >= activeQuestion.getAnswers().size()) invokeExit(ERRORANSWER);
 				// If this part of answer is correct we continue checking
-				else if(questions[QUESTIONINDEX].getAnswers()[answerIndex].isCorrect){
+				else if(activeQuestion.getAnswers()[answerIndex].isCorrect){
 					answeredCorrectly = true;
 					continue;
 				}
@@ -253,17 +261,18 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 			}
 		}
 	}
+	allQuestionsAsked++;
 
 	// Output if the user was right or not
 	if(!answeredCorrectly)
-		displayCorrectAnswers(QUESTIONINDEX, questions);
+		activeQuestion.displayCorrectAnswers();
 	else {
 		std::cout << "\n\t\t[CORRECT] Well done!";
-		questions[QUESTIONINDEX].addAnsweredCorrectly();
+		activeQuestion.addAnsweredCorrectly();
 		correctQuestions++;
 	}
 
-	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT";
+	std::cout <<"\n\n\t[NEXT QUESTION] Press ENTER, CHECK/COUNT or EXIT ";
 	std::getline(std::cin, answer);
 	if(answer == "check" || answer == "CHECK")
 		// Check the database file
@@ -276,18 +285,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		invokeExit(EXIT);
 };
 
-void displayCorrectAnswers(const int index, std::vector<Question> &questions){
-	if(questions[index].isOpen()){
-		std::cout << "\n\t[WRONG] Correct answer:\n\t\t" << questions[index].getAnswers()[0].desc;
-	}
-	else {
-		std::cout << "\n\t[WRONG] Correct answers:";
-		for(int j = 0; j < questions[index].getAnswers().size(); j++)
-			if(questions[index].getAnswers()[j].isCorrect)
-				std::cout << "\n\t\t" << questions[index].getAnswers()[j].desc;
-}
-};
-
+// Below functions are clearly to debbug and check the database file while writing it
 void checkQuestions(std::vector<Question> &questions) {
 	std::cout << "\n\n\t[QUESTIONS]";
 	int i;
