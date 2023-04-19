@@ -232,12 +232,15 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		if(activeQuestion.getAnswers()[0].desc == answer) answeredCorrectly = true;
 	}
 	else {
-		if(seeCorrect) std::cout << " [" << activeQuestion.getNumberCorrect() << " correct numbers]";
+		if(seeCorrect) 
+			std::cout << " [" << activeQuestion.getNumberCorrect() << " correct answers] " << activeQuestion.getQuestion();
+
 		int numberOfAnswers = activeQuestion.getAnswers().size();
 		
 		// Shuffle answers and display
 		activeQuestion.reorganizeAnswers();
-		for(int i = 0; i < numberOfAnswers; i++) std::cout << "\n\t\t" << (char)(i + 'a') << ". " << activeQuestion.getAnswers()[i].desc;
+		for(int i = 0; i < numberOfAnswers; i++) 
+			std::cout << "\n\t\t" << (char)(i + 'a') << ". " << activeQuestion.getAnswers()[i].desc;
 		
 		std::cout << "\n\n\tYour answer: ";
 		std::getline(std::cin, answer);
