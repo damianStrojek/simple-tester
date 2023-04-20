@@ -41,13 +41,12 @@ private:
 public:
 	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0), openQuestion(false) {}
 	std::string getQuestion() { return this->question; }
-	std::vector<answer> &getAnswers() { return this->answers; } 
-	answer getAnswerIndex(const int index) { return this->answers[index]; }
+	std::vector<answer> &getAnswers() { return this->answers; }
 	int getAnsweredCorrectly() { return this->answeredCorrectly; }
 	bool isOpen(){ return this->openQuestion; }
 	int getNumberCorrect() { return this->numberOfCorrectAnswers; }
 
-	void setCorrectAnswerIndex(const int index) { 
+	void setCorrectAnswer(const int index) { 
 		this->answers[index].isCorrect = true;
 		this->numberOfCorrectAnswers++;
 	}
@@ -185,10 +184,11 @@ void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &qu
 			std::getline(databaseFile, temp);
 			// This could be numerical (answers in source files)
 			// but I would have to reformat all databases
+			// for example: from 'a' to '1'
 			for(int j = 0; j < temp.size(); j++){
 				if(temp[j] > 96 && temp[j] < 105){
 					index = (int)temp[j] - 97;
-					newQuestion.setCorrectAnswerIndex(index);
+					newQuestion.setCorrectAnswer(index);
 				}
 			}
 		}
@@ -285,24 +285,24 @@ void checkQuestions(std::vector<Question> &questions) {
 	for (i = 0; i < questions.size(); i++) {
 		std::cout << "\n\t" << questions[i].getQuestion();
 		for (int j = 0; j < questions[i].getAnswers().size(); j++)
-			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswerIndex(j).desc << 
-				"\t[CORRECT y/n] " << questions[i].getAnswerIndex(j).isCorrect;
+			std::cout << "\n\t\t" << (char)(j + 'a') << ". " << questions[i].getAnswers()[j].desc << 
+				"\t[CORRECT y/n] " << questions[i].getAnswers()[j].isCorrect;
 	}
 
 	std::cout << "\n\n\t[ANSWERS ONLY]\n";
-	for(i = 0; i < questions.size(); i++)
+	for(i = 0; i < questions.size(); i++){
 		std::cout << "\n\t\t[QUESTION " << i+1 << "] Correct answer: ";
 		for (int j = 0; j < questions[i].getAnswers().size(); j++)
-			if(questions[i].getAnswers()[j].isCorrect){
+			if(questions[i].getAnswers()[j].isCorrect)
 				std::cout << questions[i].getAnswers()[j].desc << " ";
+	}
 	std::cin.ignore();
 };
 
 void countQuestions(std::vector<Question> &questions){
 	std::cout << "\n\n\t[QUESTIONS]";
-	for (int i = 0; i < questions.size(); i++) {
-		std::cout << "\n\t" << questions[i].getQuestion() << "\t[TIMES: " << 
-			questions[i].getAnsweredCorrectly() << "]\n"; 
-	}
+	for (int i = 0; i < questions.size(); i++)
+		std::cout << "\n\t" << questions[i].getQuestion() << "\t[TIMES: " 
+				<< questions[i].getAnsweredCorrectly() << "]\n"; 
 	std::cin.ignore();
 };
