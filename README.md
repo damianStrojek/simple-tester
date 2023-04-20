@@ -1,6 +1,6 @@
-# simpleTester 3.0 Release
+# Simple Tester 3.1 Release
 
-"Simple Tester" inspired by the source code of @Lemm Tester. 
+Inspired by the source code of @Lemm Tester. 
 
 The program is made for students who want to learn abcd questions for the exam. The databases in the repository are prepared for one of the main Computer Science courses that have the abcd tests at the Gdańsk University of Technology.
 
