@@ -291,7 +291,10 @@ void checkQuestions(std::vector<Question> &questions) {
 
 	std::cout << "\n\n\t[ANSWERS ONLY]\n";
 	for(i = 0; i < questions.size(); i++)
-		std::cout << "\n\t\t[QUESTION " << i+1 << "] Correct answer: " << questions[i].getCorrectAnswer();
+		std::cout << "\n\t\t[QUESTION " << i+1 << "] Correct answer: ";
+		for (int j = 0; j < questions[i].getAnswers().size(); j++)
+			if(questions[i].getAnswers()[j].isCorrect){
+				std::cout << questions[i].getAnswers()[j].desc << " ";
 	std::cin.ignore();
 };
 
