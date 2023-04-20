@@ -236,3 +236,15 @@ odbiorem ramki RTS lub CTS z parametrami NAV
 wykryciem zajetosci medium przy probie nadawania
 odbiorem ramki zarzadzajacej Beacon
 b
+
+Czym sa iBeacony?
+o
+iBeacony to male urzadzenia bezprzewodowe korzystajace z Bluetooth Low Energy. Glownym przeznaczeniem takich urzadzen jest regularne wysylanie ramek o stalych danych (z 1Hz do 10Hz)
+
+Wymien 4 podstawowe Metody zwielokrotniania dostepu do medium w sieciach bezprzewodowych (skrotami).
+o
+TDM, FDM, CDM, SDM
+
+Wymien 3 tryby pracy AES z szczególnym uwzględnieniem trybów pracy wykorzystywanych w systemie WPA2 (odpowiedz w formacie: XYZ (Rozwiniecie XYZ), )
+o
+ECB (Electronic Code Book), CBC (Cipher Block Chaining), CTR (Counter Mode)
