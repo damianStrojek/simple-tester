@@ -1,7 +1,7 @@
 Opcjonalna wersja pracy sieci 802.11 - w trybie DCF/EDCA - zwiazana jest ze stosowaniem ramek RTS/CTS. Ich celem jest:
 3
-wstepna rezerwacja medium, a prez to ograniczenie wplywu tzw. stacji ukrytych
-ograniczenie wplywu interferencji dtugich ramek DATA
+wstepna rezerwacja medium, a przez to ograniczenie wplywu tzw. stacji ukrytych
+ograniczenie wplywu interferencji dlugich ramek DATA
 eliminacja niepozadanego wplywu stacji ukrytych
 a
 
@@ -18,7 +18,7 @@ Protokot PEAP jest odmiana protokolu EAP, w ktorej:
 Dane przesylane sa szyfrowanym tunelem TLS.
 Dane przesylane sa bez zadnego zabezpieczenia.
 Dane przesylane sa szyfrowanym tunelem SSL.
-Dane presylane sa szyfrowanym tunelem TLS, a klient jest w stanie potwierdzic tozsamosc serwera.
+Dane przesylane sa szyfrowanym tunelem TLS, a klient jest w stanie potwierdzic tozsamosc serwera.
 a
 
 Atak Fragmentation:
@@ -29,7 +29,7 @@ Jego celem jest wygenerowanie ruchu w sieci.
 Umozliwia restartowanie punktu dostepowego.
 c
 
-W przypadku asymptotycznej analizy metody dostepu NP- CSMA uzyskiwana maksymalna efektownosc wykorzystania medium:
+W przypadku asymptotycznej analizy metody dostepu NP-CSMA uzyskiwana maksymalna efektownosc wykorzystania medium:
 4
 Wszystkie trzy odpowiedzi
 Zmierza do zera, gdy unormowane opoznienie propagacyjne przyjmuje wartosci wieksze od zera, a obciazenie medium zmierza do nieskonczonosci.
@@ -45,11 +45,11 @@ Urzadzenia stacjonarne sieci Ethernet musza by wyposazone w dodatkowe karty bezp
 Dostep do sieci Ethernet musi byc szyfrowany i poprzedzony procedura uwierzytelniania
 a
 
-W jaki sposob wybierany MUSI byc (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
+W jaki sposob MUSI byc (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
 4
 Cyklicznie powiekszany co pewna liczbe ramek.
 Standard nie precyzuje sposobu wyboru IV.
-Musi pozostawac staty dla danego urzadzenia prez caly okres pracy w danej sieci.
+Musi pozostawac staly dla danego urzadzenia przez caly okres pracy w danej sieci.
 Losowany co pewna liczbe ramek.
 b
 
@@ -72,12 +72,12 @@ d
 Atak chop-chop:
 4
 Pozwala na ustalanie klucza szyfrujacego WEP.
-Bazuje na stabosci mechanizmu uwierzytelniania.
-Bazuje na stabosci mechanizmu ochrony poufnosci.
+Bazuje na slabosci mechanizmu uwierzytelniania.
+Bazuje na slabosci mechanizmu ochrony poufnosci.
 Pozwala na odszyfrowanie ramki WEP bez znajomosci klucza szyfrujacego.
 d
 
-Ktory z ponizszych komponentow nie jest uwzgledniany jako sktadnik wptywajacy na czas procedury pretaczania miedzy punktami dostepowymi w sieci IEEE 802.11:
+Ktory z ponizszych komponentow nie jest uwzgledniany jako skladnik wptywajacy na czas procedury przelaczania miedzy punktami dostepowymi w sieci IEEE 802.11:
 4
 Czas skanowania
 Czas wykrycia utraty polaczenia
@@ -103,10 +103,10 @@ a
 
 Wskaz stwierdzenie najlepiej opisujace zasieg interferencji:
 4
-Mozliwe wykrycie sygnatu, ale komunikacja nie jest mozliwa
-Mozliwosc komunikacji z wysoka stopa biedow
-Mozliwosc komunikacji z niska stopa bredow
-Brak mozliwosci wykrycia sygnatu, wplywa na szum ta
+Mozliwe wykrycie sygnalu, ale komunikacja nie jest mozliwa
+Mozliwosc komunikacji z wysoka stopa bledow
+Mozliwosc komunikacji z niska stopa bledow
+Brak mozliwosci wykrycia sygnalu, wplywa na szum tla
 a
 
 W sieci Bluetooth 1.0 urzadzenia typu slave moga przebywac w roznych stanach. Wskaz poprawny zestaw takich stanow.
@@ -125,12 +125,12 @@ wykorzystaniu ramek RTS oraz CTS
 wykorzystaniu ramek RTS oraz Probe Response.
 c
 
-Podaj zestaw roznych rol pelnionych prez urzadzenia w architekturze BLE 4.0
+Podaj zestaw roznych rol pelnionych przez urzadzenia w architekturze BLE 4.0
 4
-master/slave/ advertiser/descriptor
-master/slave/ advertiser/scanner
-master/slave/ advertiser/scanner/sensor
-master/slave/ advertiser/security manager
+master/slave/advertiser/descriptor
+master/slave/advertiser/scanner
+master/slave/advertiser/scanner/sensor
+master/slave/advertiser/security manager
 b
 
 Podstawowe tryby pracy sieci WLAN standardu 802.11 to:
@@ -157,7 +157,7 @@ majace polaczenie z punktem dostepowym wylacznie za posrednictwem innej stacji
 nie majace aktualnego powiazania (asocjacji) z punktem dostepowym
 b
 
-Wskaz w przypadku ktorych typow pakietow ACL przesylanych w sieci Bluetooth 1.0 uzyskamy najwyzsza, a w ktorych najnizza efektywna szybkosc przekazu.
+Wskaz w przypadku ktorych typow pakietow ACL przesylanych w sieci Bluetooth 1.0 uzyskamy najwyzsza, a w ktorych najnizsza efektywna szybkosc przekazu.
 4
 najwyzsza DH5 - najnizsza DM1
 najwyzsza DM5 - najnizsza DH1
@@ -189,7 +189,7 @@ dostarczaja informacji identyfikujacych urzadzenie ora pelny opis reklamowanego 
 dostarczaja dane wykorzystywane do celow lokalizacji oraz informacje pozwalajace na identyfikacje danego urzadzenia
 d
 
-Ktory z podanych przedziatow czestotliwosci nie nalezy do nielicencjonowanych pasm ISM:
+Ktory z podanych przedzialow czestotliwosci nie nalezy do nielicencjonowanych pasm ISM:
 4
 3.4 - 3.8 GHz
 5.725 - 5.85 GHz
@@ -197,7 +197,7 @@ Wszystkie pasma sa nielicencjonowane
 2.4 - 2.483 GHz
 c
 
-Ciag szyfrujacy wygenerowany prez koder RC4 laczony jest z danymi, celem ich zaszyfrowania, z uzyciem funkcji:
+Ciag szyfrujacy wygenerowany przez koder RC4 laczony jest z danymi, celem ich zaszyfrowania, z uzyciem funkcji:
 4
 dodawania modulo 256
 XOR 
@@ -213,7 +213,7 @@ Ok. 600 Mb/s
 Ok. 100 Mb/s
 b
 
-Wskaz poprawny zestaw podstawowych zjawisk fizycznych wplywajacych na propagacje sygnatow radiowych.
+Wskaz poprawny zestaw podstawowych zjawisk fizycznych wplywajacych na propagacje sygnalow radiowych.
 4
 Odbicie, Wielodrogowosc, Interferencje, Szum zewnetrzny, Interferencje miedzysymbolowe
 Wszystkie zestawy sa poprawne
@@ -224,27 +224,15 @@ b
 Urzadzenia sieci WLAN standard IEEE 802.11 pracujace zgodnie z opcja DCF (Distributed Coordination Function) realizuja:
 4
 dostep rywalizacyny, zgodnie z protokolem CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
-dostep rywalizacyjny CSMA/CA, polaczony z mozliwoscia rezerwacji medium prez AP
+dostep rywalizacyjny CSMA/CA, polaczony z mozliwoscia rezerwacji medium przez AP
 dostep rywalizacyjny typu CSMA/CD (CSMA with Collision Detection)
-dostep do kanalu na zasadach rywalizacji CSMA/CA, polaczony z przepytywaniem stacji prez AP
+dostep do kanalu na zasadach rywalizacji CSMA/CA, polaczony z przepytywaniem stacji przez AP
 a
 
-Procedura okreslana mianem nastuchu wirtualnego w trybie DC sieci WLAN, zwiazana jest z odiozeniem transmisji przez czas okreslony w NAV, w zwiazku z:
+Procedura okreslana mianem nasluchu wirtualnego w trybie DC sieci WLAN, zwiazana jest z odlozeniem transmisji przez czas okreslony w NAV, w zwiazku z:
 4
 odbiorem ramki Probe Response z parametrami NAV
 odbiorem ramki RTS lub CTS z parametrami NAV
 wykryciem zajetosci medium przy probie nadawania
 odbiorem ramki zarzadzajacej Beacon
 b
-
-Czym sa iBeacony?
-o
-iBeacony to male urzadzenia bezprzewodowe korzystajace z Bluetooth Low Energy. Glownym przeznaczeniem takich urzadzen jest regularne wysylanie ramek o stalych danych (z 1Hz do 10Hz)
-
-Wymien 4 podstawowe Metody zwielokrotniania dostepu do medium w sieciach bezprzewodowych (skrotami).
-o
-TDM, FDM, CDM, SDM
-
-Wymien 3 tryby pracy AES z szczególnym uwzględnieniem trybów pracy wykorzystywanych w systemie WPA2 (odpowiedz w formacie: XYZ (Rozwiniecie XYZ), )
-o
-ECB (Electronic Code Book), CBC (Cipher Block Chaining), CTR (Counter Mode)

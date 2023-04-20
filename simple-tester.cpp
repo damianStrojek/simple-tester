@@ -35,8 +35,8 @@ class Question {
 private:
 	std::string question;			// Question itself
 	std::vector<answer> answers;		// All of the answers
-	int numberOfCorrectAnswers;		// Number of correct answers
-	int answeredCorrectly;			// How many times you answered this question correctly (basis for sorting)
+	int numberOfCorrectAnswers;		// Number of correct answers to this specific question
+	int answeredCorrectly;			// How many times user answered this question correctly (basis for sorting)
 	bool openQuestion;			// Check if this question is open
 public:
 	Question(std::string _question) : question(_question), answeredCorrectly(0), numberOfCorrectAnswers(0), openQuestion(false) {}
@@ -161,7 +161,6 @@ std::ifstream loadFile(){
 void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
 				std::string _question, int &numberOfQuestions){
 	
-	
 	// Load all of the answers
 	std::string temp;
 	std::getline(databaseFile, temp);
@@ -204,7 +203,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	system("clear");	// Windows version
 
 	std::string answer;
-	bool answeredCorrectly = false;
+	bool correctAnswer = false;
 	std::cout << "\n\tYour actual score: " << (double)((double)correctQuestions / 
 		(double)(allQuestionsAsked == 0 ? 1 : allQuestionsAsked)) * 100.0f << 
 		"% (" << correctQuestions << "/" << allQuestionsAsked << ")\n\n";
@@ -220,7 +219,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 		std::getline(std::cin, answer);
 
 		// Compare user answer with the correct answer
-		if(activeQuestion.getAnswers()[0].desc == answer) answeredCorrectly = true;
+		if(activeQuestion.getAnswers()[0].desc == answer) correctAnswer = true;
 	}
 	else {
 		if(seeCorrect) 
@@ -244,12 +243,12 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 				if(answerIndex >= activeQuestion.getAnswers().size()) invokeExit(ERRORANSWER);
 				// If this part of answer is correct we continue checking
 				else if(activeQuestion.getAnswers()[answerIndex].isCorrect){
-					answeredCorrectly = true;
+					correctAnswer = true;
 					continue;
 				}
 				// Else we break from the for loop and have the wrong answer
 				else {
-					answeredCorrectly = false;
+					correctAnswer = false;
 					break;
 				}
 			}
@@ -258,7 +257,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	allQuestionsAsked++;
 
 	// Output if the user was right or not
-	if(answeredCorrectly){
+	if(correctAnswer){
 		std::cout << "\n\t\t[CORRECT] Well done!";
 		activeQuestion.addAnsweredCorrectly();
 		correctQuestions++;
