@@ -4,14 +4,14 @@ Jaki rodzaj polaczen przelacznikow L2 jest optymalny dla zwiekszenia niezawodnos
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-a
+b
 
 Jaki rodzaj polaczen routerow jest optymalny dla zwiekszenia niezawodnosci i wydajnosci sieci?
 3
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-b
+c
 
 Do czego wykorzystywany jest protokol VRRP?
 4
@@ -58,7 +58,7 @@ Ktory z wymienionych systemow monitorowania sieci charakteryzuje sie najmniejszy
 MRTG
 Nagios
 Zabbix
-c
+a
 
 Wskaż urzadzenie, ktorego adres jest najbardziej odpowiedni do testowania poprawnosci dzialania lacza dostepowego:
 4
@@ -102,7 +102,7 @@ ok. 6 m^2
 ok. 10 m^2
 ok. 16 m^2
 ok. 60 m^2
-c
+b
 
 Ktora klasyfikacja opisuje centrum danych o najwyższym poziomie niezawodnosci?
 4
@@ -142,7 +142,7 @@ do przewodow ulożonych horyzontalnie
 do przewodow ulożonych wertykalnie
 do logicznej infrastruktury szkieletowej
 do logicznej infrastruktury dostepowej
-a
+d
 
 Do czego odnosi sie pojecie okablowanie pionowe?
 4
@@ -150,7 +150,7 @@ do logicznej infrastruktury dostepowej
 do logicznej infrastruktury szkieletowej
 do przewodow ulozonych wertykalnie
 do przewodow ulozonych horyzontalnie
-c
+b
 
 Jaki rodzaj swiatlowodu stosuje sie przy odleglosci polaczenia ok. 600 metrow?
 4
@@ -209,14 +209,14 @@ Ile urzadzen można zaadresowac w podsieci IPv4 z maska /29?
 7
 6
 5
-b
+c
 
 Ile urzadzen można zaadresowac W pojedynczej podsieci IPv6 o standardowej dlugosci maski? (10-22)
 3 
 miliony (x * 10^6)
 biliony (x * 10^12)
 tryliony (x * 10^18)
-a
+c
 
 Jaka bedzie maska sieci dla zagregowanych 4 podsieci z maskami /24?
 4
