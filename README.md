@@ -24,7 +24,9 @@ chmod +x simple-tester
 
 ## Database Source File
 
-In order for it to work you need to provide a `.txt` database file. If you are worried about state of your database you can always use the `checkQuestions(questions);` function.
+In order for it to work you need to provide a `.txt` database file. If you are worried about state of your database you can always use the `checkQuestions(questions);` function. 
+
+The source code is designed to work with the `Databases/` folder. You need to create this folder and put there `.txt` database files if you didn't clone the repository from github.
 
 Template of a question looks like this:
 
