@@ -1,0 +1,279 @@
+# Baza danych dla przedmiotu Sieci Korporacyjne - na podstawie egzaminu z 2023 roku
+Jaki rodzaj polaczen przelacznikow L2 jest optymalny dla zwiekszenia niezawodnosci sieci?
+3
+agregacja wielu linkow
+polaczenia w topologii pierscienia
+polaczenia w topologii kratowej
+
+
+Jaki rodzaj polaczen routerow jest optymalny dla zwiekszenia niezawodnosci i wydajnosci sieci?
+3
+agregacja wielu linkow
+polaczenia w topologii pierscienia
+polaczenia w topologii kratowej
+
+
+Do czego wykorzystywany jest protokol VRRP?
+4
+do zwiekszenia poziomu bezpieczenstwa
+do zwiekszenia poziomu niezawodnosci
+do zwiekszenia poziomu skalowalnosci
+do zwiekszenia wygody zarzadzania
+
+
+Ktora z technologii pozwala poprawic bezpieczenstwo sieci?
+4
+LACP
+VLAN
+VNC
+VRRP
+
+
+Ktora z wymienionych technologii pozwala zwiekszyc niezawodnosc sieci?
+4
+VLAN
+VNC
+VRRP
+VPN
+
+
+Do czego wykorzystywana jest technologia agregacji laczy?
+jest niezbedna dla poprawnego dzialania protokolow rodziny STP
+zwieksza niezawodnosc polaczenia
+zwieksza przepustowosc polaczenia
+zwieksza zarowno przepustowosc jak i niezawodnosc polaczenia
+
+
+Wskaz protokol monitorowania sieci wykorzystywany m.in. do zbierania statystyk ruchu interfejsow sieciowych:
+4
+SNMP
+SMTP
+ICMP
+GVRP
+
+
+Ktory z wymienionych systemow monitorowania sieci charakteryzuje sie najmniejszymi możliwosciami?
+3
+MRTG
+Nagios
+Zabbix
+
+
+Wskaż urzadzenie, ktorego adres jest najbardziej odpowiedni do testowania poprawnosci dzialania lacza dostepowego:
+4
+router brzegowy na krawedzi sieci lokalnej i sieci operatora
+router w sieci operatora
+urzadzenie w sieci zewnetrznej, z ktorym komunikuja sie urzadzenia lokalne
+urzadzenie w sieci zewnetrznej, z ktorym nie komunikuja sie urzadzenia lokalne
+
+
+Wskaz technologie dostepu do sieci lokalnej z publicznego Internetu o najwiekszej pewnosci dzialania:
+3
+PPTP
+L2TP
+OpenVPN
+
+
+Ktory z wymienionych adresow pocztowych najlepiej realizuje funkcyjna polityke adresowa?
+3
+logistyka©firma.com.pl
+jkowal@firma.com.pl
+Jan.Kowalski@biuro.firma.com.pl
+a
+
+Ktory z podanych przykladow adresow domenowych najlepiej realizuje hierarchiczna polityke adresowa?
+4
+drukarka123.firma.com.pl
+10-1-1-123.firma.com.pl
+1011123.firma.com.pl
+drukarka123.biuro.gdansk.firma.com.pl
+d
+
+Zmiana, ktorego z parametrow zapewnia wieksza zmiane pojemnosci informacyjnej kanalu telekomunikacyjnego?
+2
+szerokosci pasma czestotliwosci
+stosunku sygnalu do szumu
+
+
+1. Jaka mniej wiecej powierzchni
+rzchni użytkowej
+
+punkt dystrybucyjny dla powie
+wynoszacej 1000 m”?
+ok.6 m”
+ok.10 m?
+ok.16 ml
+Jok.60 m?
+
+2. Ktora klasyfikacja opisuje centrum danych
+o najwyższym poziomie niezawodnosci?
+Tier1 ()
+J Tier Ill (3)
+] Tier IV (4)
+JTierV (5)
+3. Jaka jest najwieksza dopuszczalna dlugosc
+polaczenia kablowego zrealizowanego skretka
+czteroparowa miedzy punktem dystrybucyjnym
+a gniazdem abonenckim?
+]50m
+190 m
+] 100 m
+]305 m
+
+4. Jaka jest pojemnosc standardowej szafy typu
+
+rack o wysokosci ok 2 m?
+
+] 24U
+
+]36U
+
+]42U
+
+] 50U
+
+5. Ile wynosi w przybliżeniu szerokosc urzadzenia
+przystosowanego do montażu w standardowej
+szafie typu rack? (1 cal = 2.54 cm)
+
+19cm
+
+38cm
+
+44cm
+
+57cm
+
+6. Do czego odnosi sie pojecie okablowanie
+
+poziome?
+
+do przewodow ulożonyc
+do przewodow ulożonyc
+do logicznej infrastruktury SZ
+do logicznej infrastruktury dostepo
+
+h horyzontalnie
+h wertykalnie
+kieletowej
+wej
+
+7. Do czego odnosi sie pojecie okablowanie
+pionowe?
+
+do logicznej in
+
+do logicznej infr
+
+do przewodow u
+
+do przewodow ulożon
+
+frastruktury dostepowej
+astruktury szkieletowej
+lożonych wertykalnie
+ych horyzontalnie
+
+u stosuje sie przy
+
+8. Jaki rodzaj swiatlowod!
+k. 600 metrow?
+
+odleglosci polaczenia o
+ jednomodowy
+ wielomodowy
+ wielowloknowy
+
+9, Jaka bedzie użytkow
+
+a pojemnosc macierzy
+konfiguracji RAID-6 zbudowanej z 6
+
+dyskowej W
+emnosci 1 TB każdy?
+
+dyskow o pol
+6TB
+5TB
+4TB
+J1TB
+
+10, Jaka szy!
+w instalacji klasy E czteroj
+
+miedzianej kat. 6A?
+1000 MB/s
+
+1000 Mb/s
+
+10 GB/s
+
+10 Gb/s
+
+„ Jaka jest te'
+lacza swiatlowodowego?
+kilkaset Gb/s
+
+kilkanascie Tb/s
+
+powyżej kilkudziesieciu Tb/s
+
+bkosc transmisji można wykorzystywac
+parowej skretki
+
+1 oretyczna pojemnosc informacyjna
+
+r
+
+Jaka szybkosc bitowa ma nieskompresowany
+strumien mowy dla uslugi VoIP?
+
+8 Kb/s
+
+64 Kb/s
+
+64 KB/s
+
+1 Mb/s
+
+13. Do jakiego typu zaliczamy kompresje
+multimediow standardow MPEG?
+bezstratnych
+
+stratnych
+
+12.
+
+N
+
+14. Czy projekt logiczny sieci musi uwzgled?
+wszystkie fizyczne urzadzenia wystepl
+
+sieci? i
+
+tak s
+
+nie
+
+15. Ile urzadzen można zaadresowac w podsieci
+
+IPv4 z maska /29?
+
+16. Ile urzadzen można zaadresowac W
+pojedynczej podsieci IPv6 © standardowej
+dlugosci maski? (10-22)
+
+ miliony (x-109)
+ biliony (x-10*)
+ tryliony (x-10'*)
+17. Jaka bedzie maska sieci
+4 podsieci z maskami /24?
+120
+122
+1126
+128
+
+dla zagregoWal! ch
+
+6 - Sieci korporacyjne - 2023
+
