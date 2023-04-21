@@ -1,3 +1,4 @@
+# Baza danych dla przedmiotu Lokalne Sieci Bezprzewodowe
 Opcjonalna wersja pracy sieci 802.11 - w trybie DCF/EDCA - zwiazana jest ze stosowaniem ramek RTS/CTS. Ich celem jest:
 3
 wstepna rezerwacja medium, a przez to ograniczenie wplywu tzw. stacji ukrytych

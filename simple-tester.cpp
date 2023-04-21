@@ -86,7 +86,7 @@ int sortQuestions(Question, Question);
 void invokeExit(int);
 void helloMessage();
 std::ifstream loadFile();
-void loadQuestionsAnswers(std::ifstream&, std::vector<Question>&, std::string, int&);
+void loadQuestionsAnswers(std::ifstream&, std::vector<Question>&, int&);
 void displayQuestions(int&, int&, std::vector<Question>&, const bool&, const int&);
 void checkQuestions(std::vector<Question>&);
 void countQuestions(std::vector<Question>&);
@@ -100,10 +100,7 @@ int main(){
 	std::string temp;
 	int numberOfQuestions = 0;
 
-	while(databaseFile.good()){
-		std::getline(databaseFile, temp);
-		if(!temp.empty()) loadQuestionsAnswers(databaseFile, questions, temp, numberOfQuestions);
-	}
+	while(databaseFile.good()) loadQuestionsAnswers(databaseFile, questions, numberOfQuestions);
 
 	std::cout << "\n\tNumber of questions loaded from the file: " << numberOfQuestions 
 			<< "\n\tDo you want to see number of correct answers for each question? [y/n] ";
@@ -148,23 +145,29 @@ void helloMessage(){
 
 std::ifstream loadFile(){
 	std::cout << "\t\tInsert name of the database file [ANSI encoded]: ";
-	std::string databaseName;
+	std::string databaseName, path = "Databases/";
 	std::cin >> databaseName;
 
 	std::ifstream inputFile;
-	inputFile.open(databaseName, std::ios::in);
+	inputFile.open((path+databaseName), std::ios::in);
 	if(!inputFile.good()) invokeExit(ERRORFILE);
 
 	return inputFile;
 };
 
-void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
-				std::string _question, int &numberOfQuestions){
+void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions,
+				int &numberOfQuestions){
 	
-	// Load all of the answers
+	// Load the question
+	// '#' is for comment so we are loading lines until it's not a comment
 	std::string temp;
 	std::getline(databaseFile, temp);
-	Question newQuestion(_question);
+	if(temp[0] == '#') std::getline(databaseFile, temp);
+	Question newQuestion(temp);
+
+	// Load the number of answers
+	std::getline(databaseFile, temp);
+	
 	// Check whether this is an open or abcd question
 	if(temp == "o"){
 		std::getline(databaseFile, temp);
@@ -195,6 +198,8 @@ void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &qu
 
 	questions.push_back(newQuestion);
 	numberOfQuestions++;
+	// New line character
+	std::getline(databaseFile, temp); 
 };
 
 void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector<Question> &questions, 
