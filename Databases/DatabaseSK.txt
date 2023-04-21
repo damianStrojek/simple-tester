@@ -4,14 +4,14 @@ Jaki rodzaj polaczen przelacznikow L2 jest optymalny dla zwiekszenia niezawodnos
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-
+a
 
 Jaki rodzaj polaczen routerow jest optymalny dla zwiekszenia niezawodnosci i wydajnosci sieci?
 3
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-
+b
 
 Do czego wykorzystywany jest protokol VRRP?
 4
@@ -19,7 +19,7 @@ do zwiekszenia poziomu bezpieczenstwa
 do zwiekszenia poziomu niezawodnosci
 do zwiekszenia poziomu skalowalnosci
 do zwiekszenia wygody zarzadzania
-
+b
 
 Ktora z technologii pozwala poprawic bezpieczenstwo sieci?
 4
@@ -27,7 +27,7 @@ LACP
 VLAN
 VNC
 VRRP
-
+b
 
 Ktora z wymienionych technologii pozwala zwiekszyc niezawodnosc sieci?
 4
@@ -35,14 +35,15 @@ VLAN
 VNC
 VRRP
 VPN
-
+c
 
 Do czego wykorzystywana jest technologia agregacji laczy?
+4
 jest niezbedna dla poprawnego dzialania protokolow rodziny STP
 zwieksza niezawodnosc polaczenia
 zwieksza przepustowosc polaczenia
 zwieksza zarowno przepustowosc jak i niezawodnosc polaczenia
-
+c
 
 Wskaz protokol monitorowania sieci wykorzystywany m.in. do zbierania statystyk ruchu interfejsow sieciowych:
 4
@@ -50,14 +51,14 @@ SNMP
 SMTP
 ICMP
 GVRP
-
+a
 
 Ktory z wymienionych systemow monitorowania sieci charakteryzuje sie najmniejszymi możliwosciami?
 3
 MRTG
 Nagios
 Zabbix
-
+c
 
 Wskaż urzadzenie, ktorego adres jest najbardziej odpowiedni do testowania poprawnosci dzialania lacza dostepowego:
 4
@@ -65,14 +66,14 @@ router brzegowy na krawedzi sieci lokalnej i sieci operatora
 router w sieci operatora
 urzadzenie w sieci zewnetrznej, z ktorym komunikuja sie urzadzenia lokalne
 urzadzenie w sieci zewnetrznej, z ktorym nie komunikuja sie urzadzenia lokalne
-
+a
 
 Wskaz technologie dostepu do sieci lokalnej z publicznego Internetu o najwiekszej pewnosci dzialania:
 3
 PPTP
 L2TP
 OpenVPN
-
+c
 
 Ktory z wymienionych adresow pocztowych najlepiej realizuje funkcyjna polityke adresowa?
 3
@@ -93,7 +94,7 @@ Zmiana, ktorego z parametrow zapewnia wieksza zmiane pojemnosci informacyjnej ka
 2
 szerokosci pasma czestotliwosci
 stosunku sygnalu do szumu
-
+a
 
 Jaka mniej wiecej powierzchnie powinien miec punkt dystrybucyjny dla powierzchni uzytkowej wynoszacej 1000 m^2?
 4
@@ -101,7 +102,7 @@ ok. 6 m^2
 ok. 10 m^2
 ok. 16 m^2
 ok. 60 m^2
-
+c
 
 Ktora klasyfikacja opisuje centrum danych o najwyższym poziomie niezawodnosci?
 4
@@ -109,7 +110,7 @@ Tier I (1)
 Tier III (3)
 Tier IV (4)
 Tier V (5)
-
+c
 
 Jaka jest najwieksza dopuszczalna dlugosc polaczenia kablowego zrealizowanego skretka czteroparowa miedzy punktem dystrybucyjnym a gniazdem abonenckim?
 4
@@ -117,7 +118,7 @@ Jaka jest najwieksza dopuszczalna dlugosc polaczenia kablowego zrealizowanego sk
 90 m
 100 m
 305 m
-
+b
 
 Jaka jest pojemnosc standardowej szafy typu rack o wysokosci ok. 2 m?
 4
@@ -125,7 +126,7 @@ Jaka jest pojemnosc standardowej szafy typu rack o wysokosci ok. 2 m?
 36 U
 42 U
 50 U
-
+c
 
 Ile wynosi w przyblizeniu szerokosc urzadzenia przystosowanego do montażu w standardowej szafie typu rack? (1 cal = 2.54 cm)
 4
@@ -133,7 +134,7 @@ Ile wynosi w przyblizeniu szerokosc urzadzenia przystosowanego do montażu w sta
 38 cm
 44 cm
 57 cm
-
+c
 
 Do czego odnosi sie pojecie okablowanie poziome?
 4
@@ -141,7 +142,7 @@ do przewodow ulożonych horyzontalnie
 do przewodow ulożonych wertykalnie
 do logicznej infrastruktury szkieletowej
 do logicznej infrastruktury dostepowej
-
+a
 
 Do czego odnosi sie pojecie okablowanie pionowe?
 4
@@ -149,14 +150,14 @@ do logicznej infrastruktury dostepowej
 do logicznej infrastruktury szkieletowej
 do przewodow ulozonych wertykalnie
 do przewodow ulozonych horyzontalnie
-
+c
 
 Jaki rodzaj swiatlowodu stosuje sie przy odleglosci polaczenia ok. 600 metrow?
 4
 jednomodowy
 wielomodowy
 wielowloknowy
-
+b
 
 Jaka bedzie użytkowa pojemnosc macierzy konfiguracji RAID-6 zbudowanej z 6 dyskow o pojemnosci 1 TB każdy?
 4
@@ -164,7 +165,7 @@ Jaka bedzie użytkowa pojemnosc macierzy konfiguracji RAID-6 zbudowanej z 6 dysk
 5 TB
 4 TB
 1 TB
-
+c
 
 Jaka szybkosc transmisji mozna wykorzystac w instalacji klasy E czteroparowej skreki miedzianej kat. 6A?
 4
@@ -172,14 +173,14 @@ Jaka szybkosc transmisji mozna wykorzystac w instalacji klasy E czteroparowej sk
 1000 Mb/s
 10 GB/s
 10 Gb/s
-
+d
 
 Jaka jest teoretyczna pojemnosc informacyjna lacza swiatlowodowego?
 3
 kilkaset Gb/s
 kilkanascie Tb/s
 powyżej kilkudziesieciu Tb/s
-
+c
 
 Jaka szybkosc bitowa ma nieskompresowany strumien mowy dla uslugi VoIP?
 4
@@ -187,20 +188,21 @@ Jaka szybkosc bitowa ma nieskompresowany strumien mowy dla uslugi VoIP?
 64 Kb/s
 64 KB/s
 1 Mb/s
-
+b
 
 Do jakiego typu zaliczamy kompresje multimediow standardow MPEG? 
 2
 bezstratnych
 stratnych
-
+b
 
 Czy projekt logiczny sieci musi uwzgledniac wszystkie fizyczne urzadzenia wystepujace w sieci?
 2
 tak
 nie
+b
 
-
+# Z uwagi na adresy sieci i rozgłoszeniowe, faktyczna liczba adresów IP dostępnych dla urządzeń jest mniejsza niż 8.
 Ile urzadzen można zaadresowac w podsieci IPv4 z maska /29?
 4
 8
@@ -214,7 +216,7 @@ Ile urzadzen można zaadresowac W pojedynczej podsieci IPv6 o standardowej dlugo
 miliony (x * 10^6)
 biliony (x * 10^12)
 tryliony (x * 10^18)
-
+a
 
 Jaka bedzie maska sieci dla zagregowanych 4 podsieci z maskami /24?
 4
