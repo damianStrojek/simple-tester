@@ -9,9 +9,9 @@ a
 Urzadzenia ZigBee o pelnej funkcjonalnosci, tzw. Full-Function Devices (FFDs) - wykorzystywane w rozwiazaniu WPN - ZigBee pozwalaja a prace w trybie:
 4
 Koordynatora PAN (PAN Coordinator) oraz Koordynatora (Coordinator)
-Koordynatora PAN oraz Urzadzenia (Device)
-Koordynatora i Urzadzenia
-Koordynatora PAN, Koordynatora lub urzadzenia.
+Koordynatora PAN (PAN Coordinator) oraz Urzadzenia (Device)
+Koordynatora (Coordinator) i Urzadzenia (Device)
+Koordynatora PAN (PAN Coordinator), Koordynatora (Coordinator) lub Urzadzenia (Device).
 d
 
 Protokot PEAP jest odmiana protokolu EAP, w ktorej:
