@@ -108,7 +108,7 @@ Mozliwe wykrycie sygnalu, ale komunikacja nie jest mozliwa
 Mozliwosc komunikacji z wysoka stopa bledow
 Mozliwosc komunikacji z niska stopa bledow
 Brak mozliwosci wykrycia sygnalu, wplywa na szum tla
-a
+d
 
 W sieci Bluetooth 1.0 urzadzenia typu slave moga przebywac w roznych stanach. Wskaz poprawny zestaw takich stanow.
 4
