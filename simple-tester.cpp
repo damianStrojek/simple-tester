@@ -138,8 +138,8 @@ void invokeExit(int status) {
 void helloMessage(){
 	//system("cls");	// Windows version
 	system("clear");	// Linux version
-	std::cout << "\n\n\tSimpleTester release 3.1\n\n\tContributors: damianStrojek@2023" << 
-		", Lemm@2012, Pitya@2022\n\n\tHave fun learning. Fuck GUT.\n\n";
+	std::cout << "\n\n\tSimpleTester release 3.2\n\n\tContributors: damianStrojek@2023" << 
+		", Lemm@2012, Pitya@2022\n\n\tHave fun learning. ;)\n\n";
 	return;
 };
 
