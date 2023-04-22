@@ -38,7 +38,7 @@ Jest rzedu 1/2e, gdy unormowane opoznienie propagacyne zmierza do jednosci
 Osiaga wartosci zmierzajace do jednosci, gdy unormowane opoznienie propagacyjne zmierza do zera, a obciazenie sieci zmierza do nieskonczonosci
 c
 
-Sieci LAN typu 802.3/Ethernet i WLAN - typu 802.11 moga ze soba wspolpracowac... ale...
+Sieci LAN typu 802.3/Ethernet i WLAN - typu 802.11 moga ze soba wspolpracowac, pod warunkiem, ze...
 4
 Wymagane jest uzycie punktow dostepowych dokonujacych miedzy innymi konwersji struktur ramek (realizacja funkcji portal)
 Moga ze soba wspotpracowac bez najmniejszych ograniczen
@@ -142,7 +142,7 @@ Collision Avoidance, Contention Free Access
 Distributed Coordination Function, Point Coordination Function
 d
 
-Jaka jest dlugosc wektora inicjalizacyjnego IV da szyfrowania WEP z 64 bitowym kluczem RC4?
+Jaka jest dlugosc wektora inicjalizacyjnego IV dla szyfrowania WEP z 64 bitowym kluczem RC4?
 4
 24 bity
 48 bitow
@@ -152,7 +152,7 @@ d
 
 Stacje ukryte w sieciach WLAN, to stacje:
 4
-nie majace tacznosciz punktem dostepowym w sieci WLAN
+nie majace lacznosci z punktem dostepowym w sieci WLAN
 pozostajace poza zasiegiem wajemnej, bezposredniej komunikacji
 majace polaczenie z punktem dostepowym wylacznie za posrednictwem innej stacji
 nie majace aktualnego powiazania (asocjacji) z punktem dostepowym
@@ -206,7 +206,7 @@ OR
 AND
 b
 
-Czy wspolczesnie rozwijane sieci WLAN standardu IEEE 802.11 pozwalaja na przekazy z maksymalnymi szybkosciami:
+Wspolczesnie rozwijane sieci WLAN standardu IEEE 802.11 pozwalaja na przekazy z maksymalnymi szybkosciami:
 4
 Ok. 1.3 Gb/s
 Ponad 5 Gb/s 
