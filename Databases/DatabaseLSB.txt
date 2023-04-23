@@ -20,7 +20,7 @@ Dane przesylane sa szyfrowanym tunelem TLS.
 Dane przesylane sa bez zadnego zabezpieczenia.
 Dane przesylane sa szyfrowanym tunelem SSL.
 Dane przesylane sa szyfrowanym tunelem TLS, a klient jest w stanie potwierdzic tozsamosc serwera.
-a
+d
 
 Atak Fragmentation:
 4
