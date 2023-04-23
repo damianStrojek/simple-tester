@@ -36,7 +36,7 @@ Wszystkie trzy odpowiedzi
 Zmierza do zera, gdy unormowane opoznienie propagacyjne przyjmuje wartosci wieksze od zera, a obciazenie medium zmierza do nieskonczonosci.
 Jest rzedu 1/2e, gdy unormowane opoznienie propagacyne zmierza do jednosci
 Osiaga wartosci zmierzajace do jednosci, gdy unormowane opoznienie propagacyjne zmierza do zera, a obciazenie sieci zmierza do nieskonczonosci
-c
+d
 
 Sieci LAN typu 802.3/Ethernet i WLAN - typu 802.11 moga ze soba wspolpracowac, pod warunkiem, ze...
 4
