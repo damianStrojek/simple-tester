@@ -148,7 +148,7 @@ Jaka jest dlugosc wektora inicjalizacyjnego IV dla szyfrowania WEP z 64 bitowym 
 48 bitow
 64 bity
 40 bitow
-d
+a
 
 Stacje ukryte w sieciach WLAN, to stacje:
 4
