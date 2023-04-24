@@ -196,7 +196,7 @@ Ktory z podanych przedzialow czestotliwosci nie nalezy do nielicencjonowanych pa
 5.725 - 5.85 GHz
 Wszystkie pasma sa nielicencjonowane
 2.4 - 2.483 GHz
-c
+a
 
 Ciag szyfrujacy wygenerowany przez koder RC4 laczony jest z danymi, celem ich zaszyfrowania, z uzyciem funkcji:
 4
