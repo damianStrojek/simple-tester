@@ -36,7 +36,7 @@ Wszystkie trzy odpowiedzi
 Zmierza do zera, gdy unormowane opoznienie propagacyjne przyjmuje wartosci wieksze od zera, a obciazenie medium zmierza do nieskonczonosci.
 Jest rzedu 1/2e, gdy unormowane opoznienie propagacyne zmierza do jednosci
 Osiaga wartosci zmierzajace do jednosci, gdy unormowane opoznienie propagacyjne zmierza do zera, a obciazenie sieci zmierza do nieskonczonosci
-c
+d
 
 Sieci LAN typu 802.3/Ethernet i WLAN - typu 802.11 moga ze soba wspolpracowac, pod warunkiem, ze...
 4
@@ -92,7 +92,7 @@ Maksymalne wartosci efektywnego wykorzystania medium w systemach ALOHA i S-ALOHA
 e i 2e
 0.5 i 1
 0.5 i 2
-b
+c
 
 W sieciach IEEE 802.11 rozszerzeniem pozwalajacym na skrocenie czasu przelaczania miedzy punktami dostepowymi jest:
 4
@@ -153,7 +153,7 @@ a
 Stacje ukryte w sieciach WLAN, to stacje:
 4
 nie majace lacznosci z punktem dostepowym w sieci WLAN
-pozostajace poza zasiegiem wajemnej, bezposredniej komunikacji
+pozostajace poza zasiegiem wzajemnej, bezposredniej komunikacji
 majace polaczenie z punktem dostepowym wylacznie za posrednictwem innej stacji
 nie majace aktualnego powiazania (asocjacji) z punktem dostepowym
 b
@@ -166,7 +166,7 @@ typ pakietu nie ma znaczenia - szybkosc ta zalezy wylacznie od warstwy fizycznej
 najwyzsza DM5 - najnizsza DM1
 a
 
-Sieci osobiste Bluetooth (typu BRE) oferuja, w swej podstawowej wersji, obstuge uzytkownikow:
+Sieci osobiste Bluetooth (typu BRE) oferuja, w swej podstawowej wersji, obsluge uzytkownikow:
 4
 na obszarze o promieniu do 1 km i prace z szybkoscia do 1 Mb/s
 na obszarze o promieniu do 100 m i prace z szybkoscia do 1 Mb/s
@@ -196,7 +196,7 @@ Ktory z podanych przedzialow czestotliwosci nie nalezy do nielicencjonowanych pa
 5.725 - 5.85 GHz
 Wszystkie pasma sa nielicencjonowane
 2.4 - 2.483 GHz
-c
+a
 
 Ciag szyfrujacy wygenerowany przez koder RC4 laczony jest z danymi, celem ich zaszyfrowania, z uzyciem funkcji:
 4
