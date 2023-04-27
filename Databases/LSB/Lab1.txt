@@ -1,0 +1,79 @@
+W trybie ad-hoc:
+4
+są wysyłane ramki Beacon
+nie są wysyłane ramki Probe Response
+nie występuje proces uwierzytelniania
+nie są wysyłane ramki Beacon
+a
+
+Stacja przewodowa A jest podłączona do AP B pracującego w trybie klienta z infrastrukturą z AP C; które zdanie jest prawdziwe:
+4
+żaden z AP nie pozwala podłączać się stacjom bezprzewodowym
+oba AP pozwalają podłączać się stacjom bezprzewodowym
+tylko AP B może podłączać stacje bezprzewodowe
+tylko AP C może podłączać stacje bezprzewodowe
+d
+
+Stacja przewodowa A jest podłączona do AP B pracującego w trybie mostu punkt-punkt z AP C; które zdanie jest prawdziwe:
+4
+żaden z AP nie pozwala podłączać się stacjom bezprzewodowym
+oba AP pozwalają podłączać się stacjom bezprzewodowym
+tylko AP C może podłączać stacje bezprzewodowe
+tylko AP B może podłączać stacje bezprzewodowe
+a
+
+Stacja bezprzewodowa A jest podłączona do AP B pracującego w trybie regeneratora z AP C; które zdanie jest prawdziwe:
+4
+oba AP pozwalają podłączać się stacjom bezprzewodowym
+tylko AP B może podłączać stacje bezprzewodowe
+tylko AP C może podłączać stacje bezprzewodowe
+żaden z AP nie pozwala podłączać się stacjom bezprzewodowym
+a
+
+Tryb pracy punktu dostępowego "klient ad-hoc":
+4
+wymaga drugiego AP w trybie mostu bezprzewodowego
+wymaga do działania innego AP
+pozwala podłączyć stację przewodowo do AP, a AP w trybie ad-hoc do innych stacji bezprzewodowych
+nie pozwala podłączyć stacji po interfejsie ethernetowym AP
+c
+
+Ramka Probe Request:
+4
+wysyłana jest tylko przez punkty dostępu w trybie AP
+rozpoczyna aktywne skanowanie w poszukiwaniu sieci bezprzewodowych
+pozwala rozwiązać problem ukrytych stacji w sieciach bezprzewodowych
+jest poprzedzana ramką Probe Response
+b
+
+Tryb pracy punktu dostępowego "regenerator":
+4
+nie pozwala podłączać się klientom bezprzewodowym
+pozwala podłączać się bezprzewodowo tylko innym punktom dostępowym w tym trybie
+powoduje dwukrotne zmniejszenie pasma dla podłączonych klientów bezprzewodowych
+powoduje rozgłaszanie innej nazwy sieci SSID niż główny punkt dostępowy
+c
+
+Ramka Beacon:
+4
+jest wysyłana przez punkty dostępu w trybie AP i może być wysyłana przez stacje bezprzewodowe (w określonych warunkach <- chodzi chyba o tryb ad-hoc)
+pozwala rozwiązać problem ukrytych stacji w sieciach bezprzewodowych
+wysyłana jest tylko przez stacje bezprzewodowe
+rozpoczyna aktywne skanowanie w poszukiwaniu sieci bezprzewodowych
+a
+
+Tryb pracy punktu dostępowego "klient z infrastrukturą":
+4
+pozwala pracować w trybie ad-hoc
+nie pozwala podłączyć stacji po interfejsie ethernetowym AP
+pozwala wykorzystać AP w roli karty bezprzewodowej
+pozwala podłączać radiowo klientów do tego AP
+c
+
+Tryb pracy punktu dostępowego "most punkt-punkt":
+4
+łączy dwie sieci przewodowe
+pozwala podłączać się typowym stacjom bezprzewodowym do obu AP
+pozwala dołączyć się punktom dostępowym do istniejącej sieci ad-hoc
+pozwala podłączać się typowym stacjom bezprzewodowym jednego AP
+a
