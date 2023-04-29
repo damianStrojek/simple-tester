@@ -1,0 +1,152 @@
+Protokol RFCOMM to:
+4
+protokol umozliwiajacy przenoszenie pakietow sieci LAN
+protokol transportowy na ktorym bazuja protokoly posredniczace
+protokol wyszukiwania uslug
+protokol umozliwiajacy emulacje portu szeregowego
+d
+
+Protokol SDP to:
+4
+protokol transportowy na ktorym bazuja protokoly posredniczace
+protokol umozliwiajacy emulacje portu szeregowego
+protokol wyszukiwania uslug
+protokol umozliwiajacy przenoszenie pakietow sieci LAN
+c
+
+Ilosc aktywnych urzadzen, ktore moga pozostawac jednoczesnie w synchronizacji z urzadzeniem master to:
+4
+10
+16
+255
+7
+d
+
+Sieci Bluetooth:
+4
+dzialaja w pasmie czestotliwosci 900 MHz i korzystaja z kanalow przypisanych przez urzadzenie master
+dzialaja w pasmie czestotliwosci 2.4 GHz i korzystaja ze stalych kanalow czestotliwosciowych
+dzialaja w pasmie czestotliwosci 900 MHz i korzystaja z algorytmu skakania po czestotliwosciach
+dzialaja w pasmie czestotliwosci 2.4 GHz i korzystaja z algorytmu skakania po czestotliwosciach
+d
+
+Dane przesylane przez siec Bluetooth sa szyfrowane na poziomie warstwy:
+4
+Pasma Podstawowego
+L2CAP
+HCI
+RFCOMM
+a
+
+Atak BlueSnarf to:
+4
+atak DoS polegajacy na przeslaniu do urzadzenia duzych pakietow, ktore powoduja jego zawieszenie
+atak polegajacy na lamaniu kodu PIN i umozliwiajacy podsluch transmitowanych przez siec danych
+atak polegajacy na wykorzystaniu blednej implementacji profilu OBEX PUSH do kradziezy danych
+atak polegajacy na wykorzystaniu ukrytych kanalow umozliwiajacych sterowanie urzadzeniem przy pomocy polecen AT
+c
+
+Architektura Bluetooth:
+4
+zadna z przedstawionych odpowiedzi
+nie jest zgodna z modelem odniesienia ISO/OSI
+w pierwszych wersjach specyfikacji byla niezgodna z modelem odniesienia ISO/OSI, ale zostalo to poprawione
+jest zgodna z modelem odniesienia ISO/OSI
+b
+
+Atak BlueSmack to:
+4
+atak polegajacy na wykorzystaniu blednej implementacji profilu OBEX PUSH do kradziezy danych
+atak polegajacy na wykorzystaniu ukrytych kanalow umozliwiajacych sterowanie urzadzeniem przy pomocy polecen AT
+atak polegajacy na lamaniu kodu PIN i umozliwiajacy podsluch transmitowanych przez siec danych
+atak DoS polegajacy na przeslaniu do urzadzenia duzych pakietow, ktore powoduja jego zawieszenie
+d
+
+Aktualnie najnowsza obowiazujaca wersja standardu Bluetooth to:
+5
+3.1
+2.0
+2.1
+3.0
+5.4
+e
+
+Sieci Bluetooth dzialaja w architekturze:
+4
+peer-to-peer
+master-slave
+zadna z przedstawionych odpowiedzi
+client-server
+b
+
+Parowanie urzadzen jest to:
+4
+proces konieczny do jakiejkolwiek wymiany danych miedzy dwoma urzadzeniami Bluetooth
+sposob ataku polegajacy na zdobyciu nieuprawnionego dostepu do urzadzenia
+stworzenie szyfrowanego kanalu komunikacyjnego umozliwiajacego wymiany danych przez okreslona usluge
+proces uwierzytelnienia i wygenerowania klucza polaczenia w parze urzadzen
+d
+
+Atak BlueBug to:
+4
+atak polegajacy na wykorzystaniu blednej implementacji profilu OBEX PUSH do kradziezy danych
+atak polegajacy na lamaniu kodu PIN i umozliwiajacy podsluch transmitowanych przez siec danych
+atak DoS polegajacy na przeslaniu do urzadzenie duzych pakietow, ktore powoduja jego zawieszenie
+atak polegajacy na wykorzystaniu ukrytych kanalow umozliwiajacych sterowanie urzadzeniem przy pomocy polecen AT
+d
+
+Tryb bezpieczenstwa na poziomie uslug:
+4
+wymusza uwierzytelnienie lub uwierzytelnienie i szyfrowanie na poziomie uslug
+jest nowoscia wprowadzona w wersji 2.1 specyfikacji i diametralnie podnosi poziom bezpieczenstwa uslug
+pozwala urzadzeniom pracujacym w tym trybie na na pominiecie weryfikacji i szyfrowania danych
+daje uslugom i aplikacjom swobode w negocjowaniu zabezpieczen
+d
+
+W standardzie Bluetooth mechanizm kanalow sluzy do:
+4
+rownoleglego laczenia sie wielu urzadzen Bluetooth
+wymiany informacji dot. jakosci uslug QoS
+segmentacji i skladania pakietow przesylanych przez siec
+pozwala wspolbieznie koegzystowac wielu protokolom warstw wyzszych
+d
+
+Rejestr SDP przechowuje miedzy innymi nastepujace dane:
+4
+informacje o nazwie urzadzenia i warstwach stosu protokolow, na ktorych bazuja obslugiwane uslugi
+informacje o klasie uslugi i prawach dostepu do uslugi
+informacje o klasie uslugi i warstwach stosu protokolow, na ktorych bazuje ta usluga
+zadna z przedstawionych odpowiedzi
+c
+
+W sieciach Bluetooth:
+4
+nie mozna ustawic adaptera w tryb uprzywilejowany, ale jest mozliwosc podsluchu wykorzystujac specjalistyczne narzedzia
+mozna ustawic adapter w tryb uprzywilejowany i podsluchiwac wszystkie dane transmitowane przez siec
+mozna ustawic adapter w tryb uprzywilejowany i podsluchiwac dane transmitowane przez siec, ale tylko dla danej pikosieci
+nie mozna ustawic adaptera w tryb uprzywilejowany i nie ma zadnej mozliwosci podsluchu danych w tego typu sieciach
+a
+
+Skanowanie w sieci Bluetooth:
+4
+nie ma sensu, poniewaz wszystkie uslugi sa widoczne w rejestrach SDP
+jest mozliwe dla protokolow RFCOMM i L2CAP
+nie jest mozliwe poniewaz Bluetooth nie bazuje na protokole TCP/IP
+jest mozliwe dla protokolow RFCOMM i HCI
+b
+
+Protokol L2CAP to:
+4
+protokol umozliwiajacy emulacje portu szeregowego
+protokol wyszukiwania uslug
+protokol umozliwiajacy przenoszenie pakietow sieci LAN
+protokol transportowy na ktorym bazuja protokoly posredniczace
+d
+
+Urzadzenia w trybie ukrytym:
+4
+umozliwiaja polaczenie, ale tylko urzadzeniom znajacym ich adres fizyczny
+odrzucaja jakiekolwiek proby polaczenia
+odrzucaja wszystkie polaczenia, ale wszystkie moga laczyc sie z innymi
+maja aktywny firewall, ktory zabezpiecza je przed niektorymi atakami
+a

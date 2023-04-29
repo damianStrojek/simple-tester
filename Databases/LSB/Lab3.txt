@@ -1,0 +1,70 @@
+Oparte na mechanizmie WEP uwierzytelnianie ze wspolnym haslem (shared key authentication) w sieci stosujacej szyfrowanie WEP (PYTANIE WIELEKOROTNEGO WYBORU):
+4
+Polega na przeslaniu przez siec bezprzewodowa tych samych danych w sposob niezaszyfrowany, a potem zaszyfrowany.
+Poprawia bezpieczeństwo sieci bezprzewodowej.
+Wykorzystuje ten sam klucz, ktory uzywany jest nastepnie jako glowna czesc skladowa klucza szyfrujacego RC4.
+Pozwala na rozpoznanie przez siec poszczegolnych uzytkownikow, dzieki przedstawieniu przez niech unikalnych informacji uwierzytelniajacych.
+ac
+
+W jaki sposob wybierany MUSI byc (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
+4
+Standard nie precyzuje sposobu wyboru IV.
+Musi pozostawac staly dla danego urzadzenia przez caly okres pracy w danej sieci.
+Losowany co pewna liczbe ramek.
+Cyklicznie powiekszany co pewna liczbe ramek.
+a
+
+Jaka jest dlugosc sekretnego klucza WEP dla szyfrowania z 64 bitowym kluczem RC4?
+4
+32 bity
+64 bity
+48 bitow
+40 bitow
+d
+
+W jaki sposob tworzony jest klucz szyfrujacy RC4 dla sieci 802.11 zabezpieczonej mechanizmem WEP?
+3
+Z sekretnego klucza WEP i wektora inicjalizujacego (IV) poprzez zastosowanie specjalnej funkcji mieszajacej.
+Klucz jest generowany calkowicie losowo dla co pewna liczbe transmitowanych ramek.
+Poprzez proste dopisanie bitow wektora inicjalizujacego (IV) do bitow klucza WEP.
+c
+
+Atak chop-chop:
+4
+Pozwala na ustalanie klucza szyfrujacego WEP.
+Pozwala na odszyfrowanie ramki WEP bez znajomosci klucza szyfrujacego.
+Uzyskanie ciagu szyfrujacego danej ramki WEP bez znajomosci klucza szyfrujacego.
+Wymaga, aby AP obslugiwal transmisje ramek o malej dlugosci.
+bcd
+
+Ktory z ponizszych filtrow programu Wireshark powoduje wyswietlenie wylacznie ramek uwierzytelnienia i asocjacji sieci IEEE 802.11:
+4
+(wlan.fc.type_subtype==0x00) and (wlan.fc.type_subtype==0x01)
+(wlan.fc.ip_frame_type==0x00) or (wlan.fc.ip_frame_type==0x01) or (wlan.fc.ip_frame_type==0x0b)
+(wlan.fc.type_subtype==0x00) or (wlan.fc.type_subtype==0x01) or (wlan.fc.type_subtype==0x0b)
+wlan.fc.type_subtype==0x0b
+c
+
+Glownym celem stosowania atakow aktywnych ARP-Replay i Interactive Packet Selection na mechanizm WEP jest:
+3
+Generowanie przez stacje atakujaca ramek, ktore moga potem zostac uzyte do analizy celem ustalania klucza szyfrujacego WEP.
+Chec zmuszenia AP do retransmisji wysylanych podczas ataku danych i wygenerowania ramek z nowym IV.
+Okreslenie stosowanego mechanizmu uwierzytelniania i potencjalne zlamanie hasla uwierzytelniajacego.
+b
+
+Naglowek ramki IEEE 802.11:
+4
+Jest szyfrowany.
+Jest modyfikowany przez AP gdy ten retransmituje ramki, wymieniane miedzy stacjami bezprzewodowymi.
+Prosta zmiana adresu docelowego pozwala skierowac dowolna ramke do sieci przewodowej.
+Jest chroniony przed modyfikacja.
+bc
+
+Uwierzytelnianie typu shared-key:
+5
+Moze byc stosowane nawet, jesli dane w sieci nie beda szyfrowane mechanizmem WEP.
+Ujawnia napastnikowi poprawny ciag szyfrujacy dla jednego IV.
+Wymaga wymiany wiekszej liczby wiecej wiadomosci niz uwierzytelnianie open-system.
+Ujawnia napastnikowi poprawny ciag szyfrujacy dla wszystkich IV.
+W przypadku sieci w ktorej ruch szyfrowany jest mechanizmem WEP podnosi bezpieczeństwo sieci.
+abc

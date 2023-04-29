@@ -1,0 +1,31 @@
+Mozliwosc przekierowania zgloszen do innych serwerow RADIUS:
+4
+Jest konfigurowane z uzyciem pliku realms.conf
+Pozwala na kierowanie zgloszen do roznych serwerow na podstawie elementow podanej przez logujacego sie nazwy uzytkownika.
+Pozwala na zapewnienie wiekszej bezawaryjnosci.
+Pozwala na rozlozenie obciazenia na wiele serwerow.
+bcd
+
+Protokol PEAP jest odmiana protokolu EAP, w ktorej:
+4
+Dane przesylane sa szyfrowanym tunelem TLS.
+Dane przesylane sa szyfrowanym tunelem SSL.
+Dane przesylane sa szyfrowanym tunelem TLS, a klient jest w stanie potwierdzic tozsamosc serwera.
+Dane przesylane sa bez zadnego zabezpieczenia.
+c
+
+Plik clients.conf serwera FreeRADIUS moze sluzyc do okreslenia:
+4
+Jakie stacje koncowe (komputery uzytkownikow) moga podlaczac sie do sieci bezprzewodowej.
+Jakie punkty dostepowe moga wymieniac dane z serwerem RADIUS.
+Jakie stacje koncowe (komputery uzytkownikow) moga wymieniac dane z serwerem RADIUS.
+Jakie urzadzenia sieciowe serwer RADIUS ma odpytywac w celu wyszukania i uwierzytelnienia nowo podlaczonych klientow.
+b
+
+Zastosowanie, w sieci zabezpieczonej WEP, serwera RADIUS z uwierzytelnianiem PEAP pozwala na:
+4
+Jednoczesne uzywanie przez roznych klientow sieci roznych kluczy szyfrujacych.
+Automatyczne uzyskiwanie przez klientow sieci kluczy szyfrujacych.
+Zastosowanie szyfrowania metoda AES.
+Wydluzenie klucza szyfrujacego do ponad 128 bitow, w celu poprawy bezpieczenstwa sieci.
+ab
