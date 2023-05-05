@@ -4,22 +4,22 @@ Jaki rodzaj polaczen przelacznikow L2 jest optymalny dla zwiekszenia niezawodnos
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-b
+c
 
 Jaki rodzaj polaczen routerow jest optymalny dla zwiekszenia niezawodnosci i wydajnosci sieci?
 3
 agregacja wielu linkow
 polaczenia w topologii pierscienia
 polaczenia w topologii kratowej
-c
+a
 
-Do czego wykorzystywany jest protokol VRRP?
+Do czego wykorzystywany jest protokol VRRP (Virtual Router Redundancy Protocol)?
 4
 do zwiekszenia poziomu bezpieczenstwa
 do zwiekszenia poziomu niezawodnosci
 do zwiekszenia poziomu skalowalnosci
 do zwiekszenia wygody zarzadzania
-b
+bc
 
 Ktora z technologii pozwala poprawic bezpieczenstwo sieci?
 4
@@ -43,7 +43,7 @@ jest niezbedna dla poprawnego dzialania protokolow rodziny STP
 zwieksza niezawodnosc polaczenia
 zwieksza przepustowosc polaczenia
 zwieksza zarowno przepustowosc jak i niezawodnosc polaczenia
-c
+d
 
 Wskaz protokol monitorowania sieci wykorzystywany m.in. do zbierania statystyk ruchu interfejsow sieciowych:
 4
@@ -81,6 +81,20 @@ logistyka©firma.com.pl
 jkowal@firma.com.pl
 Jan.Kowalski@biuro.firma.com.pl
 a
+
+Ktory z wymienionych adresow pocztowych najlepiej realizuje pelna polityke adresowa?
+3
+logistyka©firma.com.pl
+jkowal@firma.com.pl
+Jan.Kowalski@firma.com.pl
+c
+
+Ktory z wymienionych adresow pocztowych najlepiej realizuje skrotowa polityke adresowa?
+3
+logistyka©firma.com.pl
+jkowalski@firma.com.pl
+Jan.Kowalski@firma.com.pl
+b
 
 Ktory z podanych przykladow adresow domenowych najlepiej realizuje hierarchiczna polityke adresowa?
 4
@@ -120,14 +134,16 @@ Jaka jest najwieksza dopuszczalna dlugosc polaczenia kablowego zrealizowanego sk
 305 m
 b
 
+# W zaleznosci od tego jakie urzadzenia sa instalowane w srodku - (24U dla urzadzen o wielkosci 1U i 42U dla urzadzen o wielkosci 1.75U)
 Jaka jest pojemnosc standardowej szafy typu rack o wysokosci ok. 2 m?
 4
 24 U
 36 U
 42 U
 50 U
-c
+ac
 
+# 19 cali
 Ile wynosi w przyblizeniu szerokosc urzadzenia przystosowanego do montażu w standardowej szafie typu rack? (1 cal = 2.54 cm)
 4
 19 cm
@@ -152,8 +168,9 @@ do przewodow ulozonych wertykalnie
 do przewodow ulozonych horyzontalnie
 b
 
+# Bo mozna przeslac wiecej informacji, a 600m to nie jest duza odleglosc
 Jaki rodzaj swiatlowodu stosuje sie przy odleglosci polaczenia ok. 600 metrow?
-4
+3
 jednomodowy
 wielomodowy
 wielowloknowy
@@ -167,7 +184,7 @@ Jaka bedzie użytkowa pojemnosc macierzy konfiguracji RAID-6 zbudowanej z 6 dysk
 1 TB
 c
 
-Jaka szybkosc transmisji mozna wykorzystac w instalacji klasy E czteroparowej skreki miedzianej kat. 6A?
+Jaka szybkosc transmisji mozna wykorzystac w instalacji klasy E czteroparowej skretki miedzianej kat. 6A?
 4
 1000 MB/s
 1000 Mb/s
