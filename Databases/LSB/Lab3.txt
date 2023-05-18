@@ -1,4 +1,4 @@
-Oparte na mechanizmie WEP uwierzytelnianie ze wspolnym haslem (shared key authentication) w sieci stosujacej szyfrowanie WEP (PYTANIE WIELEKOROTNEGO WYBORU):
+Oparte na mechanizmie WEP uwierzytelnianie ze wspolnym haslem (shared key authentication) w sieci stosujacej szyfrowanie WEP:
 4
 Polega na przeslaniu przez siec bezprzewodowa tych samych danych w sposob niezaszyfrowany, a potem zaszyfrowany.
 Poprawia bezpieczeństwo sieci bezprzewodowej.
@@ -6,7 +6,7 @@ Wykorzystuje ten sam klucz, ktory uzywany jest nastepnie jako glowna czesc sklad
 Pozwala na rozpoznanie przez siec poszczegolnych uzytkownikow, dzieki przedstawieniu przez niech unikalnych informacji uwierzytelniajacych.
 ac
 
-W jaki sposob wybierany MUSI byc (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
+W jaki sposob MUSI byc (zgodnie ze standardem) wybierany wektor inicjalizujacy (IV) w sieci 802.11 zabezpieczonej mechanizmem WEP?
 4
 Standard nie precyzuje sposobu wyboru IV.
 Musi pozostawac staly dla danego urzadzenia przez caly okres pracy w danej sieci.
@@ -33,7 +33,7 @@ Atak chop-chop:
 4
 Pozwala na ustalanie klucza szyfrujacego WEP.
 Pozwala na odszyfrowanie ramki WEP bez znajomosci klucza szyfrujacego.
-Uzyskanie ciagu szyfrujacego danej ramki WEP bez znajomosci klucza szyfrujacego.
+Pozwala na uzyskanie ciagu szyfrujacego danej ramki WEP bez znajomosci klucza szyfrujacego.
 Wymaga, aby AP obslugiwal transmisje ramek o malej dlugosci.
 bcd
 
@@ -48,14 +48,14 @@ c
 Glownym celem stosowania atakow aktywnych ARP-Replay i Interactive Packet Selection na mechanizm WEP jest:
 3
 Generowanie przez stacje atakujaca ramek, ktore moga potem zostac uzyte do analizy celem ustalania klucza szyfrujacego WEP.
-Chec zmuszenia AP do retransmisji wysylanych podczas ataku danych i wygenerowania ramek z nowym IV.
+Chec zmuszenia AP do retransmisji wysylanych podczas ataku danych i wygenerowania ramek z nowym wektorem IV.
 Okreslenie stosowanego mechanizmu uwierzytelniania i potencjalne zlamanie hasla uwierzytelniajacego.
 b
 
 Naglowek ramki IEEE 802.11:
 4
 Jest szyfrowany.
-Jest modyfikowany przez AP gdy ten retransmituje ramki, wymieniane miedzy stacjami bezprzewodowymi.
+Jest modyfikowany przez AP gdy ten retransmituje ramki wymieniane miedzy stacjami bezprzewodowymi.
 Prosta zmiana adresu docelowego pozwala skierowac dowolna ramke do sieci przewodowej.
 Jest chroniony przed modyfikacja.
 bc
@@ -63,8 +63,8 @@ bc
 Uwierzytelnianie typu shared-key:
 5
 Moze byc stosowane nawet, jesli dane w sieci nie beda szyfrowane mechanizmem WEP.
-Ujawnia napastnikowi poprawny ciag szyfrujacy dla jednego IV.
+Ujawnia napastnikowi poprawny ciag szyfrujacy dla jednego wektora IV.
 Wymaga wymiany wiekszej liczby wiecej wiadomosci niz uwierzytelnianie open-system.
-Ujawnia napastnikowi poprawny ciag szyfrujacy dla wszystkich IV.
+Ujawnia napastnikowi poprawny ciag szyfrujacy dla wszystkich wektorow IV.
 W przypadku sieci w ktorej ruch szyfrowany jest mechanizmem WEP podnosi bezpieczeństwo sieci.
 abc
