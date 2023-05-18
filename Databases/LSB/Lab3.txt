@@ -89,4 +89,3 @@ w tym trybie pracy interfejs odbiera ramki, których adres docelowy MAC pokrywa 
 w tym trybie pracy interfejs odbiera wszystkie ramki danych, które do niego docierają z sieci bezprzewodowej do której jest podłączony, a więc również te, których adres docelowy MAC nie pokrywa się z adresem MAC interfejsu. Ramki te są następnie przekazywane do wyższych warstw w stosie protokołów.
 jest to specjalny tryb występujący jedynie w kartach bezprzewodowych, w którym interfejs potrafi odbierać wszystkie ramki 802.11 będące w powietrzu (z dowolnej, słyszalnej sieci bezprzewodowej), także ramki kontrolne i sterujące. 
 c
-
