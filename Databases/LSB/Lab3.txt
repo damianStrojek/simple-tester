@@ -68,3 +68,25 @@ Wymaga wymiany wiekszej liczby wiecej wiadomosci niz uwierzytelnianie open-syste
 Ujawnia napastnikowi poprawny ciag szyfrujacy dla wszystkich wektorow IV.
 W przypadku sieci w ktorej ruch szyfrowany jest mechanizmem WEP podnosi bezpieczeństwo sieci.
 abc
+
+Czym charakteryzuje sie zwykly tryb pracy interfejsu bezprzewodowego?
+3
+w tym trybie pracy interfejs odbiera ramki, których adres docelowy MAC pokrywa się z adresem MAC interfejsu. Pozostałe ramki są odrzucane, a tym samym nie są przekazywane do wyższych warstw w stosie protokołów. 
+w tym trybie pracy interfejs odbiera wszystkie ramki danych, które do niego docierają z sieci bezprzewodowej do której jest podłączony, a więc również te, których adres docelowy MAC nie pokrywa się z adresem MAC interfejsu. Ramki te są następnie przekazywane do wyższych warstw w stosie protokołów.
+jest to specjalny tryb występujący jedynie w kartach bezprzewodowych, w którym interfejs potrafi odbierać wszystkie ramki 802.11 będące w powietrzu (z dowolnej, słyszalnej sieci bezprzewodowej), także ramki kontrolne i sterujące. 
+a
+
+Czym charakteryzuje sie tryb pracy promiscous interfejsu bezprzewodowego?
+3
+w tym trybie pracy interfejs odbiera ramki, których adres docelowy MAC pokrywa się z adresem MAC interfejsu. Pozostałe ramki są odrzucane, a tym samym nie są przekazywane do wyższych warstw w stosie protokołów. 
+w tym trybie pracy interfejs odbiera wszystkie ramki danych, które do niego docierają z sieci bezprzewodowej do której jest podłączony, a więc również te, których adres docelowy MAC nie pokrywa się z adresem MAC interfejsu. Ramki te są następnie przekazywane do wyższych warstw w stosie protokołów.
+jest to specjalny tryb występujący jedynie w kartach bezprzewodowych, w którym interfejs potrafi odbierać wszystkie ramki 802.11 będące w powietrzu (z dowolnej, słyszalnej sieci bezprzewodowej), także ramki kontrolne i sterujące. 
+b
+
+Czym charakteryzuje sie tryb pracy RFMON interfejsu bezprzewodowego?
+3
+w tym trybie pracy interfejs odbiera ramki, których adres docelowy MAC pokrywa się z adresem MAC interfejsu. Pozostałe ramki są odrzucane, a tym samym nie są przekazywane do wyższych warstw w stosie protokołów. 
+w tym trybie pracy interfejs odbiera wszystkie ramki danych, które do niego docierają z sieci bezprzewodowej do której jest podłączony, a więc również te, których adres docelowy MAC nie pokrywa się z adresem MAC interfejsu. Ramki te są następnie przekazywane do wyższych warstw w stosie protokołów.
+jest to specjalny tryb występujący jedynie w kartach bezprzewodowych, w którym interfejs potrafi odbierać wszystkie ramki 802.11 będące w powietrzu (z dowolnej, słyszalnej sieci bezprzewodowej), także ramki kontrolne i sterujące. 
+c
+
