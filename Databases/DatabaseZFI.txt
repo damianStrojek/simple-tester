@@ -1,0 +1,247 @@
+Za mape produktu odpowiada:
+4
+Wlasciciel produktu
+Interesariusz
+Mistrz SCRUMu
+Zespol menadzerski
+a
+
+Stwierdzenie "wewnatrz organizacji przewazaja, slabe strony, zas w otoczeniu szanse" opisuje strategie:
+4
+mini-maxi
+mini-mini
+maxi-mini
+maxi-maxi
+a
+
+W zarzadzaniu SCRUM interesariuze naleza do:
+4
+zespolu deweloperskiego
+zespolu mistrza SCRUMu
+zespolu SCRUMowego
+otoczenia projektu
+d
+
+Klient w metodyce Prince2 to:
+4
+osoba lub grupa ktora zleca projekt i odnosi korzysci z jego rezultatow
+osoba lub grupa odpowiedzialna za dostarczenie specjalistycznych produktow projektu
+osoba lub grupa odnoszaca korzysci z rezultatow projektu
+osoba lub grupa ktora kupuje produkt
+a
+
+W procesie kontroli po etapie wykonania nastepuje etap...
+4
+oceny
+korygowania
+dostarczenia
+wykonania
+a
+
+Ktore stwierdzenie o roli wsparcia projektu jest prawidlowe?
+4
+sporzadza raporty z punktu kontrolnego dla kierownika projektu
+mozna ja laczyc z rola nadzoru nad projektem
+jest rola opcjonalna w projekcie zgodnym z Prince2
+moze byc podejmowana przez kierownika projektu
+d
+
+Ktore stwierdzenia o interesariuszach projektu sa prawidlowe? 
+A Interesariusze to kazda osoba, ktora sadzi, ze dany projekt bedzie mial na nia wplyw. 
+B Interesariusze wymagaja jednakowego zaangazowania ze strony zespolu zarzadzania projektem. 
+C Interesariusze nie zmieniaja sie podczas trwania projektu. 
+D Interesariusze moga byc podmiotami wewnetrznymi lub zewnetrznymi w stosunku do korporacji.
+4
+B i C
+C i D
+A i D
+A i B
+c
+
+W analizie SWOT szanse opisuje litera
+4
+S
+W
+O
+T
+c
+
+Jakie sa korzysci ze stosowania metodyki PRINCE2?
+4
+Dzieki niej kierownik projektu ponosi odpowiedzialnosc za projekt.
+Wykorzystuje ona uznane i sprawdzone najlepsze praktyki oraz wytyczne do zarzadzania projektami.
+Zapobiega ona wprowadzaniu zmian w ramach uzgodnionego zakresu projektu.
+Zawiera techniki analizy sciezki krytycznej oraz analizy wartosci wypracowanej.
+b
+
+Metodyka Prince – Inicjonowanie Projektu -> kluczowe produkty zarzadcze. Jako kierownik projektu opracowuje? (wybierz poprawnie)
+4
+podejscie do ryzyka, zmian, jakosci i komunikacji; plan projektu, w tym opis produktu końcowego projektu
+podejscie do ryzyka, jakosci i komunikacji; plan projektu, w tym opis produktu końcowego projektu
+podejscie do klienta, zmian, jakosci i komunikacji; plan projektu, w tym opis sprzedazy produktu
+podejscie do zarzadzania czasem, zmian, jakosci i komunikacji; plan projektu, w tym opis sprzedazy produktu
+a
+
+Faza realizowania tego co zostalo zaplanowane, uzgodnione i zapisane w ksiazce projektu i planach, to faza?
+4
+pracy
+zlecenia
+ewaluacji
+planowania
+a
+
+Kroki potrzebne do wdrozenia historii uzytkownika to?
+4
+Zadania
+Epiki
+Sprinty
+Akcje.
+a
+
+Do "kontrola" komunikacji w zarzadzaniu projektem zaliczamy?
+3
+Ustaleniu dzialań, ktore musza byc podjete
+Ustalenie regul zarzadzania dokumentami
+Stymulowaniu komunikacji w zespole
+b
+
+Co jest uwazane za obowiazek klienta w srodowisku klient/dostawca PRINCE2?
+4
+Dostarczenie umiejetnosci koniecznych do osiagniecia oczekiwanego rezultatu.
+Wytworzenie produktow projektu.
+Okreslenie oczekiwanego rezultatu.
+Zapewnienie integralnosci technicznej projektu.
+c
+
+Co jest celem tematu Organizacja?
+4
+Planowanie szkoleń niezbednych do dostarczenia projektu.
+Okreslenie tolerancji dotyczacej kosztow zasobu.
+Wdrazanie kontroli wymaganych do zarzadzania z wykorzystaniem tolerancji.
+Okreslenie struktury odpowiedzialnosci i obowiazkow w projekcie.
+d
+
+Ktory krok w analizie SWOT odpowiada za okreslenie dzialań i taktyk, ktore musi podjac przedsiebiorstwo, aby osiagnac cele strategiczne?
+4
+czwarty
+pierwszy
+siódmy
+szósty
+d
+
+Ktory element jest jednym z czterech zintegrowanych elementow PRINCE2?
+4
+Opisy produktow
+Procesy
+Opisy rol
+Jakosc
+b
+
+"Cele indywidualne musza byc zgodne z polityka firmy" - do ktorej kategorii reguly SMART nalezy to zdanie?
+4
+M - Wymierne
+T - Monitorowane
+R - Odpowiednie
+A - Osiagalne
+c
+
+Serie dzialań z dzieleniem funkcji na wymagania do wykonania to:
+4
+Historie uzytkownikow
+Zadania
+Epiki
+Motywy
+c
+
+Jakie role w metodyce Prince2 musza byc obsadzone jednoosobowo?
+4
+przewodniczacego i kierownika zespolu
+przewodniczacego i glownego uzytkownika
+kierownika projektu i przewodniczacego
+kierownika projektu i kierownika zespolu
+c
+
+Co jest obowiazkiem przedstawiciela biznesu w komitecie sterujacym?
+4
+Upewnienie sie, ze projekt odzwierciedla wartosc odpowiadajaca poniesionym nakladom.
+Ustalenie poziomow tolerancji dla projektu.
+Potwierdzenie, ze projekt dostarcza wymagana funkcjonalnosc.
+Sprawdzenie, czy wymagane poziomy jakosci sa osiagane przez produkty projektu.
+a
+
+Srodki prewencyjne w planie komunikacji to?
+3
+Plan awaryjny
+Ubezpieczenie, zatrudnienie dodatkowych ludzi
+Wprowadzenie dodatkowych procedur testujacych
+b
+
+Najwazniejszym pryncipiem w metodyce Prince jest?
+4
+Koncentracja na kliencie
+Zarzadzanie zwinne
+Ciagla zasadnosc biznesowa
+Zadowolenie klienta
+c
+
+Jakie cechy odrozniaja projekt od zwyklej dzialalnosci biznesowej?
+4
+Projekt zarzadza interesariuszami.
+Projekt jest zwiazany z kosztami.
+Projekt wytwarza korzysci.
+Projekt wprowadza zmiany biznesowe.
+d
+
+Malpa "spych" opisuje sytuacje?
+3
+Gdy sami bierzmy dodatkowe zadanie lub problem
+Gdy przelozony zrzuca na nas zadanie lub problem
+Gdy wspolpracownik zrzuca na nas zadanie lub problem
+c
+
+Niekorzystne rozwiazania systemowe - bedzie nalezalo do ktorej kategorii?
+4
+potencjalne mocne strony
+potencjalne slabe strony
+potencjalne szanse
+potencjalne zagrozenia
+d
+
+Podaj brakujace slowa w ponizszym zdaniu. Szesc aspektow efektywnosci projektu, ktorymi nalezy zarzadzac to [???], koszty, terminy i zakres.
+4
+korzysci, jakosc, ryzyko
+zmiana, jakosc, ryzyko
+korzysci, zmiana, ryzyko
+korzysci, zmiana, jakosc
+a
+
+Ta czynnosc powinna byc zaplanowana na okres, kiedy bedziesz mial wiecej czasu, ale tak aby byla wykonana w terminie, albo delegowana pracownikowi, ktory jest przygotowany, aby wykonac to zadanie. - to zdanie opisuje ktora kategorie Pilnosci
+3
+Niewazne, ale pilne
+Wazne i pilne
+Wazne, ale niepilne
+c
+
+Co jest minimalnym wymaganiem w zakresie stosowania tematu Organizacja?
+4
+Okreslenie roli kierownika zespolu jako nadzoru nad projektem.
+Tam gdzie to mozliwe, polaczenie rol, aby uproscic organizacje.
+Jezeli projekt jest czescia programu, wyznaczenie kierownika ds. zarzadzania zmianami biznesu jako glownego uzytkownika.
+Okreslenie podejscia w zakresie kontaktow z interesariuszami.
+d
+
+Do "zewnetrznych" zlodziei czasu naleza? (wybierz poprawnie)
+4
+brak dyscypliny i zla komunikacja
+rozmowy telefoniczne i odkladanie spraw na pozniej
+Przerywanie i niezdecydowanie
+spotkania i korespodencja
+d
+
+Ustalanie i koordynacja priorytetow kazdego dnia odbywa sie w ramach:
+4
+ustalane odgornie przez wlasciciela produktu
+Spotkania Mistrza Scrumu z Wlascicielem produktu
+codziennego scrumu
+rozmow interesariuszy
+c

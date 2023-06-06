@@ -66,23 +66,10 @@ iBeacony to male urzadzenia bezprzewodowe korzystajace z Bluetooth Low Energy. G
 
 ```
 
+## Multi-line Questions
+
+Since 06.2023 my program is supporting multi-line questions again. :) 
+
 ## Known Problems
 
 Sometimes there is a problem with the source file. On Linux I've observed that the file has to be configured with **End of Line Sequence** that equals to `LF` (right bottom corner when editing file in Visual Studio Code).
-
-## Multi-line Questions
-
-If you have multi-line questions in your database file you need to somehow check if you are still reading question or an answer. I have deleted this function from the main release and pasted it here for the future.
-
-```c++
-void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &questions, 
-							std::string _question, int &numberOfQuestions){
-    [...]           
-    // Check if the first symbol is a number
-    // This while is to make sure that the "multiple line questions" will get processed too
-    while (!((int)temp[0] > 48 && (int)temp[0] < 57)) { 
-        if (!((int)temp[0] > 48 && (int)temp[0] < 57)) _question += '\n' + temp;
-        std::getline(databaseFile, temp);
-    }
-}
-```

@@ -55,6 +55,11 @@ public:
 
 	void setOpen() { this->openQuestion = true; }
 
+	void addQuestionLine(std::string _questionLine){
+		this->question += "\n\t";
+		this->question += _questionLine;
+	}
+
 	void addAnswer(std::string _answer) {
 		answer temp;
 		temp.desc = _answer;
@@ -175,6 +180,15 @@ void loadQuestionsAnswers(std::ifstream &databaseFile, std::vector<Question> &qu
 		newQuestion.addAnswer(temp);
 	}
 	else {
+		// Checking whether the question is longer than one line
+		// if so - add next line to the question till the first symbol is number (number of answers)
+		if(!isdigit(temp[0])){
+			while(!isdigit(temp[0])) {
+				newQuestion.addQuestionLine(temp);
+				std::getline(databaseFile, temp);
+			}
+		}
+
 		int numberOfAnswers = temp[0] - '0', i, index;
 		for(i = 0; i < numberOfAnswers && databaseFile.good(); i++){
 			std::getline(databaseFile, temp);
@@ -229,9 +243,10 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 	else {
 		if(seeCorrect) 
 			std::cout << "\n\t[" << activeQuestion.getNumberCorrect() << " correct answers] " << activeQuestion.getQuestion();
+		std::cout << "\n";
 
 		int numberOfAnswers = activeQuestion.getAnswers().size();
-		
+
 		// Shuffle answers and display
 		activeQuestion.reorganizeAnswers();
 		for(int i = 0; i < numberOfAnswers; i++) 
@@ -284,7 +299,7 @@ void displayQuestions(int &correctQuestions, int &allQuestionsAsked, std::vector
 
 // Below functions are clearly to debbug and check the database file while writing it
 void checkQuestions(std::vector<Question> &questions) {
-	std::cout << "\n\n\t[QUESTIONS]";
+	std::cout << "\n\n\t\t[QUESTIONS]\n";
 	int i;
 	for (i = 0; i < questions.size(); i++) {
 		std::cout << "\n\t" << questions[i].getQuestion();
